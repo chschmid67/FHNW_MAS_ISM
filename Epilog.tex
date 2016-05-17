@@ -1,0 +1,42 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+%% - Bibliography
+%% - --------------------------------------
+\newpage
+\subfile{Literaturverzeichnis}
+
+%% - List of figures: do not number this subsection, but put it in the TOC
+%% - --------------------------------------
+
+\newpage
+\renewcommand{\listfigurename}{Abbildungsverzeichnis}
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\listoffigures
+
+%% - List of tables: do not number this subsection, but put it in the TOC
+%% - --------------------------------------
+
+\newpage
+\renewcommand{\listfigurename}{Tabellenverzeichnis}
+\addcontentsline{toc}{section}{Tabellenverzeichnis}
+\listoftables
+
+%% - List of acronyms: do not number this subsection, but put it in the TOC
+%% - --------------------------------------
+
+\newpage
+\printglossary[type=\acronymtype,title=Abkürzungsverzeichnis]
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+\printglossary
+
+%% - Appendix: do not number this subsection, but put it in the TOC
+%% - --------------------------------------
+
+\newpage
+\section*{Anhang}
+\addcontentsline{toc}{section}{Anhang}
+\subfile{Anhang}
+
+\end{document}

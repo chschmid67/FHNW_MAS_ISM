@@ -1,0 +1,211 @@
+\documentclass[12pt]{article}
+
+%% - packages definitions
+%% - --------------------------------------
+
+\usepackage[utf8]{inputenc}                     % - direct usage of ä,ö,ü possible
+\usepackage[T1]{fontenc}                        % - fonts 256 chars
+\usepackage[ngerman]{babel}                     % - new greman writing rules since 2006
+\usepackage[acronym,nonumberlist]{glossaries}   % - leave out the page numbers
+\usepackage{subfiles}                           % - enable usage of subfiles
+\usepackage{blindtext}                          % - provide ability to generate blind text
+\usepackage{fancyhdr}                           % - use fancy package for fancy pages, header, etc.
+\usepackage{graphicx}                           % - provide graphics environment
+\usepackage{array}                              % - next package must be [table]{xcolor} 
+\usepackage[table]{xcolor}                      % - previous package must be {array}
+\usepackage{tocloft}                            % - controlling the design of the TOC
+\usepackage{geometry}                           % - specify document margins and size
+\usepackage{hyphenat}                           % - global hyphenation rules
+\usepackage[font=scriptsize]{caption}           % - set fontsize of figure captions
+\usepackage{multirow}                           % - allow merging of fields of a table into one field
+\usepackage{longtable}                          % - define long tables span multiple pages
+\usepackage{floatrow}                           % - allow formatting of float values
+\usepackage{csquotes}
+\usepackage[backend=bibtex,style=alphabetic,sorting=ynt]{biblatex}
+\usepackage{tabto}                              % - used in titlepage to align metadata
+
+
+\usepackage{booktabs}
+
+
+%% - Hyphenation rules
+%% - --------------------------------------
+
+\subfile{control/hyphenating}
+
+%% - Acronyms & Glossaries
+%% - --------------------------------------
+
+\subfile{control/acronyms}
+
+%% - define where to look for images
+%% - --------------------------------------
+
+\graphicspath{ {figures/}{../figures/} }
+
+%% - set bibliography file
+%% - --------------------------------------
+
+\addbibresource{Securityawareness.bib}
+
+%% - Define everything that has to do with arrays
+%% - 
+%% - Set space between array rows to 1.5 (default 1.0)
+%% - --------------------------------------
+
+\renewcommand{\arraystretch}{1.5}
+
+%% - define font (small) for "table" tables
+%% - --------------------------------------
+
+\floatsetup[table]{font=scriptsize}
+
+
+%% - Define Table of Contents Style
+%% - add 10pt of space after section entry in toc
+%% - --------------------------------------
+
+\renewcommand\cftsecafterpnum{\par\addvspace{10pt}}
+
+%% - Define the document's geometry
+%% - --------------------------------------
+
+\geometry{a4paper, total={170mm,240mm}, headsep=5mm,left=25mm,top=30mm}
+
+%% - Define the Paragraph indent (parindent)
+%% - and the Spacing between paragraphs (parskip)
+%% - Also set the linespacing
+%% - --------------------------------------
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+\renewcommand{\baselinestretch}{1.0}
+
+%% - Set document Header and Footer fancystyle
+%% - Clear the header and footer
+%% - --------------------------------------
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+
+\fancyfoot[R]{\thepage}
+\fancyhead[L]{Security Awareness Next Generation}
+
+\renewcommand{\headrulewidth}{0pt} % draws the footer line
+\renewcommand{\footrulewidth}{0pt} % draws the footer line
+
+%% - Redefine plain page style, which is used 
+%% - for titlepage and chapter beginnings
+%% - to match fancy pagestyle
+%% - --------------------------------------
+
+\fancypagestyle{plain}{%
+    \renewcommand{\headrulewidth}{0pt}%
+    \fancyhf{}%
+    \fancyfoot[R]{\thepage}%
+    \fancyhead[L]{Security Awareness Next Generation}
+}
+
+%% - --------------------------------------
+%% - Here the document begins
+%% - --------------------------------------
+
+\begin{document}
+
+%% - Define the document title page
+%% - --------------------------------------
+
+\begin{titlepage}
+\includegraphics[width=0.45\textwidth]{FHNW_HW_10mm.jpg}\par
+\vspace{7cm}
+{\Huge\bfseries Security Awareness \par}
+{\large\bfseries Sicherheitsbewusstes Verhalten in einem international tätigen \\Unternehmen: Von OLDSCHOOL zu NEXT GENERATION  \par}
+\vspace{4.5cm}
+{\large\bfseries Master Thesis MAS Information Systems Management 2016\par}
+\vspace{1.0cm}
+\TabPositions{4cm}
+{\normalsize Auftraggeberschaft:    \tab{Aquina AG}\\}
+{\normalsize Autor:                 \tab{Christoph Schmid} \\}
+{\normalsize Dozent:                \tab{Marco Marchesi, FHNW} \\}
+{\normalsize Ort, Datum:            \tab{Pfungen, September 2016}}
+\vspace{2.0cm}
+\vfill
+%% - Bottom of the title page
+%% - --------------------------------------
+{\small Erstellt mit \LaTeX}
+\end{titlepage}
+
+%% - Define simple footer for prolog stuff 
+%% - use Roman page numbering (Big roman letters)
+%% - --------------------------------------
+
+\pagenumbering{Roman}
+\setcounter{page}{0}
+
+%% - Do all the prologue stuff
+%% - --------------------------------------
+
+\newpage
+\subfile{Prolog}
+
+%% - use arabic page numbering
+%% - reset counter of page to 1 
+%% - --------------------------------------
+
+\newpage
+\vspace*{10cm}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\setcounter{section}{1}
+\setcounter{subsection}{0}
+\section*{Erster Teil: Theoretische Grundlagen}
+\addcontentsline{toc}{section}{Erster Teil: Theoretische Grundlagen}
+\newpage
+\subfile{sections/Teil_1_Texte/Teil_1_Theoretische_Grundlagen}
+
+\newpage
+\vspace*{10cm}
+\setcounter{section}{2}
+\setcounter{subsection}{0}
+\section*{Zweiter Teil: Umfeld und Security Awareness Ist-Situation}
+\addcontentsline{toc}{section}{Zweiter Teil: Umfeld und Security Awareness Ist-Situation}
+\newpage
+\subfile{sections/Teil_2_Texte/Teil_2_Umfeld_IST_Situation}
+
+\newpage
+\vspace*{10cm}
+\setcounter{section}{3}
+\setcounter{subsection}{0}
+\section*{Dritter Teil: Ziele und Massnahmen}
+\addcontentsline{toc}{section}{Dritter Teil: Ziele und Massnahmen}
+\newpage
+\subfile{sections/Teil_3_Texte/Teil_3_Ziele_Massnahmen}
+
+\newpage
+\vspace*{10cm}
+\setcounter{section}{4}
+\setcounter{subsection}{0}
+\section*{Vierter Teil: Entwurf Security Awareness Programm}
+\addcontentsline{toc}{section}{Vierter Teil: Entwurf Security Awareness Programm}
+\newpage
+\subfile{sections/Teil_4_Texte/Teil_4_SA_Programm}
+
+\newpage
+\vspace*{10cm}
+\setcounter{section}{5}
+\setcounter{subsection}{0}
+\section*{Fünfter Teil: Fazit}
+\addcontentsline{toc}{section}{Fünfter Teil: Fazit}
+\newpage
+\subfile{sections/Teil_5_Texte/Teil_5_Fazit}
+
+
+%% - Do all the epilogue stuff
+%% - --------------------------------------
+
+\subfile{Epilog}
+
+\end{document}

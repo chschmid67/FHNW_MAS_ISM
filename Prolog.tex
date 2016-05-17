@@ -1,0 +1,51 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\subfile{sections/Preambel/motto}
+\newpage
+\subfile{sections/Preambel/impressum}
+
+%% - do not number this subsection, but put it in the TOC
+%% - --------------------------------------
+
+\newpage
+\subsection*{Ehrenwörtliche Erklärung}
+\addcontentsline{toc}{subsection}{Ehrenwörtliche Erklärung}
+\subfile{sections/Preambel/ehrenwort_erklaerung}
+
+%% - do not number this subsection, but put it in the TOC
+%% - --------------------------------------
+
+\newpage
+\subsection*{Vorwort}
+\addcontentsline{toc}{subsection}{Vorwort}
+\subfile{sections/Preambel/vorwort}
+
+%% - do not number this subsection, but put it in the TOC
+%% - --------------------------------------
+
+\newpage
+\subsection*{Management Summary}
+\addcontentsline{toc}{subsection}{Management Summary}
+\subfile{sections/Preambel/managementsummary}
+
+%% - Table of contents
+%% - --------------------------------------
+
+\newpage
+\addcontentsline{toc}{subsection}{Inhaltsverzeichnis}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+\tableofcontents
+
+%% - do not number this subsection, but put it in the TOC
+%% - --------------------------------------
+
+\newpage
+\subsection*{Einleitung}
+\addcontentsline{toc}{subsection}{Einleitung}
+\subfile{sections/Preambel/einleitung}
+
+\end{document}
+
