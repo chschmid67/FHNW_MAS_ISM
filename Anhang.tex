@@ -1,28 +1,42 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[main.tex]{subfiles}
 
 \begin{document}
 
-\blindtext
+%% - table metadata
+%% - --------------------------------------
 
 \begin{table}[h]
-\begin{tabular}{ |p{3cm}|p{4cm}|p{4cm}|p{3cm}|  }
+\centering
+\caption{Eingesetzte Software}
+\label{used-sw}
+
+%% - set width of 1st and 2nd column
+%% - --------------------------------------
+
+\begin{tabular}{ |p{3cm}|p{9cm}|p{3.5cm}| }
+
+%% - Header row with shadowing
+%% - --------------------------------------
+
 \hline
-\rowcolor{lightgray} \multicolumn{4}{|c|}{\bf Country List} \\
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Produkt} & \textbf{Verwendet für} & \textbf{Herstellerlink}\\ 
 \hline
-\bf Country Name or Area Name&\bf ISO ALPHA 2 Code &\bf ISO ALPHA 3 Code&\bf ISO numeric Code \\
-\hline
-\hline
-Afghanistan   & AF    &AFG&   004\\
-Aland Islands&   AX  & ALA   &248\\
-Albania &AL & ALB&  008\\
-Algeria    &DZ & DZA&  012\\
-American Samoa&   AS  & ASM&016\\
-Andorra& AD  & AND   &020\\
-Angola& AO  & AGO&024\\
-\hline
+
+%% - table data
+%% - --------------------------------------
+
+\textbf{WorkFlowy} & Themenstrukturierung, Entwurfsschreiben, Ideenspeicher & workflowy.com \\ \hline
+\textbf{ShareLatex} & Schreiben und Rendern der Masterarbeit mit \LaTeX & www.sharelatex.com \\ \hline
+\textbf{Zotero} & Verwaltung der Bibliografie & www.zotero.org \\ \hline
+\textbf{eSurvey Creator} & Entwicklung und Durchführung der Online-Umfrage & www.esurveycreator.com \\ \hline
+\textbf{GitHub} & Versionskontrolle für \LaTeX  Dokumente & github.com \\ \hline
+\textbf{Dropbox} & Dokumentenspeicher-Sicherheitskopie & www.dropbox.com \\ \hline
+
 \end{tabular}
-\caption{Coutry List sorted by ISO}
-\label{table:1}
 \end{table}
+
+
+
 
 \end{document}
