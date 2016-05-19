@@ -1,0 +1,100 @@
+
+%% - Define the document's geometry
+%% - --------------------------------------
+
+\geometry{a4paper, total={170mm,240mm}, headsep=5mm,left=25mm,top=30mm}
+
+
+%% - Define everything that has to do with arrays
+%% - 
+%% - Set space between array rows to 1.5 (default 1.0)
+%% - --------------------------------------
+
+\renewcommand{\arraystretch}{1.5}
+
+%% - define font (small) for "table" tables
+%% - --------------------------------------
+
+\floatsetup[table]{font=scriptsize}
+
+%% - Define Table of Contents Style
+%% - add 10pt of space after section entry in toc
+%% - --------------------------------------
+
+\renewcommand\cftsecafterpnum{\par\addvspace{10pt}}
+
+
+%% - Define the Paragraph indent (parindent)
+%% - and the Spacing between paragraphs (parskip)
+%% - Also set the linespacing
+%% - --------------------------------------
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+\renewcommand{\baselinestretch}{1.0}
+
+
+%% - 3
+%% - --------------------------------------
+
+\titlespacing{\section}{%
+  0pt}{%              left margin
+  0\baselineskip}{% space before (vertical)
+  0em}%               space after (horizontal)
+
+
+%% - 3.2
+%% - --------------------------------------
+
+\titlespacing{\subsection}{%
+  0pt}{%              left margin
+  0\baselineskip}{% space before (vertical)
+  1em}%               space after (horizontal)
+
+
+%% - 3.2.1
+%% - --------------------------------------
+
+\titlespacing{\subsubsection}{%
+  0pt}{%              left margin
+  0\baselineskip}{% space before (vertical)
+  0em}%               space after (horizontal)
+  
+
+\titlespacing{\paragraph}{%
+  0pt}{%              left margin
+  0\baselineskip}{% space before (vertical)
+  0em}%               space after (horizontal)
+  
+\titlespacing{\subparagraph}{%
+  0pt}{%              left margin
+  0\baselineskip}{% space before (vertical)
+  0em}%               space after (horizontal)
+  
+  
+
+%% - Set document Header and Footer fancystyle
+%% - Clear the header and footer
+%% - --------------------------------------
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+
+\fancyfoot[R]{\thepage}
+\fancyhead[L]{Security Awareness Next Generation}
+
+\renewcommand{\headrulewidth}{0pt} % draws the footer line
+\renewcommand{\footrulewidth}{0pt} % draws the footer line
+
+%% - Redefine plain page style, which is used 
+%% - for titlepage and chapter beginnings
+%% - to match fancy pagestyle
+%% - --------------------------------------
+
+\fancypagestyle{plain}{%
+    \renewcommand{\headrulewidth}{0pt}%
+    \fancyhf{}%
+    \fancyfoot[R]{\thepage}%
+    \fancyhead[L]{Security Awareness Next Generation}
+}

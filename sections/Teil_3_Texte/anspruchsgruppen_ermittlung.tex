@@ -1,0 +1,173 @@
+\paragraph*{Definition der Schutzbedarfskategorien}\mbox{}
+
+\begin{sloppypar}
+Die nachfolgend beschriebenen Schutzbedarfskategorien enstammen dem BSI.
+
+%% abkürzungsverzeichnis, BibliograFie
+
+\end{sloppypar}
+
+%% - table metadata
+%% - --------------------------------------
+
+\begin{table}[H]
+\centering
+\caption{Schutzbedarfsklassen}
+\label{schutzbedarfsklassen}
+
+%% - set width of columns
+%% - ---------------------------------------
+
+\begin{tabular}{ |p{4cm}|p{6cm}|{c}| }
+
+%% - Header row with shadowing
+%% - --------------------------------------
+
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Schutzbedarfsklasse} & \textbf{Ausprägung} & \textbf{Schutzbedarf-Faktor}\\ 
+\hline
+
+%% - table data
+%% - --------------------------------------
+
+\textbf{Tief} & Normaler Schutzbedarf & 1 \\ \hline
+\textbf{Mittel} & Erhöhter Schutzbedarf & 2  \\ \hline
+\textbf{Hoch} & Höchster Schutzbedarf & 3 \\ \hline
+
+\end{tabular}
+\end{table}
+
+\paragraph*{Berechnung des Schutzbedarfes}\mbox{}
+
+\begin{sloppypar}
+Für die festgelegten zugreifbaren Datenbestände der Anspruchsgruppen wird deren Schutzbedarf als Produkt von Vertraulichkeit und Integrität berechnet. Dieses Produkt wird zur Selektion der Anspruchsgruppen verwendet. Die Festlegung der Vertraulichkeits-, respektive der Integritätsklasse für die Datenbestände basiert auf einer Erst-Einschätzung welche vom Autor vorgenommen wurde; diese wurde aber im Verlauf dieser Arbeit anhand der durchgeführten Interviews kontinuierlich nachkalibriert.
+\end{sloppypar}
+
+%% - table metadata
+%% - --------------------------------------
+
+\begin{table}[H]
+\centering
+\caption{Schutzbedarfsberechnung Datenbestände }
+\label{schutzbedarf_datenbestände}
+
+%% - set width of columns
+%% - ---------------------------------------
+
+\begin{tabular}{ |l|l|{c}|{c}|{c}| }
+
+%% - Header row with shadowing
+%% - --------------------------------------
+
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Anspruchsgruppe} & \textbf{Zugreifbare Datenbestände} & \textbf{Vertraulichkeit} & \textbf{Integrität} & \textbf{Schutzbedarf}\\ 
+\hline
+
+%% - table data
+%% - --------------------------------------
+
+\textbf{Produktentwicklung} & Quellcode & Mittel & Hoch & 6\\ \hline
+\textbf{Gebäudemanagement} & Zutrittskontrolle & Mittel & Mittel & 4  \\ \hline
+\textbf{Marketing} & Firmenidentifikation & Mittel & Mittel & 4\\ \hline
+\textbf{Einkauf} & Lieferantendaten + Offerten & Tief & Tief & 1\\ \hline
+\textbf{Kommunkation} & Interne Mitarbeiterinformationen & Mittel & Mittel & 4\\ \hline
+\textbf{Personaldienst} & Personaldossiers & Hoch & Hoch & 9 \\ \hline
+\textbf{Verkauf} & Produkteofferten & Hoch & Mittel & 6\\ \hline
+\textbf{Verkaufsanbahnung} & Anonymisierte Produktdaten  & Mittel & Tief & 2\\ \hline
+\textbf{Finanzen} & Buchhaltungsdaten & Hoch & Hoch & 9\\ \hline
+\textbf{Qualitätssicherung} & Verfahrensbeschriebe  & Tief & Mittel & 2\\ \hline
+\textbf{Rechtsabteilung} & Verträge & Hoch & Hoch & 9\\ \hline
+\textbf{IT} &  Systempasswörter & Hoch & Hoch & 9\\ \hline
+\textbf{Schulung} & Prüfungsfragen & Mittel & Hoch & 6\\ \hline
+
+\end{tabular}
+\end{table}
+
+\newpage
+
+\paragraph*{Definition des Rastermodells}\mbox{}
+
+\begin{sloppypar}
+Nachfolgend wird der berechnete Schutzbedarf für die Anspruchsgruppen anhand eines Rastermodells dargestellt. Es wird die Selektionslinie bestimmt, anhand welcher die definitiven Anspruchsgruppen für die Datenerhebung festgelegt werden. 
+\end{sloppypar}
+
+\begin{sloppypar}
+Das Rastermodell für die Bestimmung der Anspruchsgruppen wird als eine Matrix mit 3 x 3 Elementen aufgebaut. Die horizontale Dimension der Matrix ist aus der Integritätsklasse, die vertikale Dimension der Matrix aus der Vertraulichkeitsklasse abgeleitet.
+\end{sloppypar}
+
+\subparagraph*{Festlegung der Selektionslinie}\mbox{}
+
+\begin{sloppypar}
+Die Selektionslinie wir im Modell wie folgt definiert: 2 < x, wobei x = berechneter Schutzbedarf
+\end{sloppypar}
+
+\begin{figure}[H]
+    \centering
+    \input{figures/tikz_raster_schutzbedarf}
+    \caption{Raster für Bestimmung der Anspruchsgruppen}
+    \label{fig:raster1}
+\end{figure}
+
+\newpage
+
+\paragraph*{Anwendung des Rastermodells}\mbox{}
+
+\blindtext
+
+\begin{figure}[H]
+    \input{figures/tikz_rasteranwendung}
+    \caption{Anwendung des Rasters auf Anspruchsgruppen}
+    \label{fig:raster2}
+\end{figure}
+
+\newpage
+
+\paragraph*{Selektion der definitiven Anspruchsgruppen}\mbox{}
+
+\begin{sloppypar}
+Nach der Anwendung des Rasters stehen die nachfolgend aufgeführten Anspruchsgruppen als Basis für die Erhebung der Zielpopulation.
+\end{sloppypar}
+
+%% - table metadata
+%% - --------------------------------------
+
+\begin{table}[H]
+\centering
+\caption{Definitive Anspruchsgruppen}
+\label{definitive_anspruchsgruppen}
+
+%% - set width of columns
+%% - ---------------------------------------
+
+\begin{tabular}{ |p{8cm}| }
+
+%% - Header row with shadowing
+%% - --------------------------------------
+
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Definitive Anspruchsgruppe} \\ 
+\hline
+
+%% - table data
+%% - --------------------------------------
+
+\textbf{Produktentwicklung}             \\ \hline
+\textbf{Gebäudemanagement}              \\ \hline
+\textbf{Marketing}                      \\ \hline
+\textbf{Kommunkation}                   \\ \hline
+\textbf{Personaldienst}                 \\ \hline
+\textbf{Verkauf}                        \\ \hline
+\textbf{Finanzen}                       \\ \hline
+\textbf{Rechtsabteilung}                \\ \hline
+\textbf{IT}                             \\ \hline
+\textbf{Schulung}                       \\ \hline
+
+\end{tabular}
+\end{table}
+
+\begin{sloppypar}
+Die Anspruchsgruppen "`Einkauf"', "`Verkaufsanbahnung"' und "`Qualitätssicherung"' wurden aufgrund ihrer Position unterhalb der Selektionslinie vom weiteren Verfahren ausgeschlossen.
+\end{sloppypar}

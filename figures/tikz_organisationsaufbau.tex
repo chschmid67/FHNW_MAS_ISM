@@ -1,0 +1,29 @@
+\begin{tikzpicture}[
+  auto, node distance = 0.4cm, thick,
+  every node/.style = {
+  rectangle, 
+  font = \sffamily, black,
+  top color = white!90!black, 
+  bottom color = white!90!black,
+  text width = 2.4cm, 
+  align = center, 
+  minimum height = 1cm }
+  ]
+  \node (GF) {\textbf{GF}\\Geschäftsführer};
+  \coordinate [below = 0.9cm of GF] (Mitte);
+  \coordinate [below = 1.6cm of GF] (Unten);
+  \node (Verwaltung) [left  = 2mm of Mitte]  {Verwaltung /\\ Büro};
+  \node (EDV)        [right = 2mm of Mitte]  {EDV \& QS};
+  \node (Bau)        [below = of Verwaltung] {Bau};
+  \node (Logistik)   [left  = of Bau]        {Logistik};
+  \node (Pflege)     [below = of EDV]        {Pflege};
+  \node (Ausbildung) [right = of Pflege]     {Ausbildung};
+  
+  \draw [black!100!black,thick]
+    (GF)    -- (Mitte) -- (Verwaltung)
+    (EDV)   -- (Mitte) -- (Unten) -| (Logistik)
+    (Unten) -| (Bau)
+    (Unten) -| (Pflege)
+    (Unten) -| (Ausbildung);
+    
+\end{tikzpicture}

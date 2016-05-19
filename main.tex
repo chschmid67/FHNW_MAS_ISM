@@ -20,23 +20,29 @@
 \usepackage{multirow}                           % - allow merging of fields of a table into one field
 \usepackage{longtable}                          % - define long tables span multiple pages
 \usepackage{floatrow}                           % - allow formatting of float values
-\usepackage{csquotes}
-\usepackage[backend=bibtex,style=alphabetic,sorting=ynt]{biblatex}
+\usepackage{csquotes}                           % - enable quoting style
+\usepackage[backend=bibtex,style=alphabetic,sorting=ynt]{biblatex} % - bibliography
 \usepackage{tabto}                              % - used in titlepage to align metadata
+\usepackage{booktabs}                           % - improve table commands
+\usepackage{titlesec}                           % - Select alternative section titles
 
-
-\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{matrix}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shadings}
 
 
 %% - Hyphenation rules
 %% - --------------------------------------
 
-\subfile{control/hyphenating}
+\include{control/hyphenating}
 
 %% - Acronyms & Glossaries
 %% - --------------------------------------
 
-\subfile{control/acronyms}
+\include{control/acronyms}
 
 %% - define where to look for images
 %% - --------------------------------------
@@ -48,64 +54,10 @@
 
 \addbibresource{Securityawareness.bib}
 
-%% - Define everything that has to do with arrays
-%% - 
-%% - Set space between array rows to 1.5 (default 1.0)
+%% - Define the document's geometry and formatting
 %% - --------------------------------------
 
-\renewcommand{\arraystretch}{1.5}
-
-%% - define font (small) for "table" tables
-%% - --------------------------------------
-
-\floatsetup[table]{font=scriptsize}
-
-
-%% - Define Table of Contents Style
-%% - add 10pt of space after section entry in toc
-%% - --------------------------------------
-
-\renewcommand\cftsecafterpnum{\par\addvspace{10pt}}
-
-%% - Define the document's geometry
-%% - --------------------------------------
-
-\geometry{a4paper, total={170mm,240mm}, headsep=5mm,left=25mm,top=30mm}
-
-%% - Define the Paragraph indent (parindent)
-%% - and the Spacing between paragraphs (parskip)
-%% - Also set the linespacing
-%% - --------------------------------------
-
-\setlength{\parindent}{0em}
-\setlength{\parskip}{1em}
-\renewcommand{\baselinestretch}{1.0}
-
-%% - Set document Header and Footer fancystyle
-%% - Clear the header and footer
-%% - --------------------------------------
-
-\pagestyle{fancy}
-\fancyhead{}
-\fancyfoot{}
-
-\fancyfoot[R]{\thepage}
-\fancyhead[L]{Security Awareness Next Generation}
-
-\renewcommand{\headrulewidth}{0pt} % draws the footer line
-\renewcommand{\footrulewidth}{0pt} % draws the footer line
-
-%% - Redefine plain page style, which is used 
-%% - for titlepage and chapter beginnings
-%% - to match fancy pagestyle
-%% - --------------------------------------
-
-\fancypagestyle{plain}{%
-    \renewcommand{\headrulewidth}{0pt}%
-    \fancyhf{}%
-    \fancyfoot[R]{\thepage}%
-    \fancyhead[L]{Security Awareness Next Generation}
-}
+\include{control/formats}
 
 %% - --------------------------------------
 %% - Here the document begins
@@ -113,28 +65,10 @@
 
 \begin{document}
 
-%% - Define the document title page
+%% - create the title page
 %% - --------------------------------------
 
-\begin{titlepage}
-\includegraphics[width=0.45\textwidth]{FHNW_HW_10mm.jpg}\par
-\vspace{7cm}
-{\Huge\bfseries Security Awareness \par}
-{\large\bfseries Sicherheitsbewusstes Verhalten in einem international tätigen \\Unternehmen: Von OLDSCHOOL zu NEXT GENERATION  \par}
-\vspace{4.5cm}
-{\large\bfseries Master Thesis MAS Information Systems Management 2016\par}
-\vspace{1.0cm}
-\TabPositions{4cm}
-{\normalsize Auftraggeberschaft:    \tab{Aquina AG}\\}
-{\normalsize Autor:                 \tab{Christoph Schmid} \\}
-{\normalsize Dozent:                \tab{Marco Marchesi, FHNW} \\}
-{\normalsize Ort, Datum:            \tab{Pfungen, September 2016}}
-\vspace{2.0cm}
-\vfill
-%% - Bottom of the title page
-%% - --------------------------------------
-{\small Erstellt mit \LaTeX}
-\end{titlepage}
+\input{sections/Prolog/titelseite}
 
 %% - Define simple footer for prolog stuff 
 %% - use Roman page numbering (Big roman letters)
@@ -147,7 +81,7 @@
 %% - --------------------------------------
 
 \newpage
-\subfile{Prolog}
+\subfile{sections/Prolog/Teil_Prolog_texte}
 
 %% - use arabic page numbering
 %% - reset counter of page to 1 
@@ -214,6 +148,6 @@
 %% - Do all the epilogue stuff
 %% - --------------------------------------
 
-\subfile{Epilog}
+\subfile{sections/Epilog/Teil_Epilog_texte}
 
 \end{document}

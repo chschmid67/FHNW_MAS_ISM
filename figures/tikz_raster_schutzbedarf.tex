@@ -1,0 +1,66 @@
+\begin{tikzpicture}
+
+%% - Draw grid
+%% - --------------------------------------
+
+\draw[step=2cm,gray,very thin] (0,0) grid (6,6);
+
+%% - Draw Grid Ticks
+%% - --------------------------------------
+
+\foreach \x in {2,4}
+    \draw (\x cm,3pt) -- (\x cm,-3pt);
+
+\foreach \y in  {2,4}
+    \draw (3pt,\y cm) -- (-3pt,\y cm);
+
+%% - Draw Arrows
+%% - --------------------------------------
+
+\draw [decoration={markings,mark=at position 1 with
+    {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (0,0) -- (6,0);
+
+\draw [decoration={markings,mark=at position 1 with
+    {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (0,0) -- (0,6);
+    
+%% - label x- and y-Axis
+%% - --------------------------------------
+
+\node[scale=1.2] at (8,0) {Vertraulichkeit};
+\node[scale=1.2] at (0,6.5) {Integrität};
+
+%% - Draw x- and y- Axis scale
+%% - --------------------------------------
+
+\node[draw,scale=1,shape=rectangle,draw=none, ] at (1,-0.5) {Tief (1)};
+\node[draw,scale=1,shape=rectangle,draw=none] at (3,-0.5) {Mittel (2)};
+\node[draw,scale=1,shape=rectangle,draw=none] at (5,-0.5) {Hoch (3)};
+
+\node[draw,scale=1,shape=rectangle,draw=none, rotate=90] at (-0.5,1) {Tief (1)};
+\node[draw,scale=1,shape=rectangle,draw=none, rotate=90] at (-0.5,3) {Mittel (2)};
+\node[draw,scale=1,shape=rectangle,draw=none, rotate=90] at (-0.5,5) {Hoch (3)};
+
+%% - Draw visible nodes in grid
+%% - --------------------------------------
+
+\node[draw,scale=2,shape=rectangle,draw=none,gray] at (1,1) {1};
+\node[draw,scale=2,shape=rectangle,draw=none,gray] at (3,1) {2};
+\node[draw,scale=2,shape=rectangle,draw=none,gray] at (5,1) {3};
+
+\node[draw,scale=2,shape=rectangle,draw=none,gray] at (1,3) {2};
+\node[draw,scale=2,shape=rectangle,draw=none,gray] at (3,3) {4};
+\node[draw,scale=2,shape=rectangle,draw=none,gray] at (5,3) {6};
+
+\node[draw,scale=2,shape=rectangle,draw=none,gray] at (1,5) {3};
+\node[draw,scale=2,shape=rectangle,draw=none,gray] at (3,5) {6};
+\node[draw,scale=2,shape=rectangle,draw=none,gray] at (5,5) {9};
+
+%% - Draw selection line and label
+%% - --------------------------------------
+
+\draw [red, ultra thick, dashed] (-1,4) -- (2,4) -- (2,2) -- (4,2) -- (4,0);
+
+\node[draw,scale=1,shape=rectangle,draw=none, red] at (-2.5,4) {Selektionslinie};
+
+
+\end{tikzpicture}
