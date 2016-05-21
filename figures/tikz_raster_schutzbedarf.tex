@@ -26,19 +26,19 @@
 %% - label x- and y-Axis
 %% - --------------------------------------
 
-\node[scale=1.2] at (8,0) {Vertraulichkeit};
-\node[scale=1.2] at (0,6.5) {Integrität};
+\node[scale=1.0] at (7.7,0) {Vertraulichkeit};
+\node[scale=1.0] at (0,6.5) {Integrität};
 
 %% - Draw x- and y- Axis scale
 %% - --------------------------------------
 
-\node[draw,scale=1,shape=rectangle,draw=none, ] at (1,-0.5) {Tief (1)};
-\node[draw,scale=1,shape=rectangle,draw=none] at (3,-0.5) {Mittel (2)};
-\node[draw,scale=1,shape=rectangle,draw=none] at (5,-0.5) {Hoch (3)};
+\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (1,-0.2) {normal (1)};
+\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (3,-0.2) {hoch (2)};
+\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (5,-0.2) {sehr hoch (3)};
 
-\node[draw,scale=1,shape=rectangle,draw=none, rotate=90] at (-0.5,1) {Tief (1)};
-\node[draw,scale=1,shape=rectangle,draw=none, rotate=90] at (-0.5,3) {Mittel (2)};
-\node[draw,scale=1,shape=rectangle,draw=none, rotate=90] at (-0.5,5) {Hoch (3)};
+\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,1) {normal (1)};
+\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,3) {hoch (2)};
+\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,5) {sehr hoch (3)};
 
 %% - Draw visible nodes in grid
 %% - --------------------------------------
@@ -59,8 +59,6 @@
 %% - --------------------------------------
 
 \draw [red, ultra thick, dashed] (-1,4) -- (2,4) -- (2,2) -- (4,2) -- (4,0);
-
 \node[draw,scale=1,shape=rectangle,draw=none, red] at (-2.5,4) {Selektionslinie};
-
 
 \end{tikzpicture}

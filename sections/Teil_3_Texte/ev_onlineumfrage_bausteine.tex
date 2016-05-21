@@ -1,0 +1,86 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+\subparagraph*{Grundstruktur}\mbox{}
+
+\begin{sloppypar}
+Die Grundstruktur der Onlinebefragung setzt sich aus den nachfolgenden Umfrage-Bereichen zusammen. Jeder dieser Umfrage-Bereiche beinhaltet einen Fragensatz.
+
+\begin{itemize}
+  \item Allgemeine Angaben
+  \item Eigene Meinung zu Security Awareness
+  \item Security Awareness im privaten Umfeld
+  \item Security Awareness im Unternehmen
+  \item Kenntnisse zu Sicherheitsthemen
+  \item Erwartungshaltung Security Awareness
+\end{itemize}
+ 
+Hinter jeder Frage in den Umfrage-Bereichen steht eine Absicht, d.h. eine Erklärung dafür, was mit der Frage erreicht / im tieferen Sinne abgefragt werden soll. Diese Absichtserklärung ist bei der jeweils entsprechenden Frage hinterlegt. Für die Beantwortung der Fragen werden Antworttypen definiert und diese dann jeweils einer Frage zugeordnet. Die Antworttypen dienen der Standardisierung des Fragebogens und sollen die spätere Auswertung erleichtern. Jede Frage lässt sich einem (oder in einigen Fällen auch weiteren) der zuvor definierten Themenbereichen zuordnen.
+
+Um die Mehrsprachigkeit und somit auch die Interkulturalität abzudecken, wird die Online-Umfrage in Deutsch und Englisch zur Verfügung gestellt.
+
+\end{sloppypar}
+
+\subparagraph*{Beschreibung der Umfragebereiche}\mbox{}
+
+%% - table metadata
+%% - --------------------------------------
+
+\sloppy 
+
+\begin{table}[H]
+\tablefontsize	
+\centering
+\caption{Beschreibung der Umfragebereiche}
+\label{Beschreibung der Umfragebereiche}
+\begin{tabular}{ |p{3cm}|p{12.5cm}|}
+
+\hline
+\tableheaderbgcolor
+\textbf{Umfragebereiche} & \textbf{Inhaltsbeschreibung} \\ 
+\hline
+\textbf{Allgemeine \newline Angaben}                &  Mit dem ersten Abschnitt "Allgemeine Angaben zu Dir selber" sollen bei der späteren Auswertung der Fragen mögliche Korrelationen zwischen Rollen, Abteilungen, Ausbildungen, kulturelle Hintergründe aufgezeigt werden können. \\
+\hline
+\textbf{Eigene Meinung zu \newline Security Awareness}                &  Im Abschnitt "Deine Meinung zu Security Awareness" soll die befragte Person den Begrif "Security Awareness" aus ihrer persönlichen Perspektive und aus ihrer Erfahrung heraus beschreiben.  \\
+\hline
+\textbf{Security Awareness \newline im privaten Umfeld}                &  Der Abschnitt "Security bei Dir zu Hause und in Deinem privaten Umfeld" dient dazu, das Sicherheitsverhalten der befragten Person in ihrer heimischen / familiären Umgebung und in ihrem Verwandten- / Freundeskreis zu erfragen. Die Absicht ist, damit sicherndes Verhalten vom sozialen Umfeld in die Firmenumgebung zu transportieren. \\
+\hline
+\textbf{Security Awareness \newline im Unternehmen}                &  Im Abschnitt "Deine Beurteilung von Security Awareness im Unternehmen" geht es darum, die aktuelle Wahrnehmung der sichernden Elemente in der Firma (sicherheitsbeauftragte Personen, Verfahren bei Sicherheitsvorfällen oder Stand des Bewusstseins im Umgang mit Firmendaten) abzufragen. \\
+\hline
+\textbf{Kenntnisse zu \newline Sicherheitsthemen}                &  Der Abschnitt "Wie schätzst Du Deine Kenntinsse zu den folgenden Sicherheitsthemen ein?" soll nicht als Prüfungsblock für Wissen / nicht Wissen wahrgenommen werden, sondern es soll der befragten Person die Möglichkeit geboten werden, zu aktuellen Sicherheitsthemen / Bedrohungsformen ein eventuelles Informationsbedürfnis anzuzeigen. \\
+\hline
+\textbf{Erwartungshaltung \newline Security Awareness}                &  Der letzte Abschnitt "Beschreibe Deine Erwartungshaltung bezüglich Security Awareness" ist als Sammelgefäss zu verstehen, in welches die befragten Personen ihre Anregungen, Ideen, Wünsche oder durch ihre Berufstätigkeit an anderen Orten bereits gesehene Security Awareness Massnahmen anregen können. \\
+\hline
+
+\end{tabular}
+\end{table}
+
+\subparagraph*{Definition der Antworttypen}\mbox{}
+
+%% - table metadata
+%% - --------------------------------------
+
+\sloppy 
+
+\begin{table}[H]
+\tablefontsize	
+\centering
+\caption{Definition der Antworttypen}
+\label{Definition der Antworttypen}
+\begin{tabular}{ |p{2cm}|p{8cm}|p{5cm}|}
+
+\hline
+\tableheaderbgcolor
+\textbf{Antworttyp} & \textbf{Beschreibung} & \textbf{Kardinalität}\\ 
+\hline
+\textbf{Typ A} &  Einschätzungsfrage mit unscharfer Bereichsangabe & "`Trifft überhaupt nicht zu"' \newline bis \newline "`Trifft voll zu"' \\
+\hline
+\textbf{Typ B} &  Dieser Antworttyp wird bei Fragen verwendet, die klar mit Ja oder Nein beantwortet werden können & Ja \newline Nein \newline unbekannt oder sagt mir nichts \\
+\hline
+\textbf{Typ C} &  Dieser Antworttyp ermöglicht der befragten Person ihre Antwort frei zu formulieren. & Freie Textantwort \\
+\hline
+
+\end{tabular}
+\end{table}
+
+\end{document}

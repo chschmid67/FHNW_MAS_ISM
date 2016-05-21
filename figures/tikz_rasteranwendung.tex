@@ -26,40 +26,24 @@
 %% - label x- and y-Axis
 %% - --------------------------------------
 
-\node[scale=1.0] at (7.5,0) {Vertraulichkeit};
+\node[scale=1.0] at (7.7,0) {Vertraulichkeit};
 \node[scale=1.0] at (0,6.5) {Integrität};
 
 %% - Draw x- and y- Axis scale
 %% - --------------------------------------
 
-\node[draw,scale=1,shape=rectangle,draw=none, ] at (1,-0.5) {Tief};
-\node[draw,scale=1,shape=rectangle,draw=none] at (3,-0.5) {Mittel};
-\node[draw,scale=1,shape=rectangle,draw=none] at (5,-0.5) {Hoch};
+\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (1,-0.2) {normal};
+\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (3,-0.2) {hoch};
+\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (5,-0.2) {sehr hoch};
 
-\node[draw,scale=1,shape=rectangle,draw=none, rotate=90] at (-0.5,1) {Tief};
-\node[draw,scale=1,shape=rectangle,draw=none, rotate=90] at (-0.5,3) {Mittel};
-\node[draw,scale=1,shape=rectangle,draw=none, rotate=90] at (-0.5,5) {Hoch};
-
-%% - Draw visible nodes in grid
-%% - --------------------------------------
-
-%\node[draw,scale=2,shape=rectangle,draw=none,gray] at (1,1) {1};
-%\node[draw,scale=2,shape=rectangle,draw=none,gray] at (3,1) {2};
-%\node[draw,scale=2,shape=rectangle,draw=none,gray] at (5,1) {3};
-
-%\node[draw,scale=2,shape=rectangle,draw=none,gray] at (1,3) {2};
-%\node[draw,scale=2,shape=rectangle,draw=none,gray] at (3,3) {4};
-%\node[draw,scale=2,shape=rectangle,draw=none,gray] at (5,3) {6};
-
-%\node[draw,scale=2,shape=rectangle,draw=none,gray] at (1,5) {3};
-%\node[draw,scale=2,shape=rectangle,draw=none,gray] at (3,5) {6};
-%\node[draw,scale=2,shape=rectangle,draw=none,gray] at (5,5) {9};
+\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,1) {normal};
+\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,3) {hoch};
+\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,5) {sehr hoch};
 
 %% - Draw selection line and label
 %% - --------------------------------------
 
 \draw [red, ultra thick, dashed] (0,4) -- (2,4) -- (2,2) -- (4,2) -- (4,0);
-%\node[draw,scale=1,shape=rectangle,draw=none, red] at (-2.5,4) {Selektionslinie};
 
 %% - Add datapoints
 %% - --------------------------------------
@@ -81,7 +65,7 @@
 %% - legend
 %% - --------------------------------------
 
-\matrix  [matrix of nodes,row sep=1mm,column 1/.style={nodes={circle,scale=0.5,draw,minimum width=1em}},column 2/.style={right,font=\footnotesize}] at (13,3)
+\matrix  [matrix of nodes,row sep=1mm,column 1/.style={nodes={circle,scale=0.5,draw,minimum width=1em}},column 2/.style={right,font=\footnotesize}] at (12,3)
 {
 A   & Produktentwicklung \\
 B   & Gebäudemanagement \\

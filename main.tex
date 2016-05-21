@@ -25,14 +25,19 @@
 \usepackage{tabto}                              % - used in titlepage to align metadata
 \usepackage{booktabs}                           % - improve table commands
 \usepackage{titlesec}                           % - Select alternative section titles
+\usepackage{amsmath}                            % - used for math expressions
 
-\usepackage{tikz}
+\usepackage{tikz}                               % - the TikZ drawing package and its used libraries
 \usetikzlibrary{arrows}
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{matrix}
 \usetikzlibrary{positioning}
 \usetikzlibrary{shadings}
 
+%% - redefined or new commands
+%% - --------------------------------------
+
+\include{control/commands}
 
 %% - Hyphenation rules
 %% - --------------------------------------
@@ -41,8 +46,7 @@
 
 %% - Acronyms & Glossaries
 %% - --------------------------------------
-
-\include{control/acronyms}
+\input{control/acronyms.tex}
 
 %% - define where to look for images
 %% - --------------------------------------
