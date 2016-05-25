@@ -3,65 +3,8 @@
 %% - packages definitions
 %% - --------------------------------------
 
-\usepackage[utf8]{inputenc}                     % - direct usage of ä,ö,ü possible
-\usepackage[T1]{fontenc}                        % - fonts 256 chars
-\usepackage[ngerman]{babel}                     % - new greman writing rules since 2006
-\usepackage[acronym,nonumberlist]{glossaries}   % - leave out the page numbers
-\usepackage{subfiles}                           % - enable usage of subfiles
-\usepackage{blindtext}                          % - provide ability to generate blind text
-\usepackage{fancyhdr}                           % - use fancy package for fancy pages, header, etc.
-\usepackage{graphicx}                           % - provide graphics environment
-\usepackage{array}                              % - next package must be [table]{xcolor} 
-\usepackage[table]{xcolor}                      % - previous package must be {array}
-\usepackage{tocloft}                            % - controlling the design of the TOC
-\usepackage{geometry}                           % - specify document margins and size
-\usepackage{hyphenat}                           % - global hyphenation rules
-\usepackage[font=scriptsize]{caption}           % - set fontsize of figure captions
-\usepackage{multirow}                           % - allow merging of fields of a table into one field
-\usepackage{longtable}                          % - define long tables span multiple pages
-\usepackage{floatrow}                           % - allow formatting of float values
-\usepackage{csquotes}                           % - enable quoting style
-\usepackage[backend=bibtex,style=alphabetic,sorting=ynt]{biblatex} % - bibliography
-\usepackage{tabto}                              % - used in titlepage to align metadata
-\usepackage{booktabs}                           % - improve table commands
-\usepackage{titlesec}                           % - Select alternative section titles
-\usepackage{amsmath}                            % - used for math expressions
-
-\usepackage{tikz}                               % - the TikZ drawing package and its used libraries
-\usetikzlibrary{arrows}
-\usetikzlibrary{decorations.markings}
-\usetikzlibrary{matrix}
-\usetikzlibrary{positioning}
-\usetikzlibrary{shadings}
-
-%% - redefined or new commands
-%% - --------------------------------------
-
-\include{control/commands}
-
-%% - Hyphenation rules
-%% - --------------------------------------
-
-\include{control/hyphenating}
-
-%% - Acronyms & Glossaries
-%% - --------------------------------------
-\input{control/acronyms.tex}
-
-%% - define where to look for images
-%% - --------------------------------------
-
-\graphicspath{ {figures/}{../figures/} }
-
-%% - set bibliography file
-%% - --------------------------------------
-
-\addbibresource{Securityawareness.bib}
-
-%% - Define the document's geometry and formatting
-%% - --------------------------------------
-
-\include{control/formats}
+\usepackage{import}
+\usepackage{mas_ism}
 
 %% - --------------------------------------
 %% - Here the document begins

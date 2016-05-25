@@ -1,0 +1,168 @@
+%% - define all packages needed
+%% - and do some configuration stuff
+%% -
+%% - --------------------------------------
+
+\ProvidesPackage{mas_ism}
+
+\usepackage[utf8]{inputenc}                     % - direct usage of ä,ö,ü possible
+\usepackage[T1]{fontenc}                        % - fonts 256 chars
+\usepackage[ngerman]{babel}                     % - new greman writing rules since 2006
+\usepackage[acronym,nonumberlist]{glossaries}   % - leave out the page numbers
+\usepackage{subfiles}                           % - enable usage of subfiles
+\usepackage{blindtext}                          % - provide ability to generate blind text
+\usepackage{fancyhdr}                           % - use fancy package for fancy pages, header, etc.
+\usepackage{graphicx}                           % - provide graphics environment
+\usepackage{array}                              % - next package must be [table]{xcolor} 
+\usepackage[table]{xcolor}                      % - previous package must be {array}
+\usepackage{tocloft}                            % - controlling the design of the TOC
+\usepackage{geometry}                           % - specify document margins and size
+\usepackage{hyphenat}                           % - global hyphenation rules
+\usepackage[font=scriptsize]{caption}           % - set fontsize of figure captions
+\usepackage{multirow}                           % - allow merging of fields of a table into one field
+\usepackage{longtable}                          % - define long tables span multiple pages
+\usepackage{floatrow}                           % - allow formatting of float values
+\usepackage{csquotes}                           % - enable quoting style
+\usepackage[backend=bibtex,style=alphabetic,sorting=ynt]{biblatex} % - bibliography
+\usepackage{tabto}                              % - used in titlepage to align metadata
+\usepackage{booktabs}                           % - improve table commands
+\usepackage{titlesec}                           % - Enabling to select alternative section titles
+\usepackage{amsmath}                            % - used for math expressions
+\usepackage{tablefootnote}                      % - handling of footnotes in tables
+
+\usepackage{tikz}                               % - the TikZ drawing package and its used libraries
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{matrix}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shadings}
+
+%% - Define the document's geometry
+%% - --------------------------------------
+
+\geometry{a4paper, total={170mm,240mm}, headsep=5mm,left=25mm,top=30mm}
+
+%% - Hyphenation rules
+%% - --------------------------------------
+
+\input{control/hyphenating}
+
+%% - Acronyms & Glossaries
+%% - --------------------------------------
+
+\input{control/acronyms.tex}
+
+%% - define where to look for images
+%% - --------------------------------------
+
+\graphicspath{ {figures/}{../figures/} }
+
+%% - set bibliography file
+%% - --------------------------------------
+
+\addbibresource{Securityawareness.bib}
+
+%% - redefined or new commands
+%% - --------------------------------------
+
+%% - Set the fontsize for tables
+%% - --------------------------------------
+
+\newcommand{\tablefontsize}{\scriptsize}
+
+%% - Set the background of table header rows
+%% - --------------------------------------
+
+\newcommand{\tableheaderbgcolor}{\rowcolor[HTML]{C0C0C0}}
+
+%% - Define everything that has to do with arrays
+%% - 
+%% - Set space between array rows to 1.5 (default 1.0)
+%% - --------------------------------------
+
+\renewcommand{\arraystretch}{1.5}
+
+%% - define font (small) for "table" tables
+%% - --------------------------------------
+
+\floatsetup[table]{font=scriptsize}
+
+%% - Define Table of Contents Style
+%% - add 10pt of space after section entry in toc
+%% - --------------------------------------
+
+\renewcommand\cftsecafterpnum{\par\addvspace{10pt}}
+
+%% - Control the Paragraph indent (parindent)
+%% - and the Spacing between paragraphs (parskip)
+%% - Also set the linespacing
+%% - --------------------------------------
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+\renewcommand{\baselinestretch}{1.0}
+
+%% - Control the titlespacing
+%% - --------------------------------------
+
+%% - 3
+%% - --------------------------------------
+
+\titlespacing{\section}{%
+  0pt}{%              left margin
+  0\baselineskip}{% space before (vertical)
+  0em}%               space after (horizontal)
+
+%% - 3.2
+%% - --------------------------------------
+
+\titlespacing{\subsection}{%
+  0pt}{%              left margin
+  0\baselineskip}{% space before (vertical)
+  1em}%               space after (horizontal)
+
+%% - 3.2.1
+%% - --------------------------------------
+
+\titlespacing{\subsubsection}{%
+  0pt}{%              left margin
+  0\baselineskip}{% space before (vertical)
+  0em}%               space after (horizontal)
+  
+
+\titlespacing{\paragraph}{%
+  0pt}{%              left margin
+  0\baselineskip}{% space before (vertical)
+  0em}%               space after (horizontal)
+  
+\titlespacing{\subparagraph}{%
+  0pt}{%              left margin
+  0\baselineskip}{% space before (vertical)
+  0em}%               space after (horizontal)
+  
+  
+%% - Set document Header and Footer fancystyle
+%% - Clear the header and footer
+%% - --------------------------------------
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+
+\fancyfoot[R]{\thepage}
+\fancyhead[L]{Security Awareness Next Generation}
+
+\renewcommand{\headrulewidth}{0pt} % draws the footer line
+\renewcommand{\footrulewidth}{0pt} % draws the footer line
+
+%% - Redefine plain page style, which is used 
+%% - for titlepage and chapter beginnings
+%% - to match fancy pagestyle
+%% - --------------------------------------
+
+\fancypagestyle{plain}{%
+    \renewcommand{\headrulewidth}{0pt}%
+    \fancyhf{}%
+    \fancyfoot[R]{\thepage}%
+    \fancyhead[L]{Security Awareness Next Generation}
+}

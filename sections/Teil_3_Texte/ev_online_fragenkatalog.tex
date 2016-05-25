@@ -1,0 +1,284 @@
+\documentclass[../../main.tex]{subfiles}
+
+
+\begin{document}
+
+\paragraph*{Abschnitt Online-Umfrage: Allgemeine Angaben}\mbox{}
+
+\begin{sloppypar}
+Mittels dieser Fragen soll ein Profil zu den hinterlegten Antworten definiert werden können. Beispielsweise soll damit bei einer späteren Auswertung ersichtlich werden, welche Rollen bereits ein Security Awareness Verständnis haben und welche eher nicht, oder ob sich die Anzahl Jahre in der Branche oder dem Betrieb positiv oder negativ auf das Sicherheitsverhalten auswirkt.
+
+Die Frage nach der Herkunft hat bei der Auswertung keinen beeinflussenden Charakter, sie wird bei der Umsetzung der späteren Massnahmen aber wichtig für die Art und Weise wie diese transportiert werden müssen.
+
+Die ID's der Fragen zu diesem Bereiche werden aus dem Präfix "`P"' für "`Persönlich"' und der fortlaufenden Fragenummer gebildet.
+\end{sloppypar}
+
+%% - table metadata
+%% - --------------------------------------
+
+\sloppy 
+
+\begin{table}[H]
+\tablefontsize	
+\centering
+\caption{Abschnitt Online-Umfrage: Allgemeine Angaben}
+\label{Allgemeine Angaben}
+\begin{tabular}{ |p{10cm}|p{4cm}|c|}
+
+\hline
+\tableheaderbgcolor
+\textbf{Fragestellung} & \textbf{Kardinalität} & \textbf{Frage-ID}\\ 
+\hline
+Welches ist Deine Rolle im Unternehmen? &  Teammitglied \newline Teamleiter \newline Manager & P1 \\
+
+\hline
+In welchem Breich arbeitest Du? & Produktion \newline Verkauf \newline IT & P2 \\
+\hline
+
+Wie lange arbeitest Du für das Unternehmen? & Angabe Anzahl Jahre & P3 \\
+\hline
+
+Wie lange arbeitest Du in Deiner Branche? & Angabe Anzahl Jahre & P4 \\
+\hline
+
+Welcher entspricht Deinem höchsten Schulabschluss?\tablefootnote{Abschlussbezeichnungen in Anlehung an \cite{bundesamt_fur_statistik_bfs_statistik_2015}} & Kein Abschluss \newline Berufslehre \newline Höhere Berufsbildung \newline Hochschule & P5 \\
+
+\hline
+
+In welcher Region\tablefootnote{Regionenbezeichnungen gemäss \cite{united_nations_united_2013}} bist Du aufgewachsen? & Afrika \newline Amerika \newline Asien \newline Europa \newline Ozeanien & P6 \\
+
+\hline
+
+\end{tabular}
+\end{table}
+
+
+%\newpage
+\paragraph*{Eigene Meinung zu Security Awareness}\mbox{}
+
+\begin{sloppypar}
+Die ID's der Fragen zu diesem Bereiche werden aus dem Präfix "`F"' für "`Freie Antwort"' und der fortlaufenden Fragenummer gebildet.
+\end{sloppypar}
+
+%% - table metadata
+%% - --------------------------------------
+
+\sloppy 
+
+\begin{table}[H]
+\tablefontsize	
+\centering
+\caption{Abschnitt Online-Umfrage: Eigene Meinung zu Security Awareness}
+\label{Eigene Meinung zu Security Awareness}
+\begin{tabular}{ |p{5.5cm}|p{5.5cm}|c|p{2.5cm}|c|}
+
+\hline
+\tableheaderbgcolor
+\textbf{Fragestellung} & \textbf{Absicht} & \textbf{Typ} & \textbf{Themenbereich} & \textbf{ID}\\ 
+\hline
+Was bedeutet der Begriff "`Security Awareness"' für Dich persönlich? &  Die Frage zielt darauf ab, stereotype abzufragen und (in leichter Form) die Erwartungshaltung zu bedienen. Diese Frage wird bewusst am Anfang des Fragebogens gestellt, um der befragten Person das Interesse an ihrer persönlichen Sicht der Dinge zu signalisieren. & C & nicht bestimmt & T7 \\
+\hline
+
+\end{tabular}
+\end{table}
+
+
+
+\paragraph*{Abschnitt Online-Umfrage: Security Awareness im privaten Umfeld}\mbox{}
+
+\begin{sloppypar}
+Die ID's der Fragen zu diesem Bereiche werden aus dem Präfix "`S"' für "`Soziales Umfeld"' und der fortlaufenden Fragenummer gebildet.
+\end{sloppypar}
+
+%% - table metadata
+%% - --------------------------------------
+
+\sloppy 
+
+\begin{table}[H]
+\tablefontsize	
+\centering
+\caption{Abschnitt Online-Umfrage: Security Awareness im privaten Umfeld}
+\label{Security Awareness im privaten Umfeld}
+\begin{tabular}{ |p{5.5cm}|p{5.5cm}|c|p{2.5cm}|c|}
+
+\hline
+\tableheaderbgcolor
+\textbf{Fragestellung} & \textbf{Absicht} & \textbf{Typ} & \textbf{Themenbereich} & \textbf{ID}\\ 
+\hline
+Ich verwende eine Firewall und einen Virenscanner mit aktueller Virensignaturdatei &  Sind diese Technologien bekannt und privat auch im Einsatz? & B & USERTOOLS & S8 \\
+\hline
+
+Ich lasse neu verfügbare Betriebssystem- und Applikationspatches automatisch installieren &  Weiss die Person, dass dieser Mechanismus existiert und hat sie ihn aktiviert? & B & USERTOOLS & S9 \\
+\hline
+
+Ich benutze auf meinem eigenen Rechner das Administratorenkonto nur für Betriebssystemupdates und Softwareinstallationen &  Ist sich die Person darüber bewusst, dass mit einem priviligiertes Benutzerkonto gewisse Risiken verbunden sind? & B & DEVICESEC & S10 \\
+\hline
+
+Ich weiss, was ein sicheres Passwort ist und wie es erzeugt wird &  Ist sich die Person der Passwortproblematik (Passwortlänge, Komplexität, Methoden zur Erzeugung) bewusst? & A & DEVICESEC \newline WPLACESEC & S11 \\
+\hline
+
+Ich weiss, woran ich erkennen kann dass mein Computer eventuell infiziert ist &  Beobachtet die Person das Verhalten ihres Rechners und stellt sie Unregelmässigkeiten fest (z.B. längere Aufstartzeiten, plötzlich erhöhter Speicherbedarf, unbekannte Software, etc.)? & A & KNOWHOW & S12 \\
+\hline
+
+Ich weiss, wie ich meinen Partner / Partnerin bei der Internetnutzung schützen kann &  Ist sich die Person über die Gefahren der Internetnutzung bewusst und hat sie (technische oder soziologische) Massnahmen getroffen um ihre Partner / Partnerin zu schützen? & A & SOCIAL & S13 \\
+\hline
+
+Ich weiss, wie ich meine Kinder bei der Internetnutzung schützen kann &  Ist sich die Person über die Gefahren der Internetnutzung bewusst und hat sie (technische oder soziologische) Massnahmen getroffen um Kinder zu schützen? & A & SOCIAL & S14 \\
+\hline
+
+Ich unterstütze meine Eltern / Verwandten / Freunde bei der Computernutzung und erkläre ihnen auch die wichtigsten Verhaltensweisen beim Benutzen des Internets &  Vermittelt die Person auch ausserhalb ihrer Kernfamilie Wissen über Computer- und Internetprobleme an nicht-IT affine Personenkreise? & A & SOCIAL & S15 \\
+\hline
+
+Was würdest Du bei Dir zu Hause bezüglich Security als die grösste Risikoquelle identifizieren? &  Ist sich die Person der Sicherheitsthematik in ihrem privaten Ökosystem bewusst und hat sie sich darüber Gedanken gemacht, welchen Risiken dieses ausgesetzt ist und wurde das grösste Risiko schon identifiziert? & C & nicht bestimmt & S16 \\
+\hline
+
+\end{tabular}
+\end{table}
+
+
+
+\paragraph*{Abschnitt Online-Umfrage: Security Awareness im Unternehmen}\mbox{}
+
+\begin{sloppypar}
+Die ID's der Fragen zu diesem Bereiche werden aus dem Präfix "`U"' für "`Unternehmen"' und der fortlaufenden Fragenummer gebildet.
+\end{sloppypar}
+
+%% - table metadata
+%% - --------------------------------------
+
+\sloppy 
+
+\begin{table}[H]
+\tablefontsize	
+\centering
+\caption{Abschnitt Online-Umfrage: Security Awareness im Unternehmen}
+\label{Security Awareness im Unternehmen}
+\begin{tabular}{ |p{5.5cm}|p{5.5cm}|c|p{2.5cm}|c|}
+
+\hline
+\tableheaderbgcolor
+\textbf{Fragestellung} & \textbf{Absicht} & \textbf{Typ} & \textbf{Themenbereich} & \textbf{ID}\\ 
+\hline
+Ich schätze meinen Firmencomputer als sicher ein & Es soll das gefühlte Vertrauen in das Arbeitsplatzgerät abgefragt werden & A & COMPANY & U17 \\
+\hline
+
+Ich bin selber dafür verantwortlich, meinen Firmencomputer und die darauf enthaltenen Informationen zu schützen & Ist sich die Person ihrer Verantwortung gegenüber Firmensachmitteln und deren Schutz bewusst? & A & COMPANY & U18 \\
+\hline
+
+Auf meinem Computer befinden sich keine Daten, die für Aussenstehende interessant sein könnten & Ist sich die Person darüber im Klaren, dass sie in ihrer Position auf Informationen Zugriff hat, welche für Aussenstehende attraktiv sein können? & A & DATAPROTECT & U19 \\
+\hline
+
+Ich weiss, wie ich mit sensiblen Daten umgehen muss (anzeigen, teilen, abspeichern, ausdrucken, versenden, etc.) & Ist sich die Person bewusst, dass es eine Datenklassifikation gibt, welche festlegt wie mit welchen Daten zu verfahren ist? & A & DATAPROTECT & U20 \\
+\hline
+
+Ich verwende das Passworttool der Firma, um meine Firmenpassworte zu verwalten & Ist die vom Unternehmen bereitgestellte Sicherheitsinfrastruktur bekannt und wird sie genutzt? & B & WPLACESEC & U21 \\
+\hline
+
+Wenn ich in der Firma ein Dokument als Email-Attachement erhalte, ist dieses auf Viren geprüft und somit virenfrei & Wird die Sicherheitszuständigkeit an die Infrastruktur delegiert? & B & WPLACESEC & U22 \\
+\hline
+
+Wenn ich mein Windows-Passwort einem Arbeitskollegen gegeben habe, ändere ich es am nächsten Tag & Wird das wichtigste Passwort im Unternehmen als persönlicher, geheimzuhaltender Schlüssel angesehen, der nicht weitergegeben werden darf? & B & WPLACESEC & U23 \\
+\hline
+
+Ich darf einem Arbeitskollegen den ich gut kenne meinen Zutrittsbadge ausleihen, falls er seinen vergessen / verloren hat & Ist bekannt, dass Ersatzbadges bezogen werden können? & B & WPLACESEC & U24 \\
+\hline
+
+Ich weiss, wie und wo ich Sicherheitsvorfälle melden kann & Sind entsprechende Prozeduren (Meldestellen, etc.) bekannt? & B & COMPANY & U25 \\
+\hline
+
+Ich weiss, wer in der Firma die Ansprechperson für Securityfragen ist & Freitext, um auf eventuell aufgefallene Sicherheitsrisiken hinweisen zu können & B & COMPANY & U26 \\
+\hline
+
+Was würdest Du im Unternehmen bezüglich Security als die grösste Risikoquelle identifizieren? & Ist bekannt, dass Ersatzbadges bezogen werden können? & C & nicht bestimmt & U27 \\
+\hline
+
+\end{tabular}
+\end{table}
+
+
+
+\paragraph*{Abschnitt Online-Umfrage: Kenntnisse zu Sicherheitsthemen}\mbox{}
+
+\begin{sloppypar}
+Die ID's der Fragen zu diesem Bereiche werden aus dem Präfix "`K"' für "`Kenntnis"' und der fortlaufenden Fragenummer gebildet.
+\end{sloppypar}
+
+%% - table metadata
+%% - --------------------------------------
+
+\sloppy 
+
+\begin{table}[H]
+\tablefontsize	
+\centering
+\caption{Abschnitt Online-Umfrage: Kenntnisse zu Sicherheitsthemen}
+\label{Kenntnisse zu Sicherheitsthemen}
+\begin{tabular}{ |p{5.5cm}|p{5.5cm}|c|p{2.5cm}|c|}
+
+\hline
+\tableheaderbgcolor
+\textbf{Fragestellung} & \textbf{Absicht} & \textbf{Typ} & \textbf{Themenbereich} & \textbf{ID}\\ 
+\hline
+
+Ich kann erkennen, ob der Datenaustausch mit einem Webservice via Browser verschlüsselt ist & Weiss die Person, dass bei gesicherten Verbindungen ein Schloss-Symbol im Browser angezeigt wird und kennt sie  den Unterschied zwischen "`http"' und "`https"' in der URL Zeile des Browsers? & B & ATTACKS \newline DATAPROTECT & K28 \\
+\hline
+
+E-Mail ist eine einfache und sichere Methode um sensitive Informationen geschützt zu übertragen & Wird E-Mail von der Person als bedenkenlos zu verwendendes Hilfsmittel angesehen und entsprechend eingesetzt? & A & DATAPROTECT & K29 \\
+\hline
+
+E-Wenn ich ein Speichermedium formatiere, können die gelöschten Daten nicht wiederhergestellt werden & Weiss die Person, dass es sichere und unsichere Datenlöschverfahren gibt? & B & DEVICESEC & K30 \\
+\hline
+
+Ich kann erläutern, was eine "`Zwei-Faktor"' Authentifizierung ist & Hat die Person ein Bewusstsein zu den Faktoren "`Weiss ich"' (Passwort) und "`Habe ich"' (Token)? & A & COMPANY & K31 \\
+\hline
+
+Ich weiss, woran man eine "`Phishing"' E-Mail erkennen kann & Ist sich die Person der Phishing-Thematik bewusst? & A & ATTACKS & K32 \\
+\hline
+
+Ich kann erklären, was "`Ransomware"' ist & Ist diese Angriffsform bekannt? & A & ATTACKS & K33 \\
+\hline
+
+Ich weiss, was "`Social Engineering"' bedeutet & Ist diese Angriffsform bekannt? & A & ATTACKS & K34 \\
+\hline
+
+\end{tabular}
+\end{table}
+
+
+
+\paragraph*{Abschnitt Online-Umfrage: Erwartungshaltung Security Awareness}\mbox{}
+
+\begin{sloppypar}
+Die ID's der Fragen zu diesem Bereiche werden aus dem Präfix "`F"' für "`Freie Antwort"' und der fortlaufenden Fragenummer gebildet.
+\end{sloppypar}
+
+%% - table metadata
+%% - --------------------------------------
+
+\sloppy 
+
+\begin{table}[H]
+\tablefontsize	
+\centering
+\caption{Abschnitt Online-Umfrage: Erwartungshaltung Security Awareness}
+\label{Erwartungshaltung Security Awareness}
+\begin{tabular}{ |p{5.5cm}|p{5.5cm}|c|p{2.5cm}|c|}
+
+\hline
+\tableheaderbgcolor
+\textbf{Fragestellung} & \textbf{Absicht} & \textbf{Typ} & \textbf{Themenbereich} & \textbf{ID}\\ 
+\hline
+Was fehlt / was braucht es Deiner Meinung nach bezüglich Security Awareness? & Die Person soll auf ihrer Meinung nach fehlende Massnahmen für Security Awareness aufmerksam machen. & C & nicht bestimmt & F35 \\
+\hline
+
+Was würdest Du von einer Security Awareness Kampagne erwarten? & Die Person soll ihre Erwartungshaltung bezüglich einer Security Awareness Kampagne formulieren. & C & nicht bestimmt & F36 \\
+\hline
+
+\end{tabular}
+\end{table}
+
+
+
+
+\end{document}
