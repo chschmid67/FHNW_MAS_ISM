@@ -65,6 +65,19 @@
 %% - redefined or new commands
 %% - --------------------------------------
 
+%% - parameter for spiderweb diagram
+%% - --------------------------------------
+
+\newcommand{\D}{7} % number of dimensions (config option)
+\newcommand{\U}{10} % number of scale units (config option)
+
+\newdimen\R % maximal diagram radius (config option)
+\R=4.5cm 
+\newdimen\L % radius to put dimension labels (config option)
+\L=5cm
+
+\newcommand{\A}{360/\D} % calculated angle between dimension axes  
+
 %% - Set the fontsize for tables
 %% - --------------------------------------
 

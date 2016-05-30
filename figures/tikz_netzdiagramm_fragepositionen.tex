@@ -1,0 +1,118 @@
+%%
+%% - Der verwwendete Code für die Darstellung der Grafik
+%% - ist geistiges Eigentum von Dominik Renzel
+%% - © 2009 
+%% - http://dbis.rwth-aachen.de/cms/staff/renzel
+%%
+%%
+
+\begin{tikzpicture}[scale=1]
+  \path (0:0cm) coordinate (O); % define coordinate for origin
+
+  % draw the spiderweb
+  \foreach \X in {1,...,\D}{
+    \draw (\X*\A:0) -- (\X*\A:\R);
+  }
+
+  \foreach \Y in {0,...,\U}{
+    \foreach \X in {1,...,\D}{
+      \path (\X*\A:\Y*\R/\U) coordinate (D\X-\Y);
+      \fill (D\X-\Y) circle (1pt);
+    }
+    \draw [opacity=0.3] (0:\Y*\R/\U) \foreach \X in {1,...,\D}{
+        -- (\X*\A:\Y*\R/\U)
+    } -- cycle;
+  }
+
+  % define labels for each dimension axis (names config option)
+  \path (1*\A:\L+2mm) node (L1) {\scriptsize KNOWHOW};
+  \path (2*\A:\L) node (L2) {\scriptsize SOCIAL};
+  \path (3*\A:\L+5mm) node (L3) {\scriptsize DEVICE};
+  \path (4*\A:\L+5mm) node (L4) {\scriptsize COMPANY};
+  \path (5*\A:\L) node (L5) {\scriptsize ATTACK};
+  \path (6*\A:\L+2mm) node (L6) {\scriptsize WPLACE};
+  \path (7*\A:\L+5mm) node (L7) {\scriptsize DATASEC};
+
+%% - Achse KNOWHOW
+%% - --------------------------------------
+
+\matrix [nodes={minimum size=5mm},column sep=1mm, row sep = 1mm] at (1*\A:\L+20mm)
+{
+\node [draw,scale=0.7,shape=circle, minimum width=3em] {S8}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {S9}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {S11};\\
+\node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {S12}; & \node [draw,scale=0.7,shape=circle, minimum width=3em] {V31};\\
+};
+
+%% - Achse SOCIAL
+%% - --------------------------------------
+
+\matrix [nodes={minimum size=5mm},column sep=1mm, row sep = 1mm] at (2*\A:\L+15mm)
+{
+\node [draw,scale=0.7,shape=circle, minimum width=3em] {S13}; & \node [draw,scale=0.7,shape=circle, minimum width=3em] {S14}; & \node [draw,scale=0.7,shape=circle, minimum width=3em] {S15}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U19}; \\
+\node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U24}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U26}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {V32}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {V34};  \\
+\\
+};
+
+%% - Achse DEVICE
+%% - --------------------------------------
+
+\matrix [nodes={minimum size=5mm},column sep=1mm, row sep = 1mm] at (3*\A-8:\L+20mm)
+{
+\node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {S9}; & \node [draw,scale=0.7,shape=circle, minimum width=3em] {S10}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U18}; \\
+\node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U19}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U20}; & \node [draw,scale=0.7,shape=circle, minimum width=3em] {V30};  \\
+};
+
+%% - Achse COMPANY
+%% - --------------------------------------
+
+\matrix [nodes={minimum size=5mm},column sep=1mm, row sep = 1mm] at (4*\A-18:\L+15mm)
+{
+\node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U17}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U18}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U23};  \\
+\node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U24}; & \node [draw,scale=0.7,shape=circle, minimum width=3em] {U25}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U26};  \\
+};
+
+%% - Achse ATTACK
+%% - --------------------------------------
+
+\matrix [nodes={minimum size=5mm},column sep=1mm, row sep = 1mm] at (5*\A:\L+15mm)
+{
+\node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {S9}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {S12}; & \node [draw,scale=0.7,shape=circle,cyan, minimum width=3em] {U19}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U22};  \\
+\node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {V28}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {V32}; & \node [draw,scale=0.7,shape=circle, minimum width=3em] {V33}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {V34};  \\
+};
+
+%% - Achse WPLACE
+%% - --------------------------------------
+
+\matrix [nodes={minimum size=5mm},column sep=1mm, row sep = 1mm] at (6*\A:\L+20mm)
+{
+\node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {S11}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U17}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U21};  \\
+\node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U22}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U23}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U24};  \\
+};
+
+%% - Achse DATASEC
+%% - --------------------------------------
+
+\matrix [nodes={minimum size=5mm},column sep=1mm, row sep = 1mm] at (7*\A+7:\L+15mm)
+{
+\node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {S11}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U18}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U19}; \\
+};
+
+%% - Achse DATASEC
+%% - --------------------------------------
+
+\matrix [nodes={minimum size=5mm},column sep=1mm, row sep = 1mm] at (7*\A-11:\L+15mm)
+{
+\node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U20}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {U21}; & \node [draw,scale=0.7,shape=circle, cyan, minimum width=3em] {V28};  \\
+\node [draw,scale=0.7,shape=circle, minimum width=3em] {V29}; \\
+};
+
+%% - Legende
+%% - --------------------------------------
+
+\matrix [column sep=1mm] at (-3,-9)
+{
+\node [draw,scale=0.3,shape=circle, cyan, minimum width=3em] {}; & \node [anchor=west] {Frage beeinflusst mehrere Themenbereiche}; \\
+\node [draw,scale=0.3,shape=circle, minimum width=3em] {}; & \node [anchor=west] {Frage beeinflusst einen Themenbereich}; \\
+};
+
+\end{tikzpicture}
+
