@@ -6,7 +6,7 @@
 %%
 %%
 
-\begin{tikzpicture}[scale=1]
+\begin{tikzpicture}[scale=0.7]
   \path (0:0cm) coordinate (O); % define coordinate for origin
 
   % draw the spiderweb
@@ -24,14 +24,6 @@
     } -- cycle;
   }
 
-  % define labels for each dimension axis (names config option)
-  \path (1*\A:\L+2mm) node (L1) {\scriptsize KNOWHOW};
-  \path (2*\A:\L) node (L2) {\scriptsize SOCIAL};
-  \path (3*\A:\L+5mm) node (L3) {\scriptsize DEVICE};
-  \path (4*\A:\L+5mm) node (L4) {\scriptsize COMPANY};
-  \path (5*\A:\L) node (L5) {\scriptsize ATTACK};
-  \path (6*\A:\L+2mm) node (L6) {\scriptsize WPLACE};
-  \path (7*\A:\L+5mm) node (L7) {\scriptsize DATASEC};
 
   % for each sample case draw a path around the web along concrete values
   % for the individual dimensions. Each node along the path is labeled
@@ -43,47 +35,19 @@
   % The paths will be drawn half-opaque, so that overlapping parts will be
   % rendered in a composite color.
 
-  % Example Case 1 (red)
-  %
-  % D1 (Security): 0/7; D2 (Content Quality): 5/7; D3 (Performance): 0/7;
-  % D4 (Stability): 6/7; D5 (Usability): 0/7; D6 (Generality): 5/7;
-  % D7 (Popularity): 0/7
-  % \draw [color=red,line width=1.5pt,opacity=0.5]
-  %  (D1-0) --
-  %  (D2-5) --
-  %  (D3-0) --
-  %  (D4-6) --
-  %  (D5-0) --
-  %  (D6-5) --
-  %  (D7-0) -- cycle;
-
   % Example Case 2 (green)
   %
-  % D1 (Security): 2/7; D2 (Content Quality): 2/7; D3 (Performance): 5/7;
-  % D4 (Stability): 1/7; D5 (Usability): 4/7; D6 (Generality): 1/7;
-  % D7 (Popularity): 7/7
-  % \draw [color=green,line width=1.5pt,opacity=0.5]
-  % (D1-2) --
-  %  (D2-2) --
-  %  (D3-5) --
-  %  (D4-1) --
-  %  (D5-4) --
-  %  (D6-1) --
-  %  (D7-7) -- cycle;
-
-  % Example Case 3 (blue)
-  %
-  % D1 (Security): 1/7; D2 (Content Quality): 7/7; D3 (Performance): 4/7;
-  % D4 (Stability): 4/7; D5 (Usability): 3/7; D6 (Generality): 5/7;
-  % D7 (Popularity): 2/7
-  % \draw [color=blue,line width=1.5pt,opacity=0.5]
-  %  (D1-1) --
-  %  (D2-7) --
-  %  (D3-4) --
-  %  (D4-4) --
-  %  (D5-3) --
-  %  (D6-5) --
-  %  (D7-2) -- cycle;
+  D1 (Security): 4/9; D2 (Content Quality): 2/7; D3 (Performance): 5/7;
+  D4 (Stability): 1/7; D5 (Usability): 4/7; D6 (Generality): 1/7;
+  D7 (Popularity): 7/7
+  \filldraw [color=blue, opacity=0.1,line width=1.5pt]
+   (D1-7) --
+    (D2-8) --
+    (D3-9.5) --
+    (D4-4) --
+    (D5-8) --
+    (D6-7) --
+    (D7-9) -- cycle;
 
 \end{tikzpicture}
 

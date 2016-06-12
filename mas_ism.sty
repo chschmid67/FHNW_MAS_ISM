@@ -23,31 +23,53 @@
 \usepackage{longtable}                          % - define long tables span multiple pages
 \usepackage{floatrow}                           % - allow formatting of float values
 \usepackage{csquotes}                           % - enable quoting style
-\usepackage[backend=bibtex,style=alphabetic,sorting=ynt]{biblatex} % - bibliography
 \usepackage{tabto}                              % - used in titlepage to align metadata
 \usepackage{booktabs}                           % - improve table commands
 \usepackage{titlesec}                           % - Enabling to select alternative section titles
 \usepackage{amsmath}                            % - used for math expressions
+\usepackage{amssymb}                            % - used for mathematical symbols
+\usepackage{mathtools}                          % - display special math characters
 \usepackage{tablefootnote}                      % - handling of footnotes in tables
+\usepackage[splitrule]{footmisc}                % - handling of footnotes 
 
-\usepackage{tikz}                               % - the TikZ drawing package and its used libraries
-\usetikzlibrary{arrows}
-\usetikzlibrary{decorations.markings}
-\usetikzlibrary{matrix}
-\usetikzlibrary{positioning}
-\usetikzlibrary{shadings}
 
-%% - Define the document's geometry
+\usepackage[                                    % - bibliography
+backend=biber,                                  % - backend for processing LaTeX bibliography style
+style=authoryear,                               % - set style for entries
+citestyle=authoryear,                           % - when cited, use this form
+sorting=anyt,                                   % - sort the bibliography
+natbib                                          % - provide options for backend
+]{biblatex} 
+
+%% - configure bibliography aspects
+%% - --------------------------------------
+
+\setlength{\bibitemsep}{\baselineskip}          % - set space between bibliography entries
+
+%% - configutre the TikZ package
+%% - --------------------------------------
+
+\usepackage{tikz}                               % - the TikZ drawing package
+\usetikzlibrary{arrows}                         % - configure arrowheads
+\usetikzlibrary{decorations.markings}           % - placement of arrowtips
+\usetikzlibrary{matrix}                         % - provide a matrix datastructure
+\usetikzlibrary{positioning}                    % - for positioning elments
+\usetikzlibrary{patterns}                       % - for applying patterns
+\usetikzlibrary{shapes.multipart}               % - dor splitting node text
+
+
+
+%% - Configure the document's geometry
 %% - --------------------------------------
 
 \geometry{a4paper, total={170mm,240mm}, headsep=5mm,left=25mm,top=30mm}
 
-%% - Hyphenation rules
+%% - Set hyphenation rules
 %% - --------------------------------------
 
 \input{control/hyphenating}
 
-%% - Acronyms & Glossaries
+%% - set Acronyms & Glossaries
 %% - --------------------------------------
 
 \input{control/acronyms.tex}
@@ -65,16 +87,15 @@
 %% - redefined or new commands
 %% - --------------------------------------
 
-%% - parameter for spiderweb diagram
+%% - parameters for spiderweb diagram
 %% - --------------------------------------
 
-\newcommand{\D}{7} % number of dimensions (config option)
-\newcommand{\U}{10} % number of scale units (config option)
-
-\newdimen\R % maximal diagram radius (config option)
-\R=4.5cm 
-\newdimen\L % radius to put dimension labels (config option)
-\L=5cm
+\newcommand{\D}{7}      % number of dimensions (config option)
+\newcommand{\U}{10}     % number of scale units (config option)
+\newdimen\R             % variable for maximal diagram radius (config option)
+\R=4.5cm                % set the value
+\newdimen\L             % variable for radius to put dimension labels (config option)
+\L=5cm                  % set the value
 
 \newcommand{\A}{360/\D} % calculated angle between dimension axes  
 
@@ -118,7 +139,7 @@
 %% - Control the titlespacing
 %% - --------------------------------------
 
-%% - 3
+%% - 3 (Section)
 %% - --------------------------------------
 
 \titlespacing{\section}{%
@@ -126,7 +147,7 @@
   0\baselineskip}{% space before (vertical)
   0em}%               space after (horizontal)
 
-%% - 3.2
+%% - 3.2 (Subsection)
 %% - --------------------------------------
 
 \titlespacing{\subsection}{%
@@ -134,7 +155,7 @@
   0\baselineskip}{% space before (vertical)
   1em}%               space after (horizontal)
 
-%% - 3.2.1
+%% - 3.2.1 (Subsubsection)
 %% - --------------------------------------
 
 \titlespacing{\subsubsection}{%
@@ -158,6 +179,8 @@
 %% - Clear the header and footer
 %% - --------------------------------------
 
+\setlength{\headheight}{15pt}
+
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
@@ -179,3 +202,10 @@
     \fancyfoot[R]{\thepage}%
     \fancyhead[L]{Security Awareness Next Generation}
 }
+
+\interfootnotelinepenalty=10000
+
+%% - configure colors of fonts
+%% - --------------------------------------
+
+\colorlet{mylightblue}{blue!30!}

@@ -1,0 +1,75 @@
+\documentclass[../../main.tex]{subfiles}
+
+
+\begin{document}
+
+\paragraph*{Analyse der Stichworte}\mbox{}
+
+
+\begin{sloppypar}
+Mittels geeigneter statistischer Verfahren werden die vorgegebenen und die zusätzlich genannten Stichworte aller Interviews auf ihre Häufigkeit hin analysiert. Für die Darstellung der Häufigkeit wird ein Säulendiagramm verwendet.
+\end{sloppypar}
+
+\paragraph*{Analyse des Ideenspeichers}\mbox{}
+
+\begin{sloppypar}
+Die im Ideenspeicher festgehaltenen Aussagen der Interviews werden zusammengefasst und bewertet. Die Bewertung erfolgt anhand der Kriterien \textit{Kosten} $K$ und \textit{Zeitaufwand} $T$ für die Realisierung der Idee. Diese beiden Kriterien werden in einer Modell einander gegenübergestellt.
+\end{sloppypar}
+
+\begin{figure}[H]
+ \centering
+    \input{figures/tikz_eisenhower_ideenspeicher}
+ \caption{Auswertungsmatrix Ideenspeicher Analyse}
+ \label{Auswertungsmatrix Ideenspeicher-Analyse}
+\end{figure}
+
+\begin{sloppypar}
+Dieses Modell für die Selektion von Einträgen aus dem Ideenspeicher wird als eine quadratische Matrix abgebildet. Der Zeilenvektor $K$ beschreibt dabei die geschätzten Kosten, der Spaltenvektor $T$ den ebenfalls geschätzten Zeitaufwand. Die Matrix wird grob in vier Quadranten unterteilt. Die vier Quadranten bezeichnen die Verfahrensempfehlungen, nach denen ein Eintrag (Idee) aus dem Ideenspeicher beurteilt werden kann.\footnote{Die Verfahrensempfehlungen werden als aktive Tätigkeiten formuliert: \textit{Idee weiterverfolgen, in Kostenplanung aufnehmen, in Ressourcenplanung aufnehmen, Idee verwerfen}.} Die Zuordnung der Ideen zu den Verfahrensempfehlungen ist als Vorschlag für das weitere Vorgehen mit den Ideen zu verstehen. Als Skala für die Zeilen- und Spaltenvektoren $K$ und $T$ werden zusätzlich die Bewertungskategorien 
+\[tief - mittel - hoch - sehr \; hoch\]
+eingeführt. Dadurch besteht die Menge $M$ der Auswertungsmatrix aus insgesamt 16 geordneten Paaren. Die nachfolgend aufgeführte Tabelle beschreibt die den Quadranten zugeordneten Paarungen.
+\end{sloppypar}
+
+%% - table metadata
+%% - --------------------------------------
+
+\sloppy 
+\begin{table}[H]
+\tablefontsize	
+\centering
+\caption{Mengenbeschreibung und Verfahrensempfehlungen Ideenspeicher}
+\label{Verfahrensmöglichkeiten mit Ideen aus Ideenspeicher}
+\begin{tabular}{ |>{\raggedright}m{2.6cm}|m{8.0cm}|m{5.0cm}|}
+
+\hline
+\tableheaderbgcolor
+\textbf{Quadrant} & \textbf{Mengenbeschreibung ($K$=Kosten, $T$=Zeitaufwand)} & \textbf{Verfahrensempfehlung}\\ 
+\hline
+
+Idee weiterverfolgen & \[ \Bigg \{ \begin{tabular}{cc} (\;\textit{K=tief\,,\,T=tief}\;) & (\;\textit{K=mittel\,,\,T=tief}\;)  \\ (\;\textit{K=tief\,,\,T=mittel}\;) & (\;\textit{K=mittel\,,\,T=mittel}\;) \end{tabular} \Bigg \}\] & Die in diesem Quadranten abgebildeten Ideen sind sowohl bezüglich der zu erwartenden Kosten als auch dem prognostizierten Zeitaufwand für die Realisierung vertretbar.\\
+\hline
+
+in Kostenplanung \newline aufnehmen & \[\Bigg\{\begin{tabular}{cc} (\textit{K=hoch,T=tief}) & (\textit{K=hoch,T=mittel})  \\ (\textit{K=sehr hoch,T=tief}) & (\textit{K=sehr hoch,T=mittel}) \end{tabular}\Bigg\}\] & Dieser Quadrant umfasst Ideen, die bezüglich dem prognostizierten Zeitaufwand für die Realisierung als vertretbar eingestuft werden. Es wird jedoch erwartet, dass sie auf der Ausgabenseite mit erhöhten Investitions- (\acrshort{capex} oder Betriebskosten (\acrshort{opex} zu Buche schlagen. Deshalb sollten Ideen dieses Quadranten in die Kostenplanung für die spätere Realisierung aufgenommen werden.\\
+\hline
+
+in Ressourcen-\newline planung aufnehmen & \[\Bigg\{\begin{tabular}{cc} (\textit{K=tief,T=hoch}) & (\textit{K=mittel,T=hoch})  \\ (\textit{K=tief,T=sehr hoch}) & (\textit{K=mittel,T=sehr hoch}) \end{tabular}\Bigg\}\] & Der dritte Quadrant umfasst Ideen, die bezüglich der prognostizierten Kosten (Investitions- (\acrshort{capex} oder Betriebskosten (\acrshort{opex}) für die Realisierung als vertretbar eingestuft werden. Es wird jedoch erwartet, dass der Zeitaufwand für die Realisierung erheblich ist. Deshalb sollten Ideen dieses Quadranten in die Ressourcenplanung für die spätere Realisierung aufgenommen werden.\\
+\hline
+
+Idee verwerfen & \[\Bigg\{\begin{tabular}{cc} (\textit{K=hoch,T=hoch}) & (\textit{K=sehr hoch,T=hoch})  \\ (\textit{K=hoch,T=sehr hoch}) & (\textit{K=sehr hoch,T=sehr hoch}) \end{tabular}\Bigg\}\] & Dieser Quadrant umfasst diejenigen Ideen, welche aufgrund der prognostizierten Kosten oder dem Zeitaufwand für die Realisierung verworfen werden sollten.\\
+\hline
+
+\end{tabular}
+\end{table}
+
+\subparagraph*{Definition der Selektionsfläche}\mbox{}
+
+\begin{sloppypar}
+Die Selektionsfläche für als durchführbar taxierte Einträge aus dem Ideenspeicher besteht aus einer Menge (kartesisches Produkt) $\{A\}$ von geordneten Paaren $(K,T)$ für die gilt dass die zu erwartenden Kosten $K$, respektive der prognostizierte Zeitaufwand $T \leq$ \textit{hoch} eingeschätzt wurde:
+\[\big\{\,A\,\big\} \coloneqq \bigg\{\,_\forall K^{\;\leq\; hoch}\times\;_\forall T^{\;\leq\; hoch}\,\bigg\}\]
+
+Das Abbild dieser Menge $A$ ist eine echte Teilmenge von $M$, kurz $A \subsetneq M$. Wird diese Menge auf die Auswertungsmatrix übertragen, so ergibt dies die blaue Selektionsfläche wie auf Seite \pageref{Auswertungsmatrix Ideenspeicher-Analyse} dargestellt. Ideen aus den Interviews, welche aufgrund ihres Kosten / Zeitaufwandverhältnisses von dieser Selektionsfläche erfasst werden, sind somit Kandidaten für Aktionen und Massnahmendefinitionen im Rahmen eines Security Awareness Programmes. 
+
+\end{sloppypar}
+
+
+\end{document}
+

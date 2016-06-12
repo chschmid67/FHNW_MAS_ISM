@@ -36,15 +36,25 @@
 %% - now, print the glossary / acronyms
 %% - --------------------------------------
 
-\printglossary[type=\acronymtype,title=Abkürzungsverzeichnis]
 \addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+\printglossary[type=\acronymtype,title=Abkürzungsverzeichnis]
 
 %% - Appendix: do not number this subsection, but put it in the TOC
 %% - --------------------------------------
 
 \newpage
-\section*{Anhang}
-\addcontentsline{toc}{section}{Anhang}
-\subfile{sections/Epilog/Anhang}
+\section*{Anhang A} \label{Anhang A}
+\addcontentsline{toc}{section}{Anhang A}
+\subfile{sections/Epilog/Anhang_A}
+
+\newpage
+\section*{Anhang B} \label{Anhang B}
+\addcontentsline{toc}{section}{Anhang B}
+\subfile{sections/Epilog/Anhang_B}
+
+\newpage
+\section*{Anhang C} \label{Anhang C}
+\addcontentsline{toc}{section}{Anhang C}
+\subfile{sections/Epilog/Anhang_C}
 
 \end{document}

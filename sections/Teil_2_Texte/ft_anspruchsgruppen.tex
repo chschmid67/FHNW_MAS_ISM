@@ -50,13 +50,14 @@ Für die Datenerhebung wurden die folgenden potentiellen Anspruchsgruppen mit de
 \end{tabular}
 \end{table}
 
-\subsubsection{Ermittlung der Anspruchsgruppen}
-\subfile{sections/Teil_3_Texte/anspruchsgruppen_ermittlung.tex}
+\subsubsection{Ermittlung der Anspruchsgruppen für die Befragung}
+\subfile{sections/Teil_2_Texte/anspruchsgruppen_ermittlung.tex}
 
 \paragraph*{Definition der Schutzbedarfskategorien}\mbox{}
+\label{Schutzbedarfskategorien}
 
 \begin{sloppypar}
-Die nachfolgend beschriebenen Schutzbedarfskategorien wurden gemäss der Publikation \cite{bsi_bsi-standard_2008} vom \acrlong{bsi} (\acrshort{bsi}) definiert. 
+Die nachfolgend beschriebenen Schutzbedarfskategorien wurden gemäss der Publikation \citep{bsi_bsi-standard_2008} vom \acrlong{bsi} (\acrshort{bsi}) definiert. 
 
 %% abkürzungsverzeichnis, BibliograFie
 
@@ -94,10 +95,14 @@ Die nachfolgend beschriebenen Schutzbedarfskategorien wurden gemäss der Publika
 \end{tabular}
 \end{table}
 
-\paragraph*{Berechnung der Relvanz der Anspruchsgruppen}\mbox{}
+\paragraph*{Berechnung der Relevanz der Anspruchsgruppen}\mbox{}
 
 \begin{sloppypar}
-Für die festgelegten zugreifbaren Datenbestände der Anspruchsgruppen wird deren Relevanz als Produkt $P =  Vertraulichkeit \times Integrit"at$ berechnet. Dieses Produkt wird später bei der Definition des Selektionskriteriums für die Anspruchsgruppen eingesetzt. Die Festlegung der Vertraulichkeit-, respektive der Integrität für die Datenbestände basiert auf einer Einschätzung welche vom Autor vorgenommen wurde.
+Bei der Beschreibung von allgemeinen Schutzzielen wird oft das Tripel \textit{\acrlong{cia}} (\acrshort{cia})\footnote{Vertraulichkeit, Integrität, Verfügbarkeit} eingesetzt (\cite{harris_cissp_2013}). Für die Berechnung der Relevanz der Anspruchsgruppen werden daraus die beiden Prinzipien \textit{Vertraulichkeit} und \textit{Integrität} verwendet.
+
+Für die aufgeführten zugreifbaren Datenbestände der Anspruchsgruppen wird die Relevanz als Produkt $P =  Vertraulichkeit \times Integrit"at$ berechnet. Dieses Produkt wird später bei der Definition des Selektionskriteriums eingesetzt. 
+
+Die Festlegung der Vertraulichkeit, respektive der Integrität für die zugreifbaren Datenbestände basiert auf Kurzgesprächen, welche vom Autor mit Vertretern aller Anspruchsgruppen auf Zufallsbasis (Flurgespräch, Zugfahrt, Kaffeepause, etc.) und somit informell  zu deren Datenbeständen geführt wurden. 
 \end{sloppypar}
 
 %% - table metadata
@@ -107,7 +112,7 @@ Für die festgelegten zugreifbaren Datenbestände der Anspruchsgruppen wird dere
 \centering
 \tablefontsize	
 
-\caption{Relevanzberechnung Datenbestände }
+\caption{Relevanzberechnung von Datenbeständen der Anspruchsgruppen }
 \label{relevanz_datenbestände}
 
 %% - set width of columns
@@ -130,7 +135,7 @@ Für die festgelegten zugreifbaren Datenbestände der Anspruchsgruppen wird dere
 \textbf{Gebäudemanagement} & Zutrittskontrolle & hoch & hoch & 4  \\ \hline
 \textbf{Marketing} & Firmenidentifikation & hoch & hoch & 4\\ \hline
 \textbf{Einkauf} & Lieferantendaten + Offerten & normal & normal & 1\\ \hline
-\textbf{Kommunkation} & Interne Mitarbeiterinformationen & hoch & hoch & 4\\ \hline
+\textbf{Kommunikation} & Interne Mitarbeiterinformationen & hoch & hoch & 4\\ \hline
 \textbf{Personaldienst} & Personaldossiers & sehr hoch & sehr hoch & 9 \\ \hline
 \textbf{Verkauf} & Produkteofferten & Hoch & hoch & 6\\ \hline
 \textbf{Verkaufsanbahnung} & Anonymisierte Produktdaten  & hoch & normal & 2\\ \hline
@@ -143,51 +148,53 @@ Für die festgelegten zugreifbaren Datenbestände der Anspruchsgruppen wird dere
 \end{tabular}
 \end{table}
 
-\newpage
-
-\paragraph*{Definition des Rastermodells}\mbox{}
+\paragraph*{Modell zur Bestimmung der Anspruchsgruppen}\mbox{}
 
 \begin{sloppypar}
-Nachfolgend wird die berechnete Relevanz der Anspruchsgruppen in einem Rastermodell dargestellt. Es wird die Selektionslinie definiert, anhand welcher die definitiven Anspruchsgruppen für die Datenerhebung festgelegt werden. 
+Nachfolgend wird die berechnete Relevanz der Anspruchsgruppen in einem Modell dargestellt. Es wird eine Selektionsfläche definiert, anhand welcher die definitiven Anspruchsgruppen für die Datenerhebung bestimmt werden.
+
+Das Modell für die Bestimmung der Anspruchsgruppen wird als eine quadratische Matrix (Menge) mit insgesamt 9 Elementen, bestehend aus 3 Zeilen und 3 Spalten aufgebaut. Der Zeilenvektor $C$ beschreibt dabei die Vertraulichkeit, der Spaltenvektor $I$ die Integrität. Als Skala für den Zeilen- und Spaltenvektor wird der Schutzbedarf-Faktor welcher bei der Definition der Schutzbedarfskategorien (siehe Seite \pageref{Schutzbedarfskategorien}) festgelegt wurde, verwendet.
+
+Die Menge $\{M\}$ aller geordneten Paare $(C,I)$ ergibt sich aus dem kartesischen Produkt von $Vertraulichkeit \times Integrit"at$. 
 \end{sloppypar}
 
-\begin{sloppypar}
-Das Rastermodell für die Bestimmung der Anspruchsgruppen wird als eine quadratische Matrix mit insgesamt 9 Elementen, bestehend aus 3 Zeilen und 3 Spalten aufgebaut. Der Zeilenvektor beschreibt dabei die Vertraulichkeit, der Spaltenvektor die Integrität.
-\end{sloppypar}
-
-\subparagraph*{Festlegung der Selektionslinie}\mbox{}
+\subparagraph*{Definition der Selektionsfläche}\mbox{}
 
 \begin{sloppypar}
-Die Selektionslinie wird im Modell über den Ausdruck $2 < x$ definiert, wobei $x$ mit der berechneten Relevanz gleichzusetzen ist.
+Die Selektionsfläche ist ebenfalls eine Teilmengemenge von geordneten Paaren $(C,I)$ der Menge $\{M\}$ und wird über ihre berechnete Relevanz bestimmt. Sie muss dabei für eine Selektion des Paares mindestens 3 betragen:
+
+\[\big\{\,A\,\big\} \coloneqq \bigg\{\,(C \times I) \geq 3 \bigg\}\]
+
+
+Die Selektionsfläche besteht somit aus der Menge $\{A\}$ von geordneten Koordinatenpaaren, welche das Selektionkriterium erfüllen. Das Abbild dieser Menge $A$ ist eine echte Teilmenge von $M$, kurz $A \subsetneq M$.
+
+\[\big\{\,A\,\big\} \coloneqq \big\{\;(3,1),(2,2),(1,3),(3,2),(2,3),(3,3)\;\big\}\]
+
 \end{sloppypar}
 
 \begin{figure}[H]
     \centering
     \input{figures/tikz_raster_schutzbedarf}
-    \caption{Raster für Bestimmung der Anspruchsgruppen}
+    \caption{Modell zur Bestimmung der Anspruchsgruppen}
     \label{fig:raster1}
 \end{figure}
-
-\newpage
-
-\paragraph*{Anwendung des Rastermodells}\mbox{}
-
-\begin{sloppypar}
-Werden nun alle Anspruchsgruppen anhand ihrer Koordinaten $(Vertraulichkeit,Integrit"at)$ in die Matrix übertragen, so ergibt sich das folgende Bild:
-\end{sloppypar} 
-
-\begin{figure}[H]
-    \input{figures/tikz_rasteranwendung}
-    \caption{Anwendung des Rasters auf Anspruchsgruppen}
-    \label{fig:raster2}
-\end{figure}
-
-%\newpage
 
 \paragraph*{Selektion der definitiven Anspruchsgruppen}\mbox{}
 
 \begin{sloppypar}
-Die Auswertung der Matrix führt zu den nachfolgend aufgeführten definitiven Anspruchsgruppen, welche somit als Basis für die Erhebung der Zielpopulation dienen.
+Werden nun alle definierten Anspruchsgruppen anhand ihrer Koordinatenpaare $(\;C,I\;)$ in das Modell übertragen, so ergibt sich das folgende Bild:
+\end{sloppypar} 
+
+\begin{figure}[H]
+    \input{figures/tikz_rasteranwendung}
+    \caption{Anwendung des Modells auf Anspruchsgruppen}
+    \label{fig:raster2}
+\end{figure}
+
+\begin{sloppypar}
+Die in \textcolor{cyan}{cyan} dargestellten Anspruchsgruppen sind in der \textcolor{mylightblue}{hellblauen} Selektionsfläche enthalten und erfüllen somit das Auswahlkriterium. Die \textcolor{gray}{grau} dargestellten Anspruchsgruppen erfüllen das Auswahlkriterium nicht.
+
+Die Auswertung des Modells führt zu den nachfolgend aufgeführten Liste der definitiven Anspruchsgruppen, welche somit gleichzeitig die Zielpopulation darstellt.
 \end{sloppypar}
 
 %% - table metadata
@@ -195,7 +202,7 @@ Die Auswertung der Matrix führt zu den nachfolgend aufgeführten definitiven An
 
 \begin{table}[H]
 \tablefontsize	
-\caption{Liste der definitiven Anspruchsgruppe}
+\caption{Liste der definitiven Anspruchsgruppen}
 \label{definitive_anspruchsgruppen}
 
 %% - set width of columns
@@ -217,7 +224,7 @@ Die Auswertung der Matrix führt zu den nachfolgend aufgeführten definitiven An
 \textbf{Produktentwicklung}             \\ \hline
 \textbf{Gebäudemanagement}              \\ \hline
 \textbf{Marketing}                      \\ \hline
-\textbf{Kommunkation}                   \\ \hline
+\textbf{Kommunikation}                   \\ \hline
 \textbf{Personaldienst}                 \\ \hline
 \textbf{Verkauf}                        \\ \hline
 \textbf{Finanzen}                       \\ \hline
@@ -229,7 +236,7 @@ Die Auswertung der Matrix führt zu den nachfolgend aufgeführten definitiven An
 \end{table}
 
 \begin{sloppypar}
-Die Anspruchsgruppen "`Einkauf"', "`Verkaufsanbahnung"' und "`Qualitätssicherung"' werden aufgrund ihrer Position unterhalb der Selektionslinie vom weiteren Datenerhebungsverfahren ausgeschlossen.
+Die Anspruchsgruppen "`Einkauf"', "`Verkaufsanbahnung"' und "`Qualitätssicherung"' werden aufgrund ihrer Positionierung ausserhalb der Selektionsfläche vom weiteren Datenerhebungsverfahren ausgeschlossen.
 \end{sloppypar}
 
 \end{document}

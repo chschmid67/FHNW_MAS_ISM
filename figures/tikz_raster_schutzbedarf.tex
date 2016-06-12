@@ -1,5 +1,6 @@
 \begin{tikzpicture}
 
+
 %% - Draw grid
 %% - --------------------------------------
 
@@ -26,8 +27,8 @@
 %% - label x- and y-Axis
 %% - --------------------------------------
 
-\node[scale=1.0] at (7.7,0) {Vertraulichkeit};
-\node[scale=1.0] at (0,6.5) {Integrität};
+\node[scale=1.0] at (7.9,0) {Vertraulichkeit $C$};
+\node[scale=1.0] at (0,6.5) {Integrität $I$};
 
 %% - Draw x- and y- Axis scale
 %% - --------------------------------------
@@ -58,7 +59,9 @@
 %% - Draw selection line and label
 %% - --------------------------------------
 
-\draw [red, ultra thick, dashed] (-1,4) -- (2,4) -- (2,2) -- (4,2) -- (4,0);
-\node[draw,scale=1,shape=rectangle,draw=none, red] at (-2.5,4) {Selektionslinie};
+\filldraw [color=blue, opacity=0.05] (0,6) -- (6,6) -- (6,0) -- (4,0) -- (4,2) -- (2,2) -- (2,4) -- (0,4) -- cycle;
+
+\node[draw,scale=1,shape=rectangle,draw=none, blue] at (-2.5,4) {Selektionsfläche};
+\draw [blue] (-1,4) -- (1,4.4);
 
 \end{tikzpicture}

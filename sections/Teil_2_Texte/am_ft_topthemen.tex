@@ -1,0 +1,86 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{sloppypar}
+Für die Ermittlung der Topthemen\footnote{Die Topthemen sind diejenigen Themen, die bei der Auswertung (im negativen Sinne) aufgefallen sind und somit implizit Handlungsbedarf gegeben ist. Sie müssen in einer Security Awareness Kampagne zwingend berücksichtigt werden.} werden die Antworten auf die Online-Umfrage, die Interviews und der Ideenspeicher mit den zuvor beschriebenen Methoden analysiert. Die konkreten Resultate der Analysen sind im Anhang B ab Seite \pageref{Anhang B} ersichtlich.
+\end{sloppypar}
+
+\paragraph*{Topthemen-Quelle: Online-Umfrage}\mbox{}
+
+\begin{sloppypar}
+Die Online-Umfrage ist in Themenbereiche aufgegliedert, welche zuerst als Ganzes betrachtet und analysiert werden. Diese Analyse umfasst alle Themenbereiche mit den jeweils zugeordneten Fragen.  Pro Themenbereich wird der Erfüllungsgrad berechnet.\footnote{Das Verfahren wurde bereits auf Seite \pageref{Beispielberechnung Themenabdeckung} detailliert beschrieben.} Das durch die Auswertungen aller Themenbereiche generierte Netzdiagramm zeigt eine näherungsweise Übersicht zum Status Quo der Security Awareness.
+
+Um ein genaueres Bild bezüglich Handlungsbedarf zu den einzelnen Themen und Themenbereichen zu erhalten, wird für die Fragetypen A und B festgelegt, wie die erhobenen Daten weiter ausgewertet werden und welches das Selektionskritrium für ein Topthema ist.
+
+\begin{itemize}
+
+\item{\textbf{Typ A}: Für Fragen dieses Typs (\textbf{Analogskala} als Antwortmöglichkeit) ist der berechnete Durchschnitt und die Standardabweichung zu verwenden. Der Durchschnitt dient dabei als Selektionskriterium, die Standardabweichung wird als Verstärker für die Selektion verwendet. Fragen, welche einen durchschnittlichen Antwortanteil von $\le  50\%$ und gleichzeitig eine tiefe Standardabweichung aufweisen, sind als zu den Topthemen zählend zu betrachten.\footnote{Grund: Ein tiefer Durchschnitt mit geringer Standardabweichung deutet darauf hin, dass das mit der Frage verknüpfte Thema nicht genügend verstanden wurde oder nicht im Bewusstsein verankert ist.} }
+
+\item{\textbf{Typ B}: Für Fragen dieses Typs (\textbf{Auswahlmenü} als Antwortmöglichkeit) wird in Abhängigkeit der korrekten Antwort entweder der Ja- oder der Nein-Antwortanteil berücksichtigt. Im Gegensatz zu den Typ A Fragen wird das Kriterium für eine Selektion in die Topthemen auf $\le 40\%$ gesenkt.\footnote{Grund: Durch die Reduktion drei mögliche Auswahlantworten ist die Wahrscheinlichkeit, dass eine Frage unabsichtlich falsch oder nicht wahrheitsgetreu beantwortet wurde höher als bei einer Antwort mit Analogskala.} }
+
+\end{itemize}
+
+\end{sloppypar}
+
+\paragraph*{Topthemen-Quelle: Interviews}\mbox{}
+
+\begin{sloppypar}
+Die Suche nach möglichen Topthemen aus den Interviews wird erst gestartet, nachdem alle Interviews durchgeführt und dokumentiert wurden. Dazu werden die genannten Stichworte aller Interviews aus der vordefinierten und der zusätzlichen Stichworteliste auf die Häufigkeit ihrer Nennung untersucht.
+
+Das prozentuale Verhältnis zwischen der Anzahl Interviews und Anzahl Nennungen eines dieser Stichworte im gleichen Fragenkontext über alle Interviews hinweg wird als Indikator für ein mögliches Topthema gewertet.\footnote{Beispiel: In fünf Interviews wurde zum Thema "`Sicherheit zu Hause"' viermal das Stichwort `"WLAN"' als grösstes Risiko genannt. Das WLAN ist somit mit einem Anteil von 80\% an allen Antworten ein Kandidat für ein Topthema betreffend Heimsicherheit.}
+
+Das Selektionskriterium für Stichworte als Kandidat für ein Topthema wird mit der Häufigkeitsnennung $\ge  50\%$ festgelegt.
+\end{sloppypar}
+
+\paragraph*{Topthemen-Quelle: Ideenspeicher}\mbox{}
+
+\begin{sloppypar}
+Die im Ideenspeicher aus allen Interviews festgehaltenen Vorschläge, Bemerkungen und Ideen werden gemäss dem ab Seite \pageref{auswertung_interview} vorgestellten Verfahren analysiert und bewertet. Ein Eintrag aus dem Ideenspeicher, welcher durch diese Selektion ausgewählt wird, ist ein Kandidat für ein Topthema. 
+\end{sloppypar}
+
+\paragraph*{Zusammenführung der Topthemen}\mbox{}
+
+\begin{sloppypar}
+Die durch die Auswertung der verschiedenen Quellen selektierten Topthemen werden gruppiert. Anhand dieser Liste können nun die Schwerpunkte für eine Security Awareness Kampagne gesetzt werden.
+\end{sloppypar}
+
+\begin{table}[H]
+\centering
+\caption{Beispiel Resultatliste Topthemen}
+\label{Beispiel Resultatliste Topthemen}
+\begin{tabular}{p{1cm}p{2cm}p{5cm}p{4.5cm}p{2cm}}
+\rowcolor[HTML]{BBDAFF} 
+\multicolumn{5}{l}{\textbf{Topthemen aus Online-Umfrage (Analogskala, Fragetyp A)}} \\
+\hline
+\textbf{ID} &\textbf{Themenbereich} & \textbf{Frage} & \textbf{Erfüllungsgrad} &  \\
+\hline
+S14 & SOCIAL & Ich weiss, wie ich meine Kinder bei der Internetnutzung schützen kann & 35\% & \\
+\hline
+V32 & SOCIAL\newline ATTACK  & Ich weiss, woran man eine „Phishing“ EMail erkennen kann & 17\% & \\
+&  &  &  & \\
+\rowcolor[HTML]{BBDAFF} 
+\multicolumn{5}{l}{\textbf{Topthemen aus Online-Umfrage (Auswahlmenü, Fragetyp B)}} \\
+\hline
+\textbf{ID} & \textbf{Themenbereich} & \textbf{Frage} & \multicolumn{2}{l}{\textbf{Erfüllungsgrad}} \\
+\hline
+U26 & SOCIAL\newline COMPANY & Ich weiss, wer in der Firma die Ansprechperson für Securityfragen ist & \multicolumn{2}{l}{50\%} \\
+&  &  &  & \\
+\rowcolor[HTML]{BBDAFF} 
+\multicolumn{5}{l}{\textbf{Topthemen aus Interviews (Stichwort-Analyse)}} \\
+\hline
+\textbf{ID} & \textbf{Themenbereich} & \textbf{Frage} & \textbf{Stichwort} & \textbf{Häufigkeit} \\
+\hline
+U27 & - & Was würdest Du im Unternehmen bezüglich Security als die grösste Risikoquelle identifizieren? &WLAN\newline Unklare (Sicherheits-) Richtlinien  & 89\%\newline 79\% \\
+&  &  &  & \\
+\rowcolor[HTML]{BBDAFF} 
+\multicolumn{5}{l}{\textbf{Topthemen aus Ideenspeicher}} \\
+\hline
+\textbf{ID} & \textbf{Themenbereich} & \textbf{Frage} & \textbf{Ideenbeschreibung} & \textbf{Kosten / Zeit} \\
+\hline
+F35 & - & Was fehlt / was braucht es Deiner Meinung nach bezüglich Security Awareness? &  Etwas salz & hoch / hoch\\
+
+\end{tabular}
+\end{table}
+
+\end{document}
