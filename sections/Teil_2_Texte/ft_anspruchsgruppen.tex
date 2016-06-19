@@ -98,9 +98,9 @@ Die nachfolgend beschriebenen Schutzbedarfskategorien wurden gemäss der Publika
 \paragraph*{Berechnung der Relevanz der Anspruchsgruppen}\mbox{}
 
 \begin{sloppypar}
-Bei der Beschreibung von allgemeinen Schutzzielen wird oft das Tripel \textit{\acrlong{cia}} (\acrshort{cia})\footnote{Vertraulichkeit, Integrität, Verfügbarkeit} eingesetzt (\cite{harris_cissp_2013}). Für die Berechnung der Relevanz der Anspruchsgruppen werden daraus die beiden Prinzipien \textit{Vertraulichkeit} und \textit{Integrität} verwendet.
+Bei der Beschreibung von allgemeinen Schutzzielen wird oft das Tripel \textit{\acrlong{cia}} (\acrshort{cia})\footnote{Vertraulichkeit, Integrität, Verfügbarkeit} eingesetzt (\cite{harris_cissp_2013}). Für die Berechnung der Relevanz der Anspruchsgruppen werden daraus die beiden Prinzipien Vertraulichkeit $(C)$ und Integrität $(I)$ verwendet.
 
-Für die aufgeführten zugreifbaren Datenbestände der Anspruchsgruppen wird die Relevanz als Produkt $P =  Vertraulichkeit \times Integrit"at$ berechnet. Dieses Produkt wird später bei der Definition des Selektionskriteriums eingesetzt. 
+Für die aufgeführten zugreifbaren Datenbestände der Anspruchsgruppen wird die Relevanz als Produkt $P =  Vertraulichkeit \cdot Integrit"at$ berechnet. Dieses Produkt wird später bei der Definition des Selektionskriteriums eingesetzt. 
 
 Die Festlegung der Vertraulichkeit, respektive der Integrität für die zugreifbaren Datenbestände basiert auf Kurzgesprächen, welche vom Autor mit Vertretern aller Anspruchsgruppen auf Zufallsbasis (Flurgespräch, Zugfahrt, Kaffeepause, etc.) und somit informell  zu deren Datenbeständen geführt wurden. 
 \end{sloppypar}
@@ -125,7 +125,7 @@ Die Festlegung der Vertraulichkeit, respektive der Integrität für die zugreifb
 
 \hline
 \tableheaderbgcolor
-\textbf{Anspruchsgruppe} & \textbf{Zugreifbare Datenbestände} & \textbf{Vertraulichkeit} & \textbf{Integrität} & \textbf{Relevanz}\\ 
+\textbf{Anspruchsgruppe} & \textbf{Zugreifbare Datenbestände} & \textbf{Vertraulichkeit $(C)$} & \textbf{Integrität $(I)$} & \textbf{Relevanz $(C \cdot I)$}\\ 
 \hline
 
 %% - table data
@@ -155,20 +155,22 @@ Nachfolgend wird die berechnete Relevanz der Anspruchsgruppen in einem Modell da
 
 Das Modell für die Bestimmung der Anspruchsgruppen wird als eine quadratische Matrix (Menge) mit insgesamt 9 Elementen, bestehend aus 3 Zeilen und 3 Spalten aufgebaut. Der Zeilenvektor $C$ beschreibt dabei die Vertraulichkeit, der Spaltenvektor $I$ die Integrität. Als Skala für den Zeilen- und Spaltenvektor wird der Schutzbedarf-Faktor welcher bei der Definition der Schutzbedarfskategorien (siehe Seite \pageref{Schutzbedarfskategorien}) festgelegt wurde, verwendet.
 
-Die Menge $\{M\}$ aller geordneten Paare $(C,I)$ ergibt sich aus dem kartesischen Produkt von $Vertraulichkeit \times Integrit"at$. 
+Die Menge $\{M\}$ aller geordneten Paare $(C,I)$ ergibt sich aus dem kartesischen Produkt von $Vertraulichkeit \times Integrit"at$:
+
+\[\big\{\,M\,\big\} \coloneqq \bigg\{\,(C \times I) \bigg\}\]
+
 \end{sloppypar}
 
+\newpage
 \subparagraph*{Definition der Selektionsfläche}\mbox{}
 
 \begin{sloppypar}
 Die Selektionsfläche ist ebenfalls eine Teilmengemenge von geordneten Paaren $(C,I)$ der Menge $\{M\}$ und wird über ihre berechnete Relevanz bestimmt. Sie muss dabei für eine Selektion des Paares mindestens 3 betragen:
+\[\big\{\,A\,\big\} \coloneqq \bigg\{\,(C \cdot I) \geq 3 \bigg\}\]
 
-\[\big\{\,A\,\big\} \coloneqq \bigg\{\,(C \times I) \geq 3 \bigg\}\]
-
-
-Die Selektionsfläche besteht somit aus der Menge $\{A\}$ von geordneten Koordinatenpaaren, welche das Selektionkriterium erfüllen. Das Abbild dieser Menge $A$ ist eine echte Teilmenge von $M$, kurz $A \subsetneq M$.
-
+Die Selektionsfläche besteht somit aus der Menge $\{A\}$ von geordneten Koordinatenpaaren, welche das Selektionkriterium erfüllen:
 \[\big\{\,A\,\big\} \coloneqq \big\{\;(3,1),(2,2),(1,3),(3,2),(2,3),(3,3)\;\big\}\]
+Das Abbild dieser Menge $A$ ist eine echte Teilmenge von $M$, kurz $A \subsetneq M$.
 
 \end{sloppypar}
 
@@ -224,7 +226,7 @@ Die Auswertung des Modells führt zu den nachfolgend aufgeführten Liste der def
 \textbf{Produktentwicklung}             \\ \hline
 \textbf{Gebäudemanagement}              \\ \hline
 \textbf{Marketing}                      \\ \hline
-\textbf{Kommunikation}                   \\ \hline
+\textbf{Kommunikation}                  \\ \hline
 \textbf{Personaldienst}                 \\ \hline
 \textbf{Verkauf}                        \\ \hline
 \textbf{Finanzen}                       \\ \hline

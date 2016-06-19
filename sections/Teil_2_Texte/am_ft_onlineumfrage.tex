@@ -12,20 +12,20 @@ Zur quantitativen Darstellung der Antwortauswertung der Einzelfragen wird ein Ne
 \paragraph*{Semantik und Skala der Achsen}\mbox{}
 
 \begin{sloppypar}
-Für die Auswertung der Online-Fragen werden sieben Achsen verwendet. Jede dieser Achsen entspricht einem der zuvor festgelegten Themenbereiche (Siehe Kapitel \ref{beschreibung_themenbereiche}, Seite \pageref{beschreibung_themenbereiche}). Die Skala einer einzelnen Achse reicht von 0\% bis 100\%, wobei der Schnittpunkt aller sieben Achsen als 0\% definiert wird.\footnotemark
+Für die Auswertung der Online-Fragen werden sieben Achsen verwendet. Jede dieser Achsen entspricht einem der zuvor festgelegten Themenbereiche (Siehe Kapitel \ref{beschreibung_themenbereiche}, Seite \pageref{beschreibung_themenbereiche}). Die Skala einer einzelnen Achse reicht von 0 bis 100, wobei der Schnittpunkt aller sieben Achsen als 0 definiert wird.\footnotemark
 \end{sloppypar}
 
-\footnotetext{Der Prozentwert zeigt den Erfüllungsgrad der verschiedenen Themenbereiche auf, wobei 0\% als "`nicht erfüllt"' und 100\% als "`vollständig erfüllt"' zu interpretieren sind.}
+\footnotetext{Der Prozentwert zeigt den Erfüllungsgrad der verschiedenen Themenbereiche auf, wobei 0 mit "`nicht erfüllt"' und 100 mit "`vollständig erfüllt"' gleichgesetzt werden.}
 
 \paragraph*{Zuordnung der Fragen zum Netzdiagramm}\mbox{}
 
 \begin{sloppypar}
-Die Fragen werden anhand des ihnen zugewiesenen Themenbereiches mit ihrem \acrfull{id} in das Diagramm übertragen, dadurch werden sie zu Fragegruppen gebündelt. Einzelne Fragen können ihrer Natur nach auf mehrere Themenbereiche einwirken; dies ist durch eine Mehrfachnennung in den verschiedenen Fragegruppen sowie anhand einer entsprechenden Farbcodierung erkennbar.
+Die Fragen werden anhand des ihnen zugewiesenen Themenbereiches mit ihrem \acrfull{id} in das Diagramm übertragen. Dadurch werden sie zu Fragegruppen gebündelt. Einzelne Fragen können ihrer Natur nach auf mehrere Themenbereiche einwirken; dies ist durch eine Mehrfachnennung in den verschiedenen Fragegruppen sowie anhand einer entsprechenden Farbcodierung erkennbar.
 \end{sloppypar}
 
 \begin{figure}[H]
  \centering
-    \input{figures/tikz_netzdiagramm_fragepositionen}
+    \input{figures/tikz_netzdiagramm_fragepositionen }
  \caption{Netzdiagramm mit zugeordneten Einzelfragen}
  \label{Netzdiagramm Schema fragepositionen}
 \end{figure}
@@ -33,30 +33,32 @@ Die Fragen werden anhand des ihnen zugewiesenen Themenbereiches mit ihrem \acrfu
 \paragraph*{Projektion der Umfragewerte auf die Achsen}\mbox{}
 
 \begin{sloppypar}
-Für die Auswertung der Online-Fragen werden wie zuvor in Kapitel \ref{allgemeine_vorgehensbeschreibung},  Seite \pageref{allgemeine_vorgehensbeschreibung} bereits beschrieben, nur Antworten auf Fragen vom Typ A und B verwendet.
+Für die Auswertung der Online-Fragen werden wie zuvor in Kapitel \ref{allgemeine_vorgehensbeschreibung}, Seite \pageref{allgemeine_vorgehensbeschreibung} bereits beschrieben, nur Antworten auf Fragen vom Typ A und B verwendet. Um den Erfüllungsgrad eines Themenbereiches darstellen zu können, werden die Durchschnittswerte (Typ A) respektive der Anteil der Soll-Antwort (Typ B) auf ihre jeweiligen Themenbereichsanteile projiziert und anschliessend summiert. 
+\end{sloppypar}
 
-Um den Erfüllungsgrad eines Themenbereiches darstellen zu können, werden die Durchschnittswerte respektive der Ja-Anteil der relevanten Antworten auf ihre jeweiligen Themenbereichsanteile projiziert und anschliessend summiert.
 \newpage
-Nachstehend ein Beispiel für die Berechnung des Erfüllungsgrades für den Themenbereich "`SOCIAL"'. Für alle sieben Themenbereiche wird für die Bestimmung ihres jeweiligen Abdeckungsgrades dasselbe Verfahren angewandt.\footnotemark
+
+\begin{sloppypar}
+Nachstehend ein Beispiel für die Berechnung des Erfüllungsgrades anhand des Themenbereiches "`SOCIAL"'. Für alle sieben Themenbereiche wird für die Bestimmung ihres jeweiligen Abdeckungsgrades dasselbe Verfahren angewandt.\footnotemark
 \end{sloppypar}
 
 %% - table metadata
 %% - --------------------------------------
 
-\sloppy 
+%\sloppy 
 
 \begin{table}[H]
 \tablefontsize	
 \centering
 \caption{Beispielberechnung Themenabdeckung SOCIAL}
 \label{Beispielberechnung Themenabdeckung}
-\begin{tabular}{p{5.0cm}lllllllll}
+\begin{tabular}{p{6.0cm}rrrrrrrrr}
 \rowcolor[HTML]{BBDAFF} 
 \multicolumn{10}{l}{\cellcolor[HTML]{BBDAFF}\textbf{Block 1: Zusammenfassung}}\\
 \hline
 \textbf{Themenbereich}                    & \multicolumn{9}{l}{SOCIAL}\\
 \textbf{Relevante Einzelfragen}           & \multicolumn{9}{l}{S13,S14,S15,U19,U24,U26,V32,V34}\\
-\textbf{Erfüllungsgrad Themenbereich}     & \multicolumn{9}{l}{64\%}\\
+\textbf{Erfüllungsgrad Themenbereich}     & \multicolumn{9}{l}{54\%}\\
 \textbf{}                                 &      &      &      &      &      &      &      &      &       \\[-3ex]
 \rowcolor[HTML]{BBDAFF} 
 \multicolumn{10}{l}{\cellcolor[HTML]{BBDAFF}\textbf{Block 2: Antworten der relevanten Einzelfragen}}\\
@@ -66,22 +68,22 @@ Nachstehend ein Beispiel für die Berechnung des Erfüllungsgrades für den Them
 \hline
 \textbf{User 1}                           & 57   & 34   & 67   & 23   & 1    & 3    & 12   & 92   &\\
 \textbf{User 2}                           & 23   & 43   & 23   & 98   & 2    & 1    & 15   & 98   &\\
-\textbf{User 3}                           & 92   & 28   & 95   & 50   & 2    & 1    & 23   & 88   &\\
-\textbf{User 4}                           & 88   & 93   & 71   & 45   & 2    & 3    & 10   & 28   &\\
+\textbf{User 3}                           & 92   & 28   & 95   & 50   & 2    & 2    & 23   & 88   &\\
+\textbf{User 4}                           & 88   & 93   & 71   & 45   & 2    & 2    & 10   & 28   &\\
 \textbf{User 5}                           & 7    & 38   & 67   & 7    & 2    & 2    & 60   & 12   &\\
 \textbf{User 6}                           & 62   & 37   & 36   & 49   & 2    & 1    & 27   & 50   &\\
 \textbf{}                                 &      &      &      &      &      &      &      &      &\\[-3ex]
 \rowcolor[HTML]{BBDAFF} 
 \multicolumn{10}{l}{\cellcolor[HTML]{BBDAFF}\textbf{Block 3: Antworten Analogskala}}\\
 \hline
-\textbf{Durchschnitt (AVG)}               & 57.3 & 35.0 & 61.7 & 57.0 &      &      & 16.7 & 92.7 &\\
-\textbf{Standardabweichung (STDEV)}       & 28.2 & 6.2  & 29.6 & 31.0 &      &      & 4.6  & 4.1  &\\
+\textbf{Durchschnitt (AVG)}               & 54.8 & 45.5 & 49.8 & 45.3 &      &      & 24.5 & 81.8 &\\
+\textbf{Standardabweichung (STDEV)}       & 31.2 & 21.7 & 23.8 & 28.2 &      &      & 17.0  & 24.3  &\\
 \textbf{}                                 &      &      &      &      &      &      &      &      &\\[-3ex]
 \rowcolor[HTML]{BBDAFF} 
 \multicolumn{10}{l}{\cellcolor[HTML]{BBDAFF}\textbf{Block 4: Antworten Auswahlmenü}}\\
 \hline
-\textbf{Ja}                               &      &      &      &      & 16.7\% & 50\%  &      &      &\\
-\textbf{Nein und unbekannt}               &      &      &      &      & 83.3\% & 50\%  &      &      &\\
+\textbf{Ja}                               &      &      &      &      & 17\% & 33\%  &      &      &\\
+\textbf{Nein und unbekannt}               &      &      &      &      & 83\% & 67\%  &      &      &\\
 \hline
 \textbf{Korrekte Antwort (Soll)}                 &      &      &      &      & \textbf{NEIN}   & \textbf{JA}    &      &      &    \\
 \textbf{}                                 &      &      &      &      &        &       &      &      &\\[-3ex]
@@ -89,16 +91,16 @@ Nachstehend ein Beispiel für die Berechnung des Erfüllungsgrades für den Them
 \multicolumn{9}{l}{\cellcolor[HTML]{BBDAFF}\textbf{Block 5: Abdeckungsberechnung Themenbereich}}& TOTAL\\
 \hline
 \textbf{Frageanteil am Themenbereich} & 12.5 & 12.5 & 12.5 & 12.5 & 12.5 & 12.5 & 12.5 & 12.5 &  \\
-\textbf{Prozentuale Erfüllung}           & 57\%  & 35\%  & 62\%  & 57\%  & 83\%  & 50\%  & 17\% & 93\% &\\
-\textbf{Relativer Erfüllungsbetrag}      & 7.2  & 4.4  & 7.7  & 7.1  & 10.4  & 6.3  & 2.1  & 11.6 & 64   
+\textbf{Prozentuale Erfüllung}           & 55\%  & 46\%  & 60\%  & 45\%  & 83\%  & 33\%  & 25\% & 82\% &\\
+\textbf{Relativer Erfüllungsbetrag}      & 6.9  & 5.7  & 7.5  & 5.7  & 10.4  & 4.2  & 3.1  & 10.2 & 53.6   
 \end{tabular}
 \end{table}
 
 \footnotetext{Die Tabelle setzt sich aus insgesamt \textbf{fünf Blöcken} zusammen: \newline 
 \textbf{Block 1} ist die Zusammenfassung, welche neben der Nennung des Themenbereiches die ID's der Einzelfragen aus der dem Themenbereich zugeordneten Fragegruppe auflistet. Der berechnete Erfüllungsgrad für den Themenbereich wird in Prozent ausgedrückt. \newline 
 \textbf{Block 2} listet pro ID den Fragetyp und die erhaltenen Antworten tabellarisch auf. \newline 
-\textbf{Block 3} stellt die für die Antworten von \textbf{Typ A} (Analogskala) berechneten Werte arithmetischer Durchschnitt (AVG) und Standardabweichung (STDEV) dar. "`Unbekannt"' Antworten werden für die Berechnung von Durchschnitt und Standardabweichung nicht berücksichtigt. \newline
+\textbf{Block 3} stellt die für die Antworten von \textbf{Typ A} (Analogskala) berechneten Werte arithmetischer Durchschnitt (AVG) und Standardabweichung (STDEV) dar.\newline
 \textbf{Block 4} stellt für Antworten von \textbf{Typ B} (Auswahlmenü) den berechneten prozentualen Anteil der Ja-Antworten dar. Die Nein-Antworten werden zusammen mit den "`Unbekannt"' Antworten als  Komplement zu 100 \% ausgewiesen. Es wird pro Frage definiert, ob der "`Ja"'- oder der "`Nein"'-Anteil für die Berechnung des Erfüllungsgrades der Frage relevant ist. \newline
-\textbf{Block 5} zeigt den Frageanteil, welcher jede Frage vom Themenbereich abdeckt. Dieser Frageanteil ist im Regelfall gleichmässig verteilt; hier könnte (falls gewünscht) eine Gewichtung der Antworten vorgenommen werden. Die Summe aller Frageanteile beträgt jedoch immer 100. In der letzten Zeile wird für jede Frage der Erfüllungsgrad des Frageanteils anhand des zuvor bestimmten Durchschnittswertes (Typ A), resp. aus dem relevanten prozentualen Ja-, resp.  Nein Anteil (Typ B) berechnet.}
+\textbf{Block 5} definiert den Frageanteil, welcher jede Frage vom Themenbereich abdeckt. Dieser Frageanteil ist im Regelfall gleichmässig verteilt; hier könnte eine Gewichtung der Antworten vorgenommen werden (die Summe aller Frageanteile muss jedoch immer 100 beragen). Die darauffolgende Zeile listet die berechnete prozentuale Erfüllung aller Fragen auf, d.h. der Durchschnittswert für Fragen vom Typ A, resp- den relevanten prozentualen Ja-, bzw. Nein- Anteil für Fragen vom Typ  B. In der letzten Zeile wird der relative Erfüllungsbetrag des Frageanteils anhand der zuvor bestimmten Werte berechnet und summiert. Diese Summe entspricht dem Erfüllungsgrad des Themenbereiches. Sie wird in der Zusammenfassung als Prozentwert angegeben.}
 
 \end{document}

@@ -108,13 +108,28 @@
 %% - Add Legend and draw box around it
 %% - --------------------------------------
 
-\matrix [column sep=1mm] at (-5.5,-4.5)
+\matrix [column sep=1mm] at (-5.7,-4.3)
 {
 \node [draw,scale=0.3,shape=circle, cyan, minimum width=3em] {}; & \node [anchor=west] {\footnotesize Mehrfachverwendung}; \\
 \node [draw,scale=0.3,shape=circle, minimum width=3em] {}; & \node [anchor=west] {\footnotesize Einmalverwendung}; \\
+\node [draw,scale=0.3,fill=blue!10, minimum width=3em,minimum height=2em] {}; & \node [anchor=west] {\footnotesize Beispiel Auswertung}; \\
 };
+% - draw enclosing box
+\draw (-8,-5.2) rectangle (-3.5,-3.3);
 
-\draw (-7.7,-5.1) rectangle (-3.4,-3.8);
+%% - draw sample data area
+%% - --------------------------------------
+
+%\filldraw [fill=blue, draw=black, opacity=0.05 ] 
+\filldraw [opacity=0.3, fill=blue!20!, draw=black ] 
+% - KNOWHOW        SOCIAL
+(1*\A:\L-50) -- (2*\A:\L-90) --
+% - DEVICE        COMPANY
+(3*\A:\L-30) -- (4*\A:\L-85) -- 
+% - ATTACK        WPLACE
+(5*\A:\L-45) -- (6*\A:\L-25) -- 
+% - DATASEC
+(7*\A:\L-95);
 
 \end{tikzpicture}
 

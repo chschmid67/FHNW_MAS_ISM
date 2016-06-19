@@ -16,7 +16,7 @@
 \usepackage{array}                              % - next package must be [table]{xcolor} 
 \usepackage[table]{xcolor}                      % - previous package must be {array}
 \usepackage{tocloft}                            % - controlling the design of the TOC
-\usepackage{geometry}                           % - specify document margins and size
+\usepackage[a4paper,top=23mm,bottom=23mm,left=21mm,right=12mm,headsep=13mm,footskip=9mm]{geometry}
 \usepackage{hyphenat}                           % - global hyphenation rules
 \usepackage[font=scriptsize]{caption}           % - set fontsize of figure captions
 \usepackage{multirow}                           % - allow merging of fields of a table into one field
@@ -31,7 +31,7 @@
 \usepackage{mathtools}                          % - display special math characters
 \usepackage{tablefootnote}                      % - handling of footnotes in tables
 \usepackage[splitrule]{footmisc}                % - handling of footnotes 
-
+\usepackage{xspace}                             % - for defining new commands
 
 \usepackage[                                    % - bibliography
 backend=biber,                                  % - backend for processing LaTeX bibliography style
@@ -56,13 +56,6 @@ natbib                                          % - provide options for backend
 \usetikzlibrary{positioning}                    % - for positioning elments
 \usetikzlibrary{patterns}                       % - for applying patterns
 \usetikzlibrary{shapes.multipart}               % - dor splitting node text
-
-
-
-%% - Configure the document's geometry
-%% - --------------------------------------
-
-\geometry{a4paper, total={170mm,240mm}, headsep=5mm,left=25mm,top=30mm}
 
 %% - Set hyphenation rules
 %% - --------------------------------------
@@ -98,6 +91,43 @@ natbib                                          % - provide options for backend
 \L=5cm                  % set the value
 
 \newcommand{\A}{360/\D} % calculated angle between dimension axes  
+
+%% - global definitions
+%% -
+%% - set the name, address  of the company
+%% - --------------------------------------
+
+\def \MAKEOUTPUTFORTRUECOMPANY {}
+
+\ifx\MAKEOUTPUTFORTRUECOMPANY\undefined
+
+\newcommand{\company}{Aquina AG\xspace}
+
+\newcommand{\companystreetmoz}{Stampfistrasse 27a\xspace}
+\newcommand{\companycitymoz}{8193 Eglisau\xspace}
+\newcommand{\companyfonmoz}{079 573 21 00\xspace}
+\newcommand{\companyemailmoz}{ezani@schulti.ch\xspace}
+
+\newcommand{\companystreetnawe}{Fritz Gottlieb Pfister Weg 31\xspace}
+\newcommand{\companycitynawe}{8703 Erlenbach\xspace}
+\newcommand{\companyfonnawe}{079 652 41 80\xspace}
+\newcommand{\companyemailnawe}{weiler@acm.org\xspace}
+
+\else
+
+\newcommand{\company}{Avaloq Evolution AG\xspace}
+
+\newcommand{\companystreetmoz}{Allmendstrasse 140\xspace}
+\newcommand{\companycitymoz}{8027 Zürich\xspace}
+\newcommand{\companyfonmoz}{058 316 21 27\xspace}
+\newcommand{\companyemailmoz}{ezani.schultheiss@avaloq.com\xspace}  
+
+\newcommand{\companystreetnawe}{Allmendstrasse 140\xspace}
+\newcommand{\companycitynawe}{8027 Zürich\xspace}
+\newcommand{\companyfonnawe}{058 316 12 30\xspace}
+\newcommand{\companyemailnawe}{nathalie.weiler@avaloq.com\xspace}  
+
+\fi
 
 %% - Set the fontsize for tables
 %% - --------------------------------------

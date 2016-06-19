@@ -7,7 +7,7 @@
 
 
 \begin{sloppypar}
-Mittels geeigneter statistischer Verfahren werden die vorgegebenen und die zusätzlich genannten Stichworte aller Interviews auf ihre Häufigkeit hin analysiert. Für die Darstellung der Häufigkeit wird ein Säulendiagramm verwendet.
+Mittels geeigneter statistischer Verfahren werden die vorgegebenen und die zusätzlich genannten Stichworte aller Interviews auf ihre Häufigkeit hin analysiert.
 \end{sloppypar}
 
 \paragraph*{Analyse des Ideenspeichers}\mbox{}
@@ -26,7 +26,8 @@ Die im Ideenspeicher festgehaltenen Aussagen der Interviews werden zusammengefas
 \begin{sloppypar}
 Dieses Modell für die Selektion von Einträgen aus dem Ideenspeicher wird als eine quadratische Matrix abgebildet. Der Zeilenvektor $K$ beschreibt dabei die geschätzten Kosten, der Spaltenvektor $T$ den ebenfalls geschätzten Zeitaufwand. Die Matrix wird grob in vier Quadranten unterteilt. Die vier Quadranten bezeichnen die Verfahrensempfehlungen, nach denen ein Eintrag (Idee) aus dem Ideenspeicher beurteilt werden kann.\footnote{Die Verfahrensempfehlungen werden als aktive Tätigkeiten formuliert: \textit{Idee weiterverfolgen, in Kostenplanung aufnehmen, in Ressourcenplanung aufnehmen, Idee verwerfen}.} Die Zuordnung der Ideen zu den Verfahrensempfehlungen ist als Vorschlag für das weitere Vorgehen mit den Ideen zu verstehen. Als Skala für die Zeilen- und Spaltenvektoren $K$ und $T$ werden zusätzlich die Bewertungskategorien 
 \[tief - mittel - hoch - sehr \; hoch\]
-eingeführt. Dadurch besteht die Menge $M$ der Auswertungsmatrix aus insgesamt 16 geordneten Paaren. Die nachfolgend aufgeführte Tabelle beschreibt die den Quadranten zugeordneten Paarungen.
+
+eingeführt. Dadurch besteht die Menge $M$ der Auswertungsmatrix aus insgesamt 16 geordneten Paaren. Die nachfolgend aufgeführte Tabelle beschreibt die den Quadranten zugeordneten Paarungsmengen und das empfohlene Verfahren für diese.
 \end{sloppypar}
 
 %% - table metadata
@@ -48,10 +49,10 @@ eingeführt. Dadurch besteht die Menge $M$ der Auswertungsmatrix aus insgesamt 1
 Idee weiterverfolgen & \[ \Bigg \{ \begin{tabular}{cc} (\;\textit{K=tief\,,\,T=tief}\;) & (\;\textit{K=mittel\,,\,T=tief}\;)  \\ (\;\textit{K=tief\,,\,T=mittel}\;) & (\;\textit{K=mittel\,,\,T=mittel}\;) \end{tabular} \Bigg \}\] & Die in diesem Quadranten abgebildeten Ideen sind sowohl bezüglich der zu erwartenden Kosten als auch dem prognostizierten Zeitaufwand für die Realisierung vertretbar.\\
 \hline
 
-in Kostenplanung \newline aufnehmen & \[\Bigg\{\begin{tabular}{cc} (\textit{K=hoch,T=tief}) & (\textit{K=hoch,T=mittel})  \\ (\textit{K=sehr hoch,T=tief}) & (\textit{K=sehr hoch,T=mittel}) \end{tabular}\Bigg\}\] & Dieser Quadrant umfasst Ideen, die bezüglich dem prognostizierten Zeitaufwand für die Realisierung als vertretbar eingestuft werden. Es wird jedoch erwartet, dass sie auf der Ausgabenseite mit erhöhten Investitions- (\acrshort{capex} oder Betriebskosten (\acrshort{opex} zu Buche schlagen. Deshalb sollten Ideen dieses Quadranten in die Kostenplanung für die spätere Realisierung aufgenommen werden.\\
+in Kostenplanung \newline aufnehmen & \[\Bigg\{\begin{tabular}{cc} (\textit{K=hoch,T=tief}) & (\textit{K=hoch,T=mittel})  \\ (\textit{K=sehr hoch,T=tief}) & (\textit{K=sehr hoch,T=mittel}) \end{tabular}\Bigg\}\] & Dieser Quadrant umfasst Ideen, die bezüglich dem prognostizierten Zeitaufwand für die Realisierung als vertretbar eingestuft werden. Es wird jedoch erwartet, dass sie auf der Ausgabenseite mit erhöhten Investitions- (\acrshort{capex}) oder Betriebskosten (\acrshort{opex}) zu Buche schlagen. Deshalb sollten Ideen dieses Quadranten in die Kostenplanung für die spätere Realisierung aufgenommen werden.\\
 \hline
 
-in Ressourcen-\newline planung aufnehmen & \[\Bigg\{\begin{tabular}{cc} (\textit{K=tief,T=hoch}) & (\textit{K=mittel,T=hoch})  \\ (\textit{K=tief,T=sehr hoch}) & (\textit{K=mittel,T=sehr hoch}) \end{tabular}\Bigg\}\] & Der dritte Quadrant umfasst Ideen, die bezüglich der prognostizierten Kosten (Investitions- (\acrshort{capex} oder Betriebskosten (\acrshort{opex}) für die Realisierung als vertretbar eingestuft werden. Es wird jedoch erwartet, dass der Zeitaufwand für die Realisierung erheblich ist. Deshalb sollten Ideen dieses Quadranten in die Ressourcenplanung für die spätere Realisierung aufgenommen werden.\\
+in Ressourcen-\newline planung aufnehmen & \[\Bigg\{\begin{tabular}{cc} (\textit{K=tief,T=hoch}) & (\textit{K=mittel,T=hoch})  \\ (\textit{K=tief,T=sehr hoch}) & (\textit{K=mittel,T=sehr hoch}) \end{tabular}\Bigg\}\] & Der dritte Quadrant umfasst Ideen, die bezüglich der prognostizierten Investitions- (\acrshort{capex}) oder Betriebskosten (\acrshort{opex}) für die Realisierung als vertretbar eingestuft werden. Es wird jedoch erwartet, dass der Zeitaufwand für die Realisierung erheblich ist. Deshalb sollten Ideen dieses Quadranten in die Ressourcenplanung für eine spätere Realisierung aufgenommen werden.\\
 \hline
 
 Idee verwerfen & \[\Bigg\{\begin{tabular}{cc} (\textit{K=hoch,T=hoch}) & (\textit{K=sehr hoch,T=hoch})  \\ (\textit{K=hoch,T=sehr hoch}) & (\textit{K=sehr hoch,T=sehr hoch}) \end{tabular}\Bigg\}\] & Dieser Quadrant umfasst diejenigen Ideen, welche aufgrund der prognostizierten Kosten oder dem Zeitaufwand für die Realisierung verworfen werden sollten.\\
