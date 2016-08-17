@@ -1,0 +1,51 @@
+%\documentclass[../../main.tex]{subfiles}
+
+%\begin{document}
+
+\pgfplotstableread[col sep=comma, header=false]{
+% -- <percent value>, <startpoint from above> , <label>
+      45,0,  Aktuelle/lesbare Informationen zum Cybercrimegeschehen
+      45,1.2,  Integration in Firmenveranstaltungen
+      44,2.4,  Verständliche Empfehlungen zum Einsatz von IT für den Alltag (Firma/Heim)
+      30,3.6,  Wirkungsvolle Sicherheitsschulungen und Trainings
+      26,4.8,  Live Hacking Event
+      24,6.0,  Praktizierbare Verhaltensanweisungen (Sicherheitsvorfall/Datenaustausch/etc.)
+      13,7.2,  Informationen zu physischer Sicherheit
+      13,8.4,  Vereinfachung/Verbesserung der Prozesse/Systemlandschaften
+      12,9.8,  Praktisches Know-How Datenklassifizierung/-schutz/-sicherheit
+      11,11.2,  Offene+transparente Kommunikation von Sicherheitsvorfällen
+      4,12.4,  Verantwortungsübernahme des Managements
+}\datatable
+
+\begin{tikzpicture}
+
+  \begin{axis}[
+%    height = 5.5cm,
+    xbar,
+    y=-.7cm,
+    enlarge y limits={abs=0.45cm},
+    axis x line       = none,
+    tickwidth         = 0pt,
+    y axis line style = { opacity = 0 },
+   yticklabels from table={\datatable}{2},
+    ytick=data,
+    yticklabel style={text width=9cm,align=right},
+    nodes near coords,
+    nodes near coords align={horizontal},
+%    nodes near coords={\pgfmathprintnumber\pgfplotspointmeta\%},
+    ]
+    \addplot table [y=1, x=0] {\datatable};
+  \end{axis}
+  
+% --
+% -- draw surrounding box
+% --
+  \node[
+      draw=black, very thin,
+      minimum width=\textwidth,
+      fit=(current bounding box.north west) (current bounding box.south east),
+    ]at (current bounding box.center){};
+    
+\end{tikzpicture}
+
+%\end{document}

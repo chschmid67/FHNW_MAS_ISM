@@ -1,0 +1,66 @@
+% --
+% -- datatable 2015
+% --
+
+\pgfplotstableread[col sep=comma, header=false]{
+% -- <percent value>, <startpoint from above> , <label>
+      68,0,    Phishing
+      38,1,    Social Engineering
+      59,2,    Malware
+      14,3,    Advanced Persistent Threat APT
+}\datatableA
+
+% --
+% -- datatable 2016
+% --
+
+\pgfplotstableread[col sep=comma, header=false]{
+% -- <percent value>, <startpoint from above> , <label>
+      84,0,    Phishing
+      64,1,    Social Engineering
+      80,2,    Malware
+      24,3,    Advanced Persistent Threat APT
+}\datatableB
+
+\begin{tikzpicture}
+  \begin{axis}[
+%    height = 5.5cm,
+    xbar,
+    y=-1.1cm,
+    enlarge y limits={abs=0.45cm},
+    axis x line       = none,
+    tickwidth         = 0pt,
+    y axis line style = { opacity = 0 },
+    yticklabels from table={\datatableA}{2},
+    ytick=data,
+    yticklabel style={text width=9cm,align=right},
+    nodes near coords,
+    nodes near coords align={horizontal},
+    nodes near coords={\pgfmathprintnumber\pgfplotspointmeta\%},
+    reverse legend,
+    legend style={
+        at={(-1.0,0.6)},
+        font=\footnotesize \selectfont,
+        anchor=north east,
+        legend columns=1
+        },
+    ]
+    \addplot table [y=1, x=0] {\datatableB};
+    \addplot table [y=1, x=0] {\datatableA};
+    
+    \legend {2016, 2015}
+
+  \end{axis}
+  
+% --
+% -- draw surrounding box
+% --
+  \node[
+      draw=black, very thin,
+      minimum width=\textwidth,
+      fit=(current bounding box.north west) (current bounding box.south east),
+    ]at (current bounding box.center){};
+    
+\end{tikzpicture}
+
+

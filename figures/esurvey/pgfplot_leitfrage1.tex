@@ -1,0 +1,53 @@
+\pgfplotstableread[col sep=comma, header=false]{
+% -- <percent value>, <startpoint from above> , <label>
+      51,0,  Persönliches Verhalten
+      43,0.7,  Datenschutz/sicherheit/klassifizierung/zugriff
+      39,1.4,  Risikobewusstsein
+      35,2.1,  Wissen über Bedrohungen
+      34,2.8,  Kenntnisse Securitypolicies
+      29,3.5,  Betrifft die physische Sicherheit
+      25,4.2,  Umgang mit Passwörtern
+      19,4.9,  Umgang mit Firmendaten
+      18,5.6,  Security Schulung
+      16,6.3,  Umgang mit Email
+      9,7.0,  Verhalten in der Öffentlichkeit
+      9,7.7,  Weltanschauung/Kultur/Soziales
+      8,8.4,  Produktesicherheit
+      6,9.1,  Umgang mit persönlichen Daten
+      6,9.8,  Umgang mit Kundendaten
+      6,10.5,  Security Incidents
+      6,11.2,  Technische Hilfsmittel
+      4,11.9,  Verantwortung Management
+      2,12.6,  Erkennung verdächtige Aktivitäten
+}\datatable
+
+\begin{tikzpicture}
+
+  \begin{axis}[
+%    height = 5.5cm,
+    xbar,
+    y=-.7cm,
+    enlarge y limits={abs=0.45cm},
+    axis x line       = none,
+    tickwidth         = 0pt,
+    y axis line style = { opacity = 0 },
+   yticklabels from table={\datatable}{2},
+    ytick=data,
+%    yticklabel style={text width=9cm,align=right},
+    nodes near coords,
+    nodes near coords align={horizontal},
+%    nodes near coords={\pgfmathprintnumber\pgfplotspointmeta\%},
+    ]
+    \addplot table [y=1, x=0] {\datatable};
+  \end{axis}
+  
+  % --
+% -- draw surrounding box
+% --
+  \node[
+      draw=black, very thin,
+      minimum width=\textwidth,
+      fit=(current bounding box.north west) (current bounding box.south east),
+    ]at (current bounding box.center){};
+    
+\end{tikzpicture}

@@ -26,61 +26,75 @@
 %% - label x- and y-Axis
 %% - --------------------------------------
 
-\node[scale=1.0] at (7.9,0) {Vertraulichkeit $C$};
-\node[scale=1.0] at (0,6.5) {Integrität $I$};
+\node[scale=1.0, align=center] at (7.5,0) {Vertraulichkeit\\$(C)$};
+\node[scale=1.0, align=center] at (0,6.8) {Integrität\\$(I)$};
 
 %% - Draw x- and y- Axis scale
 %% - --------------------------------------
 
-\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (1,-0.2) {normal};
-\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (3,-0.2) {hoch};
-\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (5,-0.2) {sehr hoch};
+\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east,align=right] at (1,-0.2) {normal\\(1)};
+\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east,align=right] at (3,-0.2) {hoch\\(2)};
+\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east,align=right] at (5,-0.2) {sehr hoch\\(3)};
 
-\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,1) {normal};
-\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,3) {hoch};
-\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,5) {sehr hoch};
+\node[draw,scale=1,shape=rectangle,draw=none,anchor=east,align=right] at (-0.2,1) {normal\\(1)};
+\node[draw,scale=1,shape=rectangle,draw=none,anchor=east,align=right] at (-0.2,3) {hoch\\(2)};
+\node[draw,scale=1,shape=rectangle,draw=none,anchor=east,align=right] at (-0.2,5) {sehr hoch\\(3)};
 
 %% - Draw selection line and label
 %% - --------------------------------------
 
 \filldraw [color=blue, opacity=0.05] (0,6) -- (6,6) -- (6,0) -- (4,0) -- (4,2) -- (2,2) -- (2,4) -- (0,4) -- cycle;
 
+\node[draw,scale=1,shape=rectangle,draw=none, blue,align=center] at (7.5,3) {Selektions-\\fläche};
+\draw [blue] (5.8,3) -- (6.4,3);
+
 %% - Add datapoints
 %% - --------------------------------------
 
-\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (3.5,4.5) {A};
-\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (2.5,3.5) {B};
-\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (3.5,3.0) {C};
-\node[draw,shape=circle,gray,very  thick,minimum width=2em] at (1.0,1.0) {D};
-\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (2.5,2.5) {E};
+\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (4.5,4.5) {A};
+\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (3.5,4.5) {B};
+\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (2.5,3.5) {C};
+\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (5.5,3.5) {D};
+\node[draw,shape=circle,gray,very  thick,minimum width=2em] at (1.0,1.0) {E};
 \node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (5.5,5.5) {F};
-\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (5.0,3.0) {G};
+\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (2.5,2.5) {G};
 \node[draw,shape=circle,gray,very  thick,minimum width=2em] at (3.0,1.0) {H};
-\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (4.5,4.5) {I};
-\node[draw,shape=circle,gray,very  thick,minimum width=2em] at (1.0,3.0) {J};
-\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (4.5,5.5) {K};
-\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (5.5,4.5) {L};
-\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (2.5,5.5) {M};
+\node[draw,shape=circle,gray,very  thick,minimum width=2em] at (1.0,3.0) {I};
+\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (4.5,5.5) {J};
+\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (5.5,4.5) {K};
+\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (2.5,5.5) {L};
+\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (4.5,3.5) {M};
+\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (3.5,2.5) {N};
+\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (5.5,2.5) {O};
+\node[draw,shape=circle,cyan,very thick,minimum width=2em,fill=white] at (3.5,3.5) {P};
 
 %% - legend
 %% - --------------------------------------
 
-\matrix  [matrix of nodes,row sep=1mm,column 1/.style={nodes={circle,scale=0.5,draw,minimum width=1em}},column 2/.style={right,font=\footnotesize}] at (12,3)
+\matrix  [matrix of nodes,row sep=1mm,column 1/.style={nodes={circle,scale=0.5,draw,minimum width=1em}},column 2/.style={right,font=\footnotesize}] at (-0.5,-6)
 {
-A   & Produktentwicklung \\
-B   & Gebäudemanagement \\
-C   & Marketing \\
-D   & Einkauf \\
-E   & Kommunkation \\
+A   & Geschäftsleitung \\
+B   & Softwareentwicklung \\
+C   & Admin- \& Gebäudemanagement \\
+D   & Marketing, Kommunikation \& Strategie \\
+E   & Einkauf \\
 F   & Personaldienst \\
 G   & Verkauf \\
 H   & Verkaufsanbahnung \\
-I   & Finanzen \\
-J   & Qualitätssicherung \\
-K   & Rechtsabteilung \\
-L   & IT \\
-M   & Schulung \\
 };
+
+\matrix  [matrix of nodes,row sep=1mm,column 1/.style={nodes={circle,scale=0.5,draw,minimum width=1em}},column 2/.style={right,font=\footnotesize}] at (8,-6)
+{
+I   & Qualitätssicherung \\
+J   & Rechtsdienst \& Finanzen\\
+K   & IT\\
+L   & Academy \\
+M   & Kundensupport \\
+N   & Konsultation \& Implementationssupport \\
+O   & Projektmanagement \& Business Analyse \\
+P   & Services \\
+};
+
 
 
 \end{tikzpicture}

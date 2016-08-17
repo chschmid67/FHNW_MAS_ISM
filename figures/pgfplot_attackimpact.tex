@@ -1,0 +1,40 @@
+\pgfplotstableread[col sep=comma, header=false]{
+% -- <percent value>, <startpoint from above> , <label>
+      44,0,  Unterbrechung der Geschäftsprozesse
+      36,1,  Finanzieller Verlust
+      28,2,  Abfluss von internen Informationen
+      24,3,  Reputations-Schaden
+      16,4,  Abfluss von vertraulichen Partner- oder Kundendaten
+      16,5,  Unerlaubte Weitergabe von persönlichen Daten
+      12,6,  Datenmanipulation
+}\datatable
+
+\begin{tikzpicture}
+  \begin{axis}[
+%    height = 5.5cm,
+    xbar,
+    y=-.7cm,
+    enlarge y limits={abs=0.45cm},
+    axis x line       = none,
+    tickwidth         = 0pt,
+    y axis line style = { opacity = 0 },
+    yticklabels from table={\datatable}{2},
+    ytick=data,
+    yticklabel style={text width=9cm,align=right},
+    nodes near coords,
+    nodes near coords align={horizontal},
+    nodes near coords={\pgfmathprintnumber\pgfplotspointmeta\%},
+    ]
+    \addplot table [y=1, x=0] {\datatable};
+  \end{axis}
+
+% --
+% -- draw surrounding box
+% --
+  \node[
+      draw=black, very thin,
+      minimum width=\textwidth,
+      fit=(current bounding box.north west) (current bounding box.south east),
+    ]at (current bounding box.center){};
+    
+\end{tikzpicture}

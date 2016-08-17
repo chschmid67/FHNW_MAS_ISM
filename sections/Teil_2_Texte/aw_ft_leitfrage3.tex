@@ -1,0 +1,104 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{sloppypar}
+Frage: Was würdest Du im Unternehmen bezüglich Security als die grösste Risikoquelle identifizieren?
+\end{sloppypar}
+
+%% -
+%% - keep this block together!!!!!!!!!!!!!!
+%% - --------------------------------------
+%% -
+\addtocounter{figure}{1}\begin{figure}[H]
+    \input{figures/esurvey/pgfplot_leitfrage3}
+    \vspace*{-5mm}
+    \caption*{Abbildung \thefigure: Auswertung Leitfrage 3 (Anzahl Nennungen der Sammelbegriffe $\vert$ $\Sigma: 277$, $n: 217$)}
+    \label{pgfplot_leitfrage3}
+\end{figure}
+\addcontentsline{lof}{figure}{\numberline {\thefigure}{\ignorespaces Auswertung Leitfrage 3}}
+%% -
+%% - keep this block together!!!!!!!!!!!!!!
+%% - --------------------------------------
+%% -
+
+\subparagraph*{Kernaussagen zu Leitfrage 3}\mbox{}
+
+%% - table metadata
+%% - --------------------------------------
+
+\begin{table}[H]
+\tablefontsize	
+\caption{Kernaussagen zu Leitfrage 3}
+\label{kernaussagen_leitfrage3}
+
+%% - set width of columns
+%% - ---------------------------------------
+
+\begin{tabular}{ |p{\textwidth-1cm}| }
+
+%% - Header row with shadowing
+%% - --------------------------------------
+
+%% - table data
+%% - --------------------------------------
+
+\hline
+Es wird geglaubt "`ich bin in einem professionellen Umfeld, d.h. ich muss mich nicht um Security kümmern, das machen andere"', oder "`wenn ein Zugriff bei mir funktioniert, dann wird das schon richtig sein"'. Wenn etwas funktioniert, nimmt man es als OK an und hinterfragt gar nicht mehr das Risiko. Beispiel: Wenn das Email schon "`böse"' ist, warum kommt das denn überhaupt zu mir durch?\\ 
+\hline
+Es werden Cloud Services benutzt, um Firmendokumente zu bearbeiten (PDF to Word Konverter, Google Translate um Gipfelimeeting Präsentationen zu übersetzen).
+\\
+\hline
+Visitor badges are handed out pretty loosely (not asking and validating the internal user id or details). It is possible to invite guests on site without registering them at reception. \\ 
+\hline
+Beim Gang durch Büros am Abend sieht man immer wieder intrne oder vertrauliche Dokumente, welche auf dem Tisch oder beim Drucker rumliegen. In Sitzungszimmer bleiben vertrauliche Dokumente liegen und die Whiteboards werden nicht abgewischt. \\ 
+\hline
+Ein Problem sind Austritte externer Mitarbeiter, welche vom Line Manager nicht (oder viel zu spät) gemeldet werden. Der Zugriff auf die Systeme ist während dieser Zeitspanne immer noch möglich.\\ 
+\hline
+Auf Geschäftsreisen sind die Bildschirme der Firmenlaptops nicht vor neugierigen Blicken geschützt. \\ 
+\hline
+The number of separate services we are required to have logins for. SAP, Windows, Avaloq tools and now the recent HR tool site need different logons. Single login is not always possible. The easiest way for us to manage all of these services is to keep our passwords aligned. \\ 
+\hline
+
+\end{tabular}
+\end{table}
+
+\subparagraph*{Vorschläge aus der Umfrage}\mbox{}
+
+%% - table metadata
+%% - --------------------------------------
+
+\sloppy 
+
+\begin{table}[H]
+\tablefontsize	
+\centering
+\caption{Vorschläge aus Interviews und Online-Umfrage zu Leitfrage 3}
+\label{vorschlaege_leitfrage3}
+\begin{tabular}{ |p{3.8cm}|p{2.5cm}|p{2.5cm}|p{3.8cm}|p{3.0cm}|}
+
+\hline
+\tableheaderbgcolor
+\textbf{Ideen-Beschreibung} & \textbf{Kosten-\newline schätzung} & \textbf{Aufwand-\newline schätzung} & \textbf{Nutzen} & \textbf{Quadrant}\\ 
+
+\hline
+Einführung einer Geräteauthentisierung auf Netzwerkebene. &  Kosten sind hoch &  Aufwand ist hoch  & Es können sich nur noch bekannte, zugelassene Geräte mit dem Firmennetzwerk verbinden. Risikoverminderung von Datenspionage. Nachweis von Netzwerkzugriffen.& langfristig einplanen\\
+\hline
+Social Engineering-Szene mit Schauspielern am Gipfelimeeting nachstellen. &  Kosten sind tief &  Aufwand ist tief  & Wiedererkennung der eigenen Verhaltensweisen. Konkrete Visualisierung einer Alltagssituation in der Firma mit Social Engineering Angriff. Nutzen eher klein, Gefahr der Lächerlichkeit gegeben. & Idee verwerfen\\
+\hline
+Auf allen Laptops eine Sichtschutzfolie installieren. &  Kosten sind tief &  Aufwand ist tief  & Schutz der Firmendaten vor neugierigen Blicken an öffentlichen Orten und in der Firma. Wahrung der Privatsphäre und Schutz von vertraulichen Informationen & zur Umsetzung empfohlen\\
+\hline
+Festlegen, wer am Gipfelimeeting teilnehmen darf (interne, externe) und wer nicht. &  Kosten sind tief &  Aufwand ist tief  & Vertrauliche Informationen werden nur an Mitarbeitende kommuniziert, die diese auch hören sollen. Schutz von Firmeninterna. & zur Umsetzung empfohlen\\
+\hline
+Der Zutrittsbadge muss jederzeit sichtbar getragen werden. &  Kosten sind tief &  Aufwand ist tief  & Mitarbeitende und externe Consultants sind direkt erkenn- und voneinader unterscheidbar. & zur Umsetzung empfohlen\\
+\hline
+Die Dokumenten-Urne vorstellen und erklären &  Kosten sind tief &  Aufwand ist tief  & Es ist ein sicherer Ort bekannt, an welchem vertrauliche Daten auf Papier entsorgt werden können. Es werden weniger vertrauliche Dokumente im normalen Papierkorb entsorgt, aus welchem sie leicht entwendet werden können.  & zur Umsetzung empfohlen\\
+\hline
+Sicherheits-Software gratis an Mitarbeitende für die Installation zu Hause abgeben. &  Kosten sind tief &  Aufwand ist mittel  & Besserer Schutz des privaten Computers mit welchem vom Homeoffice aus in die Firma eingeloggt wird.  & zur Umsetzung empfohlen\\
+\hline
+Die Personalabteilung soll Abgänge von Mitarbeitenden wieder zeitnah kommunizieren. & Kosten sind tief &  Aufwand ist tief  & Es ist bekannt, welche Mitarbeitenden das Unternehmen verlassen haben. Möglichkeit, unbefugtem Zutritt von ehemaligen Mitarbeitenden via Social-Engineering Attacke "Ich habe meinen Badge vergessen" zu verhindern. & zur Umsetzung empfohlen\\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

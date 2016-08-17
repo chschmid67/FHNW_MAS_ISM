@@ -1,0 +1,39 @@
+\pgfplotstableread[col sep=comma, header=false]{
+% -- <percent value>, <startpoint from above> , <label>
+      75,0,    Zustimmung dass die Geschäftsleitung Cyber-Gefahren als ein operationelles Risiko sieht
+      64,1.5,  Das Unternehmen war schon Ziel von Social Engineering Attacken
+      48,3,    Cyber Security ist mehrheitlich ein technisches Problem
+      36,4,    Es gibt keinen Notfallplan für Cyber-Attacken
+      19,5.5,  Die Mitarbeitenden sind sich der Cyber-Risiken genügend bewusst
+}\datatable
+
+\begin{tikzpicture}
+  \begin{axis}[
+%    height = 5.5cm,
+    xbar,
+    y=-.7cm,
+    enlarge y limits={abs=0.45cm},
+    axis x line       = none,
+    tickwidth         = 0pt,
+    y axis line style = { opacity = 0 },
+    yticklabels from table={\datatable}{2},
+    ytick=data,
+    yticklabel style={text width=9cm,align=right},
+    nodes near coords,
+    nodes near coords align={horizontal},
+    nodes near coords={\pgfmathprintnumber\pgfplotspointmeta\%},
+    ]
+    \addplot table [y=1, x=0] {\datatable};
+  \end{axis}
+
+% --
+% -- draw surrounding box
+% --
+  \node[
+      draw=black, very thin,
+      minimum width=\textwidth,
+      fit=(current bounding box.north west) (current bounding box.south east),
+    ]at (current bounding box.center){};
+    
+\end{tikzpicture}
+

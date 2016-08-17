@@ -1,0 +1,49 @@
+\pgfplotstableread[col sep=comma, header=false]{
+% -- <percent value>, <startpoint from above> , <label>
+      55,0,  Die anderen Arbeitskollegen
+      30,0.7,  Unklare Richtlinien
+      24,1.4,  Menschliches Fehlverhalten
+      21,2.1,  Fehlende Zutrittskontrolle
+      20,2.8,  Umgang mit Email
+      19,3.5,  Mangelnde Kenntnisse IT Technologien
+      18,4.2,  Sabotage/Spionage/Hacker/Social Engineering
+      16,4.9,  Umgang vertrauliche Dokumente (drucken/kopieren/entsorgen)
+      11,5.6,  Ungepatchte Software
+      10,6.3,  Eingesetzte Technologien
+      10,7.0,  Mobilgeräte (Handy/Tablets/Datenträger)
+      10,7.7,  Externe Mitarbeiter + Partner/Besucher
+      10,8.4,  Infrastruktur (WLAN/Netz/VoIP)
+      9,9.1,  Umgang mit Passwörtern
+      9,9.8,  Benutzung von Cloud Services
+}\datatable
+
+\begin{tikzpicture}
+
+  \begin{axis}[
+%    height = 5.5cm,
+    xbar,
+    y=-.7cm,
+    enlarge y limits={abs=0.45cm},
+    axis x line       = none,
+    tickwidth         = 0pt,
+    y axis line style = { opacity = 0 },
+   yticklabels from table={\datatable}{2},
+    ytick=data,
+%    yticklabel style={text width=9cm,align=right},
+    nodes near coords,
+    nodes near coords align={horizontal},
+%    nodes near coords={\pgfmathprintnumber\pgfplotspointmeta\%},
+    ]
+    \addplot table [y=1, x=0] {\datatable};
+  \end{axis}
+  
+  % --
+% -- draw surrounding box
+% --
+  \node[
+      draw=black, very thin,
+      minimum width=\textwidth,
+      fit=(current bounding box.north west) (current bounding box.south east),
+    ]at (current bounding box.center){};
+    
+\end{tikzpicture}

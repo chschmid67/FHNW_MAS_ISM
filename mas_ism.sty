@@ -16,7 +16,10 @@
 \usepackage{array}                              % - next package must be [table]{xcolor} 
 \usepackage[table]{xcolor}                      % - previous package must be {array}
 \usepackage{tocloft}                            % - controlling the design of the TOC
-\usepackage[a4paper,top=23mm,bottom=23mm,left=21mm,right=12mm,headsep=13mm,footskip=9mm]{geometry}
+%% -
+%% - to display the documents margins, add 'showframe' to the optionlist of the geometry package  
+%% -
+\usepackage[a4paper,top=23mm,bottom=23mm,left=21mm,right=10mm,headsep=13mm,footskip=11mm]{geometry}
 \usepackage{hyphenat}                           % - global hyphenation rules
 \usepackage[font=scriptsize]{caption}           % - set fontsize of figure captions
 \usepackage{multirow}                           % - allow merging of fields of a table into one field
@@ -30,10 +33,26 @@
 \usepackage{amssymb}                            % - used for mathematical symbols
 \usepackage{mathtools}                          % - display special math characters
 \usepackage{tablefootnote}                      % - handling of footnotes in tables
+%\usepackage{footnote}                           % - handling of footnotes
 \usepackage[splitrule]{footmisc}                % - handling of footnotes 
 \usepackage{xspace}                             % - for defining new commands
+\usepackage{microtype}                          % - add typographic capabilities, such as ligatures
+\usepackage{ellipsis}                           % - make beautiful ... 
+\usepackage{todonotes}
+\usepackage[pdftex,colorlinks]{hyperref}        % - prettyprint URLs
+\usepackage{dirtytalk}                          % - enable nested comments
+\usepackage{enumitem}                           % - control space in enumeration lists
+
+\usepackage{subcaption}
+
+\hypersetup{                                    % - setup hyperlinks
+pdffitwindow=true,
+urlcolor=blue, 
+linkcolor=black, 
+citecolor=black}
 
 \usepackage[                                    % - bibliography
+%backref,backrefstyle=none,                      % - prints pagenumber on which a reference to bibliography was used
 backend=biber,                                  % - backend for processing LaTeX bibliography style
 style=authoryear,                               % - set style for entries
 citestyle=authoryear,                           % - when cited, use this form
@@ -41,12 +60,31 @@ sorting=anyt,                                   % - sort the bibliography
 natbib                                          % - provide options for backend
 ]{biblatex} 
 
+\setlength{\footnotesep}{\baselineskip}
+
 %% - configure bibliography aspects
 %% - --------------------------------------
 
 \setlength{\bibitemsep}{\baselineskip}          % - set space between bibliography entries
 
-%% - configutre the TikZ package
+\setlength{\marginparwidth}{1.5cm}              % - used in todonotes
+\reversemarginpar                               % - used in todonotes
+
+
+%% - caption setup figures
+%% - --------------------------------------
+
+\captionsetup[figure]{font=scriptsize,skip=0pt}
+
+%% - use and configure the pgfplots and pgfplotstable package
+%% - --------------------------------------
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{width=9cm,compat=1.9}
+\pgfplotsset{every tick label/.append style={font=\footnotesize}}
+
+%% - use and configure the TikZ package
 %% - --------------------------------------
 
 \usepackage{tikz}                               % - the TikZ drawing package
@@ -55,7 +93,8 @@ natbib                                          % - provide options for backend
 \usetikzlibrary{matrix}                         % - provide a matrix datastructure
 \usetikzlibrary{positioning}                    % - for positioning elments
 \usetikzlibrary{patterns}                       % - for applying patterns
-\usetikzlibrary{shapes.multipart}               % - dor splitting node text
+\usetikzlibrary{shapes.multipart}               % - for splitting node text
+\usetikzlibrary{fit}                            % - fitting box around tikz image
 
 %% - Set hyphenation rules
 %% - --------------------------------------
@@ -92,16 +131,31 @@ natbib                                          % - provide options for backend
 
 \newcommand{\A}{360/\D} % calculated angle between dimension axes  
 
+%% - parameters for pie chart drawing
+%% - --------------------------------------
+
+\def\angle{0}
+\def\radius{3}
+\def\cyclelist{{"orange","blue","red","green"}}
+\newcount\cyclecount \cyclecount=-1
+\newcount\ind \ind=-1
+
+
 %% - global definitions
 %% -
 %% - set the name, address  of the company
 %% - --------------------------------------
 
-\def \MAKEOUTPUTFORTRUECOMPANY {}
+%\def \MAKEOUTPUTFORTRUECOMPANY {}
 
 \ifx\MAKEOUTPUTFORTRUECOMPANY\undefined
 
-\newcommand{\company}{Aquina AG\xspace}
+\newcommand{\companylong}{Aquina AG}
+\newcommand{\companyshort}{Aquina}
+\newcommand{\companyurl}{modellbank.com}
+\newcommand{\group}{Aquina Group\xspace}
+
+\newcommand{\abs}{Aquina Banking Solution\xspace}
 
 \newcommand{\companystreetmoz}{Stampfistrasse 27a\xspace}
 \newcommand{\companycitymoz}{8193 Eglisau\xspace}
@@ -113,9 +167,25 @@ natbib                                          % - provide options for backend
 \newcommand{\companyfonnawe}{079 652 41 80\xspace}
 \newcommand{\companyemailnawe}{weiler@acm.org\xspace}
 
+\newcommand{\companybranchOCEANIA}{Perth\xspace}
+\newcommand{\companybranchSEASIA}{Bangkok\xspace}
+\newcommand{\companybranchCHINA}{Peking\xspace}
+\newcommand{\companybranchFRANCE}{Marseille\xspace}
+\newcommand{\companybranchUK}{Manchester\xspace}
+\newcommand{\companybranchGERMANY}{Köln\xspace}
+\newcommand{\companybranchBENELUX}{Brüssel\xspace}
+
+\newcommand{\companydevcenterEU}{Glasgow\xspace}
+\newcommand{\companyopscenterSEASIA}{Kuala Lumpur\xspace}
+
 \else
 
-\newcommand{\company}{Avaloq Evolution AG\xspace}
+\newcommand{\companylong}{Avaloq Evolution AG}
+\newcommand{\companyshort}{Avaloq}
+\newcommand{\companyurl}{avaloq.com}
+\newcommand{\group}{Avaloq Group\xspace}
+
+\newcommand{\abs}{Avaloq Banking Suite\xspace}
 
 \newcommand{\companystreetmoz}{Allmendstrasse 140\xspace}
 \newcommand{\companycitymoz}{8027 Zürich\xspace}
@@ -127,7 +197,23 @@ natbib                                          % - provide options for backend
 \newcommand{\companyfonnawe}{058 316 12 30\xspace}
 \newcommand{\companyemailnawe}{nathalie.weiler@avaloq.com\xspace}  
 
+\newcommand{\companybranchOCEANIA}{Sydney\xspace}
+\newcommand{\companybranchSEASIA}{Singapur\xspace}
+\newcommand{\companybranchCHINA}{Hong Kong\xspace}
+\newcommand{\companybranchFRANCE}{Paris\xspace}
+\newcommand{\companybranchUK}{London\xspace}
+\newcommand{\companybranchGERMANY}{Rüsselsheim\xspace}
+\newcommand{\companybranchBENELUX}{Luxembourg\xspace}
+
+\newcommand{\companydevcenterEU}{Edinburgh\xspace}
+\newcommand{\companyopscenterSEASIA}{Manila\xspace}
+
 \fi
+
+%% - control the spacing in enumeration lists
+%% - --------------------------------------
+
+\setlist[itemize]{itemsep=0.1em, topsep=0pt}
 
 %% - Set the fontsize for tables
 %% - --------------------------------------

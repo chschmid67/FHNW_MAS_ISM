@@ -2,10 +2,20 @@
 
 \begin{document}
 
+\subsection{Erhebung Security Awareness Ist-Zustand}
+
+\begin{sloppypar}
+Nachstehend wird das angewandte Verfahren zur Erhebung des Security Ist-Zustandes vorgestellt. Das hier gewählte Verfahren\footnote{oder besser: die gewählten Verfahren Bestimmung der Anspruchsgruppen, Datenerhebung durch Online-Fragebogen und Experten-Interviews} für sich gesehen ist wiederverwendbar im Sinne der Schaffung einer Vergleichsmöglichkeit mit den bisherigen Messresultaten bei einer erneuten Durchführung.
+
+Ein Unternehmen befindet sich durch Personalfluktuation, Reorganisation der Organisationsstruktur oder Änderungen auf dem Wachstumspfad im permanenten Wandel. Ebenso können technologische Errungenschaften oder soziologische Umschichtungen zu einem Werte- resp. Kulturwandel führen. Die Auswirkungen dieser Veränderungen können sich dahingehend niederschlagen, dass Beispielsweise bestimmte (Interview-) Fragen ihre Relevanz verlieren während andere, zum Zeitpunkt der Nullmessung noch unbekannte Themenkomplexe nicht abgefragt wurden. 
+
+Der Security Awareness Ist-Zustand beschreibt das Unternehmen und die damit verbundene Sicherheitskultur sowie das Bewusstsein darüber zu einem bestimmten Zeitpunkt $X$. Nachfolgende Veränderungen (personell, strukturell oder kulturell) beeinflussen diese Grössen das Ergebnis einer Datensammlung in erheblichen Masse. Bei einer Nachmessung der Security Awareness zum Zeitpunkt $Y$ muss sich das Unternhemen diese Umstandes zumindest gedanklich bewusst sein.
+\end{sloppypar}
+
 \subsubsection{Potentielle Anspruchsgruppen}
 
 \begin{sloppypar}
-Für die Datenerhebung wurden die folgenden potentiellen Anspruchsgruppen mit den von ihnen hauptsächlich zugreifbaren Datenbeständen identifiziert. Für diese Datenbestände wird anhand ihres Integritäts- und Vertraulichkeitsanspruches der jeweilige Schutzbedarf eingeschätzt um damit diejenigen Anspruchsgruppen zu bestimmen, die bei der nachfolgenden Datenerhebung berücksichtigt werden müssen.
+Für die Datenerhebung wurden die folgenden potentiellen Anspruchsgruppen mit den von ihnen hauptsächlich zugreifbaren Datenbeständen identifiziert\footnote{Die Quelle für die Liste der Anspruchsgruppen ist das \acrshort{erp} System der \companylong. Die Liste wiederspiegelt dabei die fachliche Aufstellung des Unternehmens. Personaltechnische Anspruchsgruppen wie externe Mitarbeitende, Besucher, Zulieferer, Partnerfirmen wurden bewusst nicht aufgeführt, da sich die mit dieser Arbeit thematisierte Security Awareness explizit an die internen Mitarbeitenden richtet. Im Rahmen einer Security Awareness Kampagne sind externe Mitarbeitende, Besucher, Zulieferer, Partnerfirmen jedoch ein sehr wichtiger Themenfokus.}. Für diese Datenbestände wird anhand ihres Integritäts- und Vertraulichkeitsanspruches der jeweilige Schutzbedarf eingeschätzt um damit diejenigen Anspruchsgruppen zu bestimmen, die bei der nachfolgenden Datenerhebung berücksichtigt werden müssen.
 \end{sloppypar}
 
 %% - table metadata
@@ -33,76 +43,91 @@ Für die Datenerhebung wurden die folgenden potentiellen Anspruchsgruppen mit de
 %% - table data
 %% - --------------------------------------
 
-\textbf{Produktentwicklung} & Quellcode                     \\ \hline
-\textbf{Gebäudemanagement} & Zutrittskontrolle              \\ \hline
-\textbf{Marketing} & Firmenidentifikation                   \\ \hline
-\textbf{Einkauf} & Offerten                                 \\ \hline
-\textbf{Kommunkation} & Interne Mitarbeiterinformationen    \\ \hline
-\textbf{Personaldienst} & Personaldossiers                  \\ \hline
-\textbf{Verkauf} & Produkteofferten                         \\ \hline
-\textbf{Verkaufsanbahnung} & Anonymisierte Produktdaten     \\ \hline
-\textbf{Finanzen} & Buchhaltungsdaten                       \\ \hline
-\textbf{Qualitätssicherung} & Verfahrensbeschriebe          \\ \hline
-\textbf{Rechtsabteilung} & Verträge                         \\ \hline
-\textbf{IT} &  Systempasswörter                             \\ \hline
-\textbf{Schulung} & Prüfungsfragen                          \\ \hline
+\textbf{Geschäftsleitung} & Geschäftsstrategien, Entscheidungsdokumente         \\ \hline
+\textbf{Softwareentwicklung} & Quellcode, Parametrisierungsdaten                \\ \hline
+\textbf{Admin- \& Gebäudemanagement} & Zutrittskontrolle                        \\ \hline
+\textbf{Marketing, Kommunikation \& Strategie} & Firmenidentifikation, Marktstrategien\\ \hline
+\textbf{Einkauf} & Offerten                                                     \\ \hline
+\textbf{Personaldienst} & Personaldossiers                                      \\ \hline
+\textbf{Verkauf} & Produkteofferten                                             \\ \hline
+\textbf{Verkaufsanbahnung} & Anonymisierte Produktdaten                         \\ \hline
+\textbf{Qualitätssicherung} & Verfahrensbeschriebe                              \\ \hline
+\textbf{Rechtsdienst \& Finanzen} & Verträge und Buchhaltungsdaten              \\ \hline
+\textbf{IT} &  Systempasswörter                               \\ \hline
+\textbf{Academy} & Prüfungsfragen                                               \\ \hline
+\textbf{Kundensupport} & Anonymisierte Kundendaten (nur im Supportfall)         \\ \hline
+\textbf{Konsultation \& Implementationssupport} & Installationsanleitungen, Konzepte       \\ \hline
+\textbf{Projektmanagement \& Business Analyse} & Projektpläne,  Anwendungsfälle \\ \hline
+\textbf{Services} & Übersetzungsdaten, Dokumentation \\ \hline
 
 \end{tabular}
 \end{table}
 
-\subsubsection{Ermittlung der Anspruchsgruppen für die Befragung}
+\subsubsection{Bestimmung der Anspruchsgruppen für die Befragung}
 \subfile{sections/Teil_2_Texte/anspruchsgruppen_ermittlung.tex}
+
+\begin{sloppypar}
+Vor dem Beginn der eigentlichen Datenerhebung gilt es, aus der Menge der potentiellen Anspruchsgruppen diejenigen herauszufiltern, für welche sich eine  Schutzbedarfsbestimmung mit anschliessender Datenerhebung überhaupt rechtfertigt. Da sich nicht alle potentiellen Anspruchsgruppen via ihre Datenbestände für ein entsprechendes Verfahren qualifizieren werden, gilt es diese zuerst herauszufiltern. 
+\end{sloppypar}
 
 \paragraph*{Definition der Schutzbedarfskategorien}\mbox{}
 \label{Schutzbedarfskategorien}
 
 \begin{sloppypar}
-Die nachfolgend beschriebenen Schutzbedarfskategorien wurden gemäss der Publikation \citep{bsi_bsi-standard_2008} vom \acrlong{bsi} (\acrshort{bsi}) definiert. 
-
-%% abkürzungsverzeichnis, BibliograFie
-
+Die nachfolgend beschriebenen Schutzbedarfskategorien wurden gemäss der Publikation \citetitle{bsi_bsi-standard_2008} vom \acrlong{bsi} (\acrshort{bsi}) definiert. 
 \end{sloppypar}
 
+%% -
+%% - keep this block together!!!!!!!!!!!!!!
+%% - --------------------------------------
+%% -
 %% - table metadata
 %% - --------------------------------------
-
+\addtocounter{table}{1}
 \begin{table}[H]
 \centering
 \tablefontsize	
-\caption{Schutzbedarfskategorien}
+\caption*{Tabelle \thetable: Schutzbedarfskategorien; aus: \citeauthor{bsi_bsi-standard_2008} (\citeyear{bsi_bsi-standard_2008}), S. 49.}
 \label{schutzbedarfskategorien}
 
 %% - set width of columns
 %% - ---------------------------------------
 
-\begin{tabular}{ |p{4cm}|p{6cm}|{c}| }
+\begin{tabular}{ |p{3.5cm}|p{3cm}|c|p{6cm} |}
 
 %% - Header row with shadowing
 %% - --------------------------------------
 
 \hline
 \tableheaderbgcolor
-\textbf{Schutzbedarfskategorie} & \textbf{Ausprägung} & \textbf{Schutzbedarf-Faktor}\\ 
+\textbf{Schutzbedarfskategorie} & \textbf{Ausprägung} & \textbf{Schutzbedarf-\newline Faktor} & \textbf{Schaden bei Datenverlust}\\ 
 \hline
 
 %% - table data
 %% - --------------------------------------
 
-\textbf{normal} & Normaler Schutzbedarf & 1 \\ \hline
-\textbf{hoch} & Erhöhter Schutzbedarf & 2  \\ \hline
-\textbf{sehr hoch} & Höchster Schutzbedarf & 3 \\ \hline
+\textbf{normal} & Normaler Schutzbedarf & 1 & Die Schadensauswirkungen sind begrenzt und überschaubar. \\ \hline
+\textbf{hoch} & Erhöhter Schutzbedarf & 2 & Die Schadensauswirkungen können beträchtlich sein. \\ \hline
+\textbf{sehr hoch} & Höchster Schutzbedarf & 3 & Die Schadensauswirkungen können ein existentiell bedrohliches Ausmass erreichen.\\ \hline
 
 \end{tabular}
 \end{table}
+\addcontentsline{lot}{table}{\numberline {\thetable}{\ignorespaces Schutzbedarfskategorien}}
+%% -
+%% - keep this block together!!!!!!!!!!!!!!
+%% - --------------------------------------
+%% -
+
 
 \paragraph*{Berechnung der Relevanz der Anspruchsgruppen}\mbox{}
 
 \begin{sloppypar}
 Bei der Beschreibung von allgemeinen Schutzzielen wird oft das Tripel \textit{\acrlong{cia}} (\acrshort{cia})\footnote{Vertraulichkeit, Integrität, Verfügbarkeit} eingesetzt (\cite{harris_cissp_2013}). Für die Berechnung der Relevanz der Anspruchsgruppen werden daraus die beiden Prinzipien Vertraulichkeit $(C)$ und Integrität $(I)$ verwendet.
 
-Für die aufgeführten zugreifbaren Datenbestände der Anspruchsgruppen wird die Relevanz als Produkt $P =  Vertraulichkeit \cdot Integrit"at$ berechnet. Dieses Produkt wird später bei der Definition des Selektionskriteriums eingesetzt. 
+Für die aufgeführten zugreifbaren Datenbestände der Anspruchsgruppen wird die Relevanz als Produkt $P =  C \cdot I$ berechnet. Dieses Produkt wird später als Selektionskriterium verwendet.
 
-Die Festlegung der Vertraulichkeit, respektive der Integrität für die zugreifbaren Datenbestände basiert auf Kurzgesprächen, welche vom Autor mit Vertretern aller Anspruchsgruppen auf Zufallsbasis (Flurgespräch, Zugfahrt, Kaffeepause, etc.) und somit informell  zu deren Datenbeständen geführt wurden. 
+Die Festlegung der Vertraulichkeit, respektive der Integrität für die zugreifbaren Datenbestände basiert auf Kurzgesprächen, welche vom Autor informell mit Vertretern aller Anspruchsgruppen auf Zufallsbasis (Flurgespräch, Kaffeepause, etc.) zu deren Datenbeständen geführt wurden. Das Management teilt die Einschätzung der Datenbestände.
+\todo{mit Nathalie absprechen}
 \end{sloppypar}
 
 %% - table metadata
@@ -118,85 +143,64 @@ Die Festlegung der Vertraulichkeit, respektive der Integrität für die zugreifb
 %% - set width of columns
 %% - ---------------------------------------
 
-\begin{tabular}{ |l|l|{c}|{c}|{c}| }
+%%\begin{tabular}{ |l|l|{c}|{c}|{c}| }
+\begin{tabular}{ |>{\arraybackslash}p{6.1cm}|>{\arraybackslash}p{4.9cm}|>{\centering\arraybackslash}p{2.1cm}|>{\centering\arraybackslash}p{1.3cm}|>{\centering\arraybackslash}p{1.2cm}| }
+
+
+%>{\centering\arraybackslash}p{2cm}
+
 
 %% - Header row with shadowing
 %% - --------------------------------------
 
 \hline
 \tableheaderbgcolor
-\textbf{Anspruchsgruppe} & \textbf{Zugreifbare Datenbestände} & \textbf{Vertraulichkeit $(C)$} & \textbf{Integrität $(I)$} & \textbf{Relevanz $(C \cdot I)$}\\ 
+\textbf{Anspruchsgruppe} & \textbf{Zugreifbare Datenbestände} & \textbf{Vertraulichkeit \newline $(C)$} & \textbf{Integrität $(I)$} & \textbf{Relevanz $(C \cdot I)$}\\ 
 \hline
 
 %% - table data
 %% - --------------------------------------
 
-\textbf{Produktentwicklung} & Quellcode & hoch & sehr hoch & 6\\ \hline
-\textbf{Gebäudemanagement} & Zutrittskontrolle & hoch & hoch & 4  \\ \hline
-\textbf{Marketing} & Firmenidentifikation & hoch & hoch & 4\\ \hline
-\textbf{Einkauf} & Lieferantendaten + Offerten & normal & normal & 1\\ \hline
-\textbf{Kommunikation} & Interne Mitarbeiterinformationen & hoch & hoch & 4\\ \hline
-\textbf{Personaldienst} & Personaldossiers & sehr hoch & sehr hoch & 9 \\ \hline
-\textbf{Verkauf} & Produkteofferten & Hoch & hoch & 6\\ \hline
+\textbf{Geschäftsleitung} & Strategiedokumente, Kennzahlen & sehr hoch & sehr hoch & 9\\ \hline
+\textbf{Softwareentwicklung} & Quellcode, Parametrisierungsdaten & hoch & sehr hoch & 6\\ \hline
+\textbf{Admin- \& Gebäudemanagement} & Zutrittskontrolle & hoch & hoch & 4  \\ \hline
+\textbf{Marketing, Kommunikation \& Strategie} & Firmenidentifikation, Marktstrategien & sehr hoch & hoch & 6\\ \hline
+\textbf{Einkauf} & Lieferantendaten, Offerten & normal & normal & 1\\ \hline
+\textbf{Personaldienst} & Personaldossiers, Arbeitsverträge & sehr hoch & sehr hoch & 9 \\ \hline
+\textbf{Verkauf} & Offerten für Kunden & hoch & hoch & 4\\ \hline
 \textbf{Verkaufsanbahnung} & Anonymisierte Produktdaten  & hoch & normal & 2\\ \hline
-\textbf{Finanzen} & Buchhaltungsdaten & sehr hoch & sehr hoch & 9\\ \hline
 \textbf{Qualitätssicherung} & Verfahrensbeschriebe  & normal & hoch & 2\\ \hline
-\textbf{Rechtsabteilung} & Verträge & sehr hoch & sehr hoch & 9\\ \hline
+\textbf{Rechtsdienst \& Finanzen} & Verträge und Buchhaltungsdaten & sehr hoch & sehr hoch & 9\\ \hline
 \textbf{IT} &  Systempasswörter & sehr hoch & sehr hoch & 9\\ \hline
-\textbf{Schulung} & Prüfungsfragen & hoch & sehr hoch & 6\\ \hline
+\textbf{Academy} & Prüfungsunterlagen & hoch & sehr hoch & 6\\ \hline
+\textbf{Kundensupport} & Anonymisierte Kundendaten & sehr hoch & hoch & 6\\ \hline
+\textbf{Konsultation \& Implementationssupport} & Installationsanleitungen, Konzepte & hoch & hoch & 4 \\ \hline
+\textbf{Projektmanagement \& Business Analyse} & Projektpläne,  Anwendungsfälle & sehr hoch & hoch & 6 \\ \hline
+\textbf{Services} & Übersetzungsdaten, Dokumentation & hoch & hoch & 4 \\ \hline
 
 \end{tabular}
 \end{table}
 
-\paragraph*{Modell zur Bestimmung der Anspruchsgruppen}\mbox{}
+\paragraph*{Modell zur Selektion der definitiven Anspruchsgruppen}\mbox{}
 
 \begin{sloppypar}
-Nachfolgend wird die berechnete Relevanz der Anspruchsgruppen in einem Modell dargestellt. Es wird eine Selektionsfläche definiert, anhand welcher die definitiven Anspruchsgruppen für die Datenerhebung bestimmt werden.
+Nachfolgend wird die berechnete Relevanz der Anspruchsgruppen mit einem Feldermatrizen-Modell dargestellt. Als Skala für den Zeilen- und Spaltenvektor wird der Schutzbedarf-Faktor welcher bei der Definition der Schutzbedarfskategorien (siehe Seite \pageref{Schutzbedarfskategorien}) festgelegt wurde, verwendet.
 
-Das Modell für die Bestimmung der Anspruchsgruppen wird als eine quadratische Matrix (Menge) mit insgesamt 9 Elementen, bestehend aus 3 Zeilen und 3 Spalten aufgebaut. Der Zeilenvektor $C$ beschreibt dabei die Vertraulichkeit, der Spaltenvektor $I$ die Integrität. Als Skala für den Zeilen- und Spaltenvektor wird der Schutzbedarf-Faktor welcher bei der Definition der Schutzbedarfskategorien (siehe Seite \pageref{Schutzbedarfskategorien}) festgelegt wurde, verwendet.
-
-Die Menge $\{M\}$ aller geordneten Paare $(C,I)$ ergibt sich aus dem kartesischen Produkt von $Vertraulichkeit \times Integrit"at$:
-
-\[\big\{\,M\,\big\} \coloneqq \bigg\{\,(C \times I) \bigg\}\]
-
+Es wird eine Selektionsfläche definiert, anhand welcher die definitiven Anspruchsgruppen für die Datenerhebung bestimmt werden. Die Selektionsfläche wird anhand von deren berechneten Relevanz gebildet. Das Selektionskriterium wird mit $(C \cdot I) \geq 3$ definiert\footnote{Die Begründung für die Festlegung dieser Linie ist, dass Daten von Anspruchsgruppen welche aufgrund ihres Integritäts- oder Vertraulichkeitsanspruches als normal bis hoch eingestuft wurden, durch die bestehenden Sicherheitsmassnahmen genügend geschützt sind und daher keine besonderen Anforderungen bezüglich Security Awareness aufweisen. Das Wissen um diesen Umstand ist in der \companyshort nicht explizit festgehalten, es hat sich als "`Best Practice"' Muster im Laufe der Zeit herausgebildet.}. Werden nun alle definierten Anspruchsgruppen anhand ihrer Relevanz im Modell positioniert, ergibt sich das nachstehende Bild:
 \end{sloppypar}
-
-\newpage
-\subparagraph*{Definition der Selektionsfläche}\mbox{}
-
-\begin{sloppypar}
-Die Selektionsfläche ist ebenfalls eine Teilmengemenge von geordneten Paaren $(C,I)$ der Menge $\{M\}$ und wird über ihre berechnete Relevanz bestimmt. Sie muss dabei für eine Selektion des Paares mindestens 3 betragen:
-\[\big\{\,A\,\big\} \coloneqq \bigg\{\,(C \cdot I) \geq 3 \bigg\}\]
-
-Die Selektionsfläche besteht somit aus der Menge $\{A\}$ von geordneten Koordinatenpaaren, welche das Selektionkriterium erfüllen:
-\[\big\{\,A\,\big\} \coloneqq \big\{\;(3,1),(2,2),(1,3),(3,2),(2,3),(3,3)\;\big\}\]
-Das Abbild dieser Menge $A$ ist eine echte Teilmenge von $M$, kurz $A \subsetneq M$.
-
-\end{sloppypar}
-
-\begin{figure}[H]
-    \centering
-    \input{figures/tikz_raster_schutzbedarf}
-    \caption{Modell zur Bestimmung der Anspruchsgruppen}
-    \label{fig:raster1}
-\end{figure}
-
-\paragraph*{Selektion der definitiven Anspruchsgruppen}\mbox{}
-
-\begin{sloppypar}
-Werden nun alle definierten Anspruchsgruppen anhand ihrer Koordinatenpaare $(\;C,I\;)$ in das Modell übertragen, so ergibt sich das folgende Bild:
-\end{sloppypar} 
 
 \begin{figure}[H]
     \input{figures/tikz_rasteranwendung}
-    \caption{Anwendung des Modells auf Anspruchsgruppen}
+    \caption{Selektion der Anspruchsgruppen}
     \label{fig:raster2}
 \end{figure}
 
 \begin{sloppypar}
 Die in \textcolor{cyan}{cyan} dargestellten Anspruchsgruppen sind in der \textcolor{mylightblue}{hellblauen} Selektionsfläche enthalten und erfüllen somit das Auswahlkriterium. Die \textcolor{gray}{grau} dargestellten Anspruchsgruppen erfüllen das Auswahlkriterium nicht.
 
-Die Auswertung des Modells führt zu den nachfolgend aufgeführten Liste der definitiven Anspruchsgruppen, welche somit gleichzeitig die Zielpopulation darstellt.
+Die Auswertung des Modells führt zu den nachfolgend aufgeführten Liste der definitiven Anspruchsgruppen, welche somit gleichzeitig die Zielpopulation für die Datenerhebung darstellt.
+
+Die Anspruchsgruppen "`Einkauf"', "`Verkaufsanbahnung"' sowie "`Qualitätssicherung"' werden aufgrund ihrer Positionierung ausserhalb der Selektionsfläche vom weiteren Verfahren ausgeschlossen. Dies bedeutet aber nur einen Ausschluss von der empirischen Datenerhebung, in die Operationalisierung der definierten Massnahmen werden alle Eingangs genannten Anspruchsgruppen miteinbezogen.
 \end{sloppypar}
 
 %% - table metadata
@@ -223,22 +227,21 @@ Die Auswertung des Modells führt zu den nachfolgend aufgeführten Liste der def
 %% - table data
 %% - --------------------------------------
 
-\textbf{Produktentwicklung}             \\ \hline
-\textbf{Gebäudemanagement}              \\ \hline
-\textbf{Marketing}                      \\ \hline
-\textbf{Kommunikation}                  \\ \hline
-\textbf{Personaldienst}                 \\ \hline
-\textbf{Verkauf}                        \\ \hline
-\textbf{Finanzen}                       \\ \hline
-\textbf{Rechtsabteilung}                \\ \hline
-\textbf{IT}                             \\ \hline
-\textbf{Schulung}                       \\ \hline
+\textbf{Geschäftsleitung}                       \\ \hline
+\textbf{Softwareentwicklung}                    \\ \hline
+\textbf{Admin- \& Gebäudemanagement}            \\ \hline
+\textbf{Marketing, Kommunikation \& Strategie}  \\ \hline
+\textbf{Personaldienst}                         \\ \hline
+\textbf{Verkauf}                                \\ \hline
+\textbf{Rechtsdienst \& Finanzen}               \\ \hline
+\textbf{IT}                   \\ \hline
+\textbf{Academy}                                \\ \hline
+\textbf{Kundensupport}                          \\ \hline
+\textbf{Konsultation \& Implementationssupport} \\ \hline
+\textbf{Projektmanagement \& Business Analyse}  \\ \hline
+\textbf{Services}                               \\ \hline
 
 \end{tabular}
 \end{table}
-
-\begin{sloppypar}
-Die Anspruchsgruppen "`Einkauf"', "`Verkaufsanbahnung"' und "`Qualitätssicherung"' werden aufgrund ihrer Positionierung ausserhalb der Selektionsfläche vom weiteren Datenerhebungsverfahren ausgeschlossen.
-\end{sloppypar}
 
 \end{document}

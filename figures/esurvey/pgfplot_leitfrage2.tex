@@ -1,0 +1,54 @@
+\pgfplotstableread[col sep=comma, header=false]{
+% -- <percent value>, <startpoint from above> , <label>
+      46,0,  Spam Email und Malware
+      38,0.7,  Familienmitglieder
+      28,1.4,  Mangelnde Kenntnisse IT Technologien
+      25,2.1,  WLAN
+      21,2.8,  Persönliches Verhalten
+      21,3.5,  Physische Sicherheit
+      21,4.2,  Ungepatchte Software/Hardware
+      17,4.9,  Installierte Software
+      14,5.6,  Internetanschluss
+      13,6.3,  Download von Inhalten
+      12,7.0,  Anzahl Geräte mit Internetzugriff
+      11,7.7,  Umgang mit Passworten
+      10,8.4,  Nichts
+      7,9.1,  Mobile Geräte
+      6,9.8,  Keine Antwort/unklar
+      6,10.5,  Persönliche Daten (Kreditkarten/Ausweise)
+      5,11.2,  Manipulation Infrastruktur (Router/Switch/PC)
+      4,11.9,  Verwendung Social Networks
+      3,12.6,  Datendiebstahl/Datenverlust
+      1,13.3,  Umgang mit Firmendokumenten
+}\datatable
+
+\begin{tikzpicture}
+
+  \begin{axis}[
+%    height = 5.5cm,
+    xbar,
+    y=-.7cm,
+    enlarge y limits={abs=0.45cm},
+    axis x line       = none,
+    tickwidth         = 0pt,
+    y axis line style = { opacity = 0 },
+   yticklabels from table={\datatable}{2},
+    ytick=data,
+%    yticklabel style={text width=9cm,align=right},
+    nodes near coords,
+    nodes near coords align={horizontal},
+%    nodes near coords={\pgfmathprintnumber\pgfplotspointmeta\%},
+    ]
+    \addplot table [y=1, x=0] {\datatable};
+  \end{axis}
+  
+  % --
+% -- draw surrounding box
+% --
+  \node[
+      draw=black, very thin,
+      minimum width=\textwidth,
+      fit=(current bounding box.north west) (current bounding box.south east),
+    ]at (current bounding box.center){};
+    
+\end{tikzpicture}

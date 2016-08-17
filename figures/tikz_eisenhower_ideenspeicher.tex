@@ -4,63 +4,57 @@
 %% - Draw grid
 %% - --------------------------------------
 
-\draw[step=4cm,thick] (0,0) grid (8,8);
-
-\foreach \x in {2,4,6}
-    \draw (\x cm,0pt) -- (\x cm,-6pt);
-
-\foreach \y in  {2,4,6}
-    \draw (0pt,\y cm) -- (-6pt,\y cm);
-    
-\draw[thin, gray, dotted](2,0) -- (2,8);
-\draw[thin, gray, dotted](6,0) -- (6,8);
-
-\draw[thin, gray, dotted](0,2) -- (8,2);
-\draw[thin, gray, dotted](0,6) -- (8,6);
-
+\draw[step=4cm,thick] (0,0) grid (12,12);
 
 %% - Draw Arrows
 %% - --------------------------------------
 
 \draw [decoration={markings,mark=at position 1 with
-    {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (0,0) -- (8,0);
+    {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (0,0) -- (12,0);
 
 \draw [decoration={markings,mark=at position 1 with
-    {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (0,0) -- (0,8);
+    {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (0,0) -- (0,12);
     
 %% - label x- and y-Axis
 %% - --------------------------------------
 
-\node[scale=1.0] at (9.2,0) {Kosten $K$};
-\node[scale=1.0] at (0,8.5) {Zeitaufwand $T$};
+\node[scale=1.0, align=center] at (13,0) {Kosten\\$(K)$};
+\node[scale=1.0, align=center] at (0,12.8) {Zeitaufwand\\$(T)$};
 
 %% - Draw x- and y- Axis scale
 %% - --------------------------------------
 
-\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (1,-0.2) {tief};
-\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (3,-0.2) {mittel};
-\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (5,-0.2) {hoch};
-\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (7,-0.2) {sehr hoch};
+\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (2,-0.2) {tief};
+\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (6,-0.2) {mittel};
+\node[draw,scale=1,shape=rectangle,draw=none, rotate=90,anchor=east] at (10,-0.2) {hoch};
 
-\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,1) {tief};
-\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,3) {mittel};
-\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,5) {hoch};
-\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,7) {sehr hoch};
+\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,2) {tief};
+\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,6) {mittel};
+\node[draw,scale=1,shape=rectangle,draw=none,anchor=east] at (-0.2,10) {hoch};
 
 %% - Draw visible nodes in grid
 %% - --------------------------------------
 
-\node[draw,scale=1.2,shape=rectangle,draw=none,gray, align=center] at (2,2) {Idee \\ weiterverfolgen};
-\node[draw,scale=1.2,shape=rectangle,draw=none,gray, align=center] at (6,2) {in Kosten- \\ planung \\ aufnehmen};
-\node[draw,scale=1.2,shape=rectangle,draw=none,gray, align=center] at (2,6) {in Ressourcen- \\ planung \\ aufnehmen};
-\node[draw,scale=1.2,shape=rectangle,draw=none,gray, align=center] at (6,6) {Idee \\ verwerfen};
+\node[draw,scale=1.2,shape=rectangle,draw=none,gray, align=center] at (2,2) {zur Umsetzung \\ empfohlen};
+\node[draw,scale=1.2,shape=rectangle,draw=none,gray, align=center] at (6,2) {zur Umsetzung \\ empfohlen};
+\node[draw,scale=1.2,shape=rectangle,draw=none,gray, align=center] at (2,6) {zur Umsetzung \\ empfohlen};
+\node[draw,scale=1.2,shape=rectangle,draw=none,gray, align=center] at (6,6) {zur Umsetzung \\ empfohlen};
+
+\node[draw,scale=1.2,shape=rectangle,draw=none,gray, align=center] at (2,10) {in Ressourcen-\\planung \\aufnehmen };
+\node[draw,scale=1.2,shape=rectangle,draw=none,gray, align=center] at (6,10) {in Ressourcen-\\planung \\aufnehmen };
+
+\node[draw,scale=1.2,shape=rectangle,draw=none,gray, align=center] at (10,2) {in Kosten- \\ planung \\ aufnehmen };
+\node[draw,scale=1.2,shape=rectangle,draw=none,gray, align=center] at (10,6) {in Kosten- \\ planung \\ aufnehmen };
+
+\node[draw,scale=1.2,shape=rectangle,draw=none,gray, align=center] at (10,10) {Idee \\ langfristig \\ einplanen oder \\ verwerfen};
+
 
 %% - Draw selection line
 %% - --------------------------------------
 
-\filldraw [color=blue, opacity=0.05] (0,0) -- (0,6) -- (6,6) -- (6,0) -- cycle;
+\filldraw [color=blue, opacity=0.05] (0,0) -- (12,0) -- (12,8) -- (8,8) -- (8,12) -- (0,12) -- cycle;
 
-\node[draw,scale=1,shape=rectangle,draw=none, blue] at (-2.5,4) {Selektionsfläche};
-\draw [blue] (-1,4) -- (1,4.4);
+\node[draw,scale=1,shape=rectangle,draw=none, blue,align=center] at (-2.0,3) {Selektions-\\fläche};
+\draw [blue] (-1,3) -- (0.5,3);
 
 \end{tikzpicture}
